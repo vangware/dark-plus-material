@@ -1,0 +1,399 @@
+{
+  "name": "Dark+ Material",
+  "settings": [
+    {
+      "scope": "emphasis",
+      "settings": {
+        "fontStyle": "italic"
+      }
+    },
+    {
+      "scope": "strong",
+      "settings": {
+        "fontStyle": "bold"
+      }
+    },
+    {
+      "scope": "header",
+      "settings": {
+        "foreground": "#3F51B5"
+      }
+    },
+    {
+      "scope": "comment",
+      "settings": {
+        "foreground": "#8BC34A"
+      }
+    },
+    {
+      "scope": "constant.language",
+      "settings": {
+        "foreground": "#2196F3"
+      }
+    },
+    {
+      "scope": "constant.numeric",
+      "settings": {
+        "foreground": "#CDDC39"
+      }
+    },
+    {
+      "scope": "constant.regexp",
+      "settings": {
+        "foreground": "#9C27B0"
+      }
+    },
+    {
+      "scope": "constant.rgb-value",
+      "settings": {
+        "foreground": "#9E9E9E"
+      }
+    },
+    {
+      "scope": "entity.name.tag",
+      "settings": {
+        "foreground": "#2196F3"
+      }
+    },
+    {
+      "scope": "entity.name.selector",
+      "settings": {
+        "foreground": "#FF9800"
+      }
+    },
+    {
+      "scope": "entity.other.attribute-name",
+      "settings": {
+        "foreground": "#00BCD4"
+      }
+    },
+    {
+      "scope": "entity.other.attribute-name.css",
+      "settings": {
+        "foreground": "#FF9800"
+      }
+    },
+    {
+      "scope": "invalid",
+      "settings": {
+        "foreground": "#F44336"
+      }
+    },
+    {
+      "scope": "markup.underline",
+      "settings": {
+        "fontStyle": "underline"
+      }
+    },
+    {
+      "scope": "markup.bold",
+      "settings": {
+        "fontStyle": "bold",
+        "foreground": "#2196F3"
+      }
+    },
+    {
+      "scope": "markup.heading",
+      "settings": {
+        "fontStyle": "bold",
+        "foreground": "#2196F3"
+      }
+    },
+    {
+      "scope": "markup.italic",
+      "settings": {
+        "fontStyle": "italic"
+      }
+    },
+    {
+      "scope": "markup.inserted",
+      "settings": {
+        "foreground": "#CDDC39"
+      }
+    },
+    {
+      "scope": "markup.deleted",
+      "settings": {
+        "foreground": "#FFC107"
+      }
+    },
+    {
+      "scope": "markup.changed",
+      "settings": {
+        "foreground": "#2196F3"
+      }
+    },
+    {
+      "scope": "markup.punctuation.quote.beginning",
+      "settings": {
+        "foreground": "#8BC34A"
+      }
+    },
+    {
+      "scope": "markup.punctuation.list.beginning",
+      "settings": {
+        "foreground": "#03A9F4"
+      }
+    },
+    {
+      "scope": "markup.inline.raw",
+      "settings": {
+        "foreground": "#FFC107"
+      }
+    },
+    {
+      "scope": "meta.selector",
+      "settings": {
+        "foreground": "#FF9800"
+      }
+    },
+    {
+      "name": "brackets of XML/HTML tags",
+      "scope": "punctuation.definition.tag",
+      "settings": {
+        "foreground": "#607D8B"
+      }
+    },
+    {
+      "scope": "meta.preprocessor",
+      "settings": {
+        "foreground": "#2196F3"
+      }
+    },
+    {
+      "scope": "meta.preprocessor.string",
+      "settings": {
+        "foreground": "#FFC107"
+      }
+    },
+    {
+      "scope": "meta.preprocessor.numeric",
+      "settings": {
+        "foreground": "#CDDC39"
+      }
+    },
+    {
+      "scope": "meta.structure.dictionary.key.python",
+      "settings": {
+        "foreground": "#00BCD4"
+      }
+    },
+    {
+      "scope": "meta.header.diff",
+      "settings": {
+        "foreground": "#2196F3"
+      }
+    },
+    {
+      "scope": "storage",
+      "settings": {
+        "foreground": "#2196F3"
+      }
+    },
+    {
+      "scope": "storage.type",
+      "settings": {
+        "foreground": "#2196F3"
+      }
+    },
+    {
+      "scope": "storage.modifier",
+      "settings": {
+        "foreground": "#2196F3"
+      }
+    },
+    {
+      "scope": "string",
+      "settings": {
+        "foreground": "#FFC107"
+      }
+    },
+    {
+      "scope": "string.tag",
+      "settings": {
+        "foreground": "#FFC107"
+      }
+    },
+    {
+      "scope": "string.value",
+      "settings": {
+        "foreground": "#FFC107"
+      }
+    },
+    {
+      "scope": "string.regexp",
+      "settings": {
+        "foreground": "#FF5722"
+      }
+    },
+    {
+      "name": "JavaScript string interpolation ${}",
+      "scope": "string.template-expression",
+      "settings": {
+        "foreground": "#2196F3"
+      }
+    },
+    {
+      "scope": "support.type.property-name",
+      "settings": {
+        "foreground": "#00BCD4"
+      }
+    },
+    {
+      "scope": "keyword",
+      "settings": {
+        "foreground": "#2196F3"
+      }
+    },
+    {
+      "scope": "keyword.control",
+      "settings": {
+        "foreground": "#2196F3"
+      }
+    },
+    {
+      "scope": "keyword.operator",
+      "settings": {
+        "foreground": "#9E9E9E"
+      }
+    },
+    {
+      "scope": [
+        "keyword.operator.new",
+        "keyword.operator.expression"
+      ],
+      "settings": {
+        "foreground": "#2196F3"
+      }
+    },
+    {
+      "scope": "keyword.other.unit",
+      "settings": {
+        "foreground": "#CDDC39"
+      }
+    },
+    {
+      "name": "coloring of the PHP start and end tag (<?php and ?>)",
+      "scope": [
+        "punctuation.section.embedded.begin.metatag.php",
+        "punctuation.section.embedded.end.metatag.php"
+      ],
+      "settings": {
+        "foreground": "#2196F3"
+      }
+    },
+    {
+      "scope": "support.function.git-rebase",
+      "settings": {
+        "foreground": "#00BCD4"
+      }
+    },
+    {
+      "scope": "constant.sha.git-rebase",
+      "settings": {
+        "foreground": "#CDDC39"
+      }
+    },
+    {
+      "name": "coloring of the Java import and package identifiers",
+      "scope": [
+        "storage.modifier.import.java",
+        "storage.modifier.package.java"
+      ],
+      "settings": {
+        "foreground": "#9E9E9E"
+      }
+    },
+    {
+      "name": "this.self",
+      "scope": "variable.language",
+      "settings": {
+        "foreground": "#2196F3"
+      }
+    },
+    {
+      "name": "Function declarations",
+      "scope": [
+        "entity.name.function",
+        "support.function"
+      ],
+      "settings": {
+        "foreground": "#FFEB3B"
+      }
+    },
+    {
+      "name": "Types declaration and references",
+      "scope": [
+        "meta.return-type",
+        "support.class",
+        "support.type",
+        "entity.name.type",
+        "storage.type.cs",
+        "storage.type.java",
+        "entity.other.inherited-class"
+      ],
+      "settings": {
+        "foreground": "#009688"
+      }
+    },
+    {
+      "name": "Types declaration and references, TS grammar specific",
+      "scope": [
+        "meta.return.type",
+        "meta.type.cast.expr",
+        "meta.type.new.expr",
+        "support.constant.math",
+        "support.constant.dom",
+        "support.constant.json"
+      ],
+      "settings": {
+        "foreground": "#009688"
+      }
+    },
+    {
+      "name": "Control flow keywords",
+      "scope": "keyword.control",
+      "settings": {
+        "foreground": "#E91E63"
+      }
+    },
+    {
+      "name": "Variable and parameter name",
+      "scope": [
+        "variable.parameter",
+        "variable",
+        "variable.name",
+        "support.variable"
+      ],
+      "settings": {
+        "foreground": "#00BCD4"
+      }
+    },
+    {
+      "name": "Object keys, TS gammar specific",
+      "scope": "object-literal.member.key",
+      "settings": {
+        "foreground": "#00BCD4"
+      }
+    },
+    {
+      "name": "CSS property value",
+      "scope": [
+        "support.property-value",
+        "constant.rgb-value",
+        "support.property-value.scss",
+        "constant.rgb-value.scss"
+      ],
+      "settings": {
+        "foreground": "#FFC107"
+      }
+    },
+    {
+      "name": "JSX Tag names, workaround for flattening match with function",
+      "scope": "entity.name.function.tag",
+      "settings": {
+        "foreground": "#2196F3"
+      }
+    }
+  ]
+}

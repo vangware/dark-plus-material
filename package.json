@@ -1,0 +1,43 @@
+{
+  "name": "dark-plus-material",
+  "displayName": "Dark+ Material",
+  "description": "Default Dark+ Theme, with material palette",
+  "version": "0.0.1",
+  "publisher": "vangware",
+  "license": "MIT",
+  "galleryBanner": {
+    "color": "#2196F3",
+    "theme": "dark"
+  },
+  "engines": {
+    "vscode": "*"
+  },
+  "categories": [
+    "Themes"
+  ],
+  "keywords": [
+    "theme",
+    "dark",
+    "vscode",
+    "material",
+    "google"
+  ],
+  "icon": "icon.svg",
+  "contributes": {
+    "themes": [
+      {
+        "label": "Dark+ Material",
+        "uiTheme": "vs-dark",
+        "path": "./dark-plus-material.json"
+      }
+    ]
+  },
+  "bugs": {
+    "url": "https://github.com/vangware/dark-plus-material/issues"
+  },
+  "homepage": "https://github.com/vangware/dark-plus-material",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/vangware/dark-plus-material"
+  }
+}
