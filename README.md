@@ -1,6 +1,17 @@
 # Dark+ Material
 The default Dark+ Theme, with material palette.
 
+## Screenshots
+
+### JavaScript
+![](https://raw.githubusercontent.com/vangware/dark-plus-material/master/screenshots/js.gif)
+
+### LESS
+![](https://raw.githubusercontent.com/vangware/dark-plus-material/master/screenshots/less.gif)
+
+### TypeScript
+![](https://raw.githubusercontent.com/vangware/dark-plus-material/master/screenshots/ts.gif)
+
 ## Installing
 
 Launch VS Code Quick Open (Ctrl+P), paste the following command, and press enter.
