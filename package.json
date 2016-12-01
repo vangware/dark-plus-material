@@ -2,11 +2,11 @@
   "name": "dark-plus-material",
   "displayName": "Dark+ Material",
   "description": "Default Dark+ Theme, with material palette",
-  "version": "0.0.6",
+  "version": "0.1.0",
   "publisher": "vangware",
   "license": "MIT",
   "galleryBanner": {
-    "color": "#1e1e1e",
+    "color": "#212121",
     "theme": "dark"
   },
   "engines": {
