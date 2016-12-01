@@ -1,3 +1,8 @@
+## 0.1.0
+- Updated background color to be material palette too.
+- Updated invisible color to be material palette too.
+- Updated background for gallery banner.
+
 ## 0.0.6
 - Added recommendations section in `README.md` for some great stuff made by others.
 - Added a more readable "changes made" section to `README.md`.

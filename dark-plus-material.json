@@ -2,6 +2,12 @@
   "name": "Dark+ Material",
   "settings": [
     {
+      "settings": {
+        "background": "#212121",
+        "invisibles": "#424242"
+      }
+    },
+    {
       "scope": "emphasis",
       "settings": {
         "fontStyle": "italic"
@@ -148,7 +154,6 @@
       }
     },
     {
-      "name": "brackets of XML/HTML tags",
       "scope": "punctuation.definition.tag",
       "settings": {
         "foreground": "#607D8B"
@@ -227,7 +232,6 @@
       }
     },
     {
-      "name": "JavaScript string interpolation ${}",
       "scope": "string.template-expression",
       "settings": {
         "foreground": "#2196F3"
@@ -273,7 +277,6 @@
       }
     },
     {
-      "name": "coloring of the PHP start and end tag (<?php and ?>)",
       "scope": [
         "punctuation.section.embedded.begin.metatag.php",
         "punctuation.section.embedded.end.metatag.php"
@@ -295,7 +298,6 @@
       }
     },
     {
-      "name": "coloring of the Java import and package identifiers",
       "scope": [
         "storage.modifier.import.java",
         "storage.modifier.package.java"
@@ -305,14 +307,12 @@
       }
     },
     {
-      "name": "this.self",
       "scope": "variable.language",
       "settings": {
         "foreground": "#2196F3"
       }
     },
     {
-      "name": "Function declarations",
       "scope": [
         "entity.name.function",
         "support.function"
@@ -322,7 +322,6 @@
       }
     },
     {
-      "name": "Types declaration and references",
       "scope": [
         "meta.return-type",
         "support.class",
@@ -337,7 +336,6 @@
       }
     },
     {
-      "name": "Types declaration and references, TS grammar specific",
       "scope": [
         "meta.return.type",
         "meta.type.cast.expr",
@@ -351,14 +349,12 @@
       }
     },
     {
-      "name": "Control flow keywords",
       "scope": "keyword.control",
       "settings": {
         "foreground": "#E91E63"
       }
     },
     {
-      "name": "Variable and parameter name",
       "scope": [
         "variable.parameter",
         "variable",
@@ -370,14 +366,12 @@
       }
     },
     {
-      "name": "Object keys, TS gammar specific",
       "scope": "object-literal.member.key",
       "settings": {
         "foreground": "#00BCD4"
       }
     },
     {
-      "name": "CSS property value",
       "scope": [
         "support.property-value",
         "constant.rgb-value",
@@ -389,7 +383,6 @@
       }
     },
     {
-      "name": "JSX Tag names, workaround for flattening match with function",
       "scope": "entity.name.function.tag",
       "settings": {
         "foreground": "#2196F3"
