@@ -1,3 +1,6 @@
+## 0.1.1
+- Updated icon.svg to match colors in theme.
+
 ## 0.1.0
 - Updated background color to be material palette too.
 - Updated invisible color to be material palette too.
