@@ -1,3 +1,6 @@
+## 0.1.3
+- Only 5 tags? ok...
+
 ## 0.1.2
 - Updated `package.json` tags.
 - Updated icon.
