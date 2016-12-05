@@ -1,3 +1,8 @@
+## 0.1.2
+- Updated `package.json` tags.
+- Updated icon.
+- Updated `README.md` with the reason behind this theme.
+
 ## 0.1.1
 - Updated icon.svg to match colors in theme.
 
