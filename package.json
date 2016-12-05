@@ -2,7 +2,7 @@
   "name": "dark-plus-material",
   "displayName": "Dark+ Material",
   "description": "Default Dark+ Theme, with material palette",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "publisher": "vangware",
   "license": "MIT",
   "galleryBanner": {
@@ -20,7 +20,10 @@
     "dark",
     "vscode",
     "material",
-    "google"
+    "google",
+    "colorful",
+    "saturated",
+    "improve"
   ],
   "icon": "icon.svg",
   "contributes": {
