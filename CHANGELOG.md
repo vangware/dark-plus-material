@@ -1,3 +1,6 @@
+## 0.1.4
+- Better icon (transparent background).
+
 ## 0.1.3
 - Only 5 tags? ok...
 
