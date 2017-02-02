@@ -3,6 +3,7 @@
   "settings": [
     {
       "settings": {
+        "foreground": "#9E9E9E",
         "background": "#212121",
         "invisibles": "#424242"
       }

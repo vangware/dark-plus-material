@@ -1,4 +1,6 @@
 # Dark+ Material
+**v0.1.5**
+
 The default Dark+ Theme, with material palette.
 
 ## Reason
