@@ -1,3 +1,6 @@
+## 0.1.5
+- Fixed issue with colors in VSCode 1.9.0.
+
 ## 0.1.4
 - Better icon (transparent background).
 
