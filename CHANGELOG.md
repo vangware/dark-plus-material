@@ -1,3 +1,6 @@
+## 0.1.6
+- Better color for default text (white instead of gray).
+
 ## 0.1.5
 - Fixed issue with colors in VSCode 1.9.0.
 
