@@ -1,5 +1,5 @@
 # Dark+ Material
-**v0.1.6**
+**v0.1.7**
 
 The default Dark+ Theme, with material palette.
 
@@ -34,7 +34,3 @@ ext install dark-plus-material
 
 - [Material Icon Theme](https://marketplace.visualstudio.com/items?itemName=PKief.material-icon-theme) (by [Philipp Kief](https://github.com/PKief)): Beautiful icon theme that looks awesome with this theme.
 - [FiraCode](https://github.com/tonsky/FiraCode) (by [Nikita Prokopov](https://github.com/tonsky)): The best code ligature font I found, used in the screenshots.
-
-## Color changes made in this theme
-
-![](https://raw.githubusercontent.com/vangware/dark-plus-material/master/screenshots/colors.gif)

@@ -1,0 +1,12 @@
+.foobar(@foo, @bar) {
+	background-color: @foo;
+	color: @bar;
+}
+
+#foo {
+	.foobar(#fff, #000);
+}
+
+#foo > .bar {
+	.foobar(#000, #fff);
+}

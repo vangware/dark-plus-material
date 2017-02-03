@@ -1,3 +1,6 @@
+## 0.1.7
+- Added update script for easy fix of styles in the future.
+
 ## 0.1.6
 - Better color for default text (white instead of gray).
 
