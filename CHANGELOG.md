@@ -1,3 +1,7 @@
+## 0.2.1
+- Finally working as intended.
+- Added new screnshots.
+
 ## 0.2.0
 - Better yet code.
 
