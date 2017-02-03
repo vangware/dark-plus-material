@@ -1,5 +1,5 @@
 # Dark+ Material
-**v0.2.0**
+**v0.2.1**
 
 The default Dark+ Theme, with material palette.
 
@@ -14,13 +14,13 @@ Visual Studio Code.
 ## Screenshots
 
 ### JavaScript
-![](https://raw.githubusercontent.com/vangware/dark-plus-material/master/screenshots/js.gif)
+![](https://raw.githubusercontent.com/vangware/dark-plus-material/master/screenshots/javascript.jpeg)
 
 ### LESS
-![](https://raw.githubusercontent.com/vangware/dark-plus-material/master/screenshots/less.gif)
+![](https://raw.githubusercontent.com/vangware/dark-plus-material/master/screenshots/less.jpeg)
 
 ### TypeScript
-![](https://raw.githubusercontent.com/vangware/dark-plus-material/master/screenshots/ts.gif)
+![](https://raw.githubusercontent.com/vangware/dark-plus-material/master/screenshots/typescript.jpeg)
 
 ## Installing
 
