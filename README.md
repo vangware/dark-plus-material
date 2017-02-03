@@ -1,5 +1,5 @@
 # Dark+ Material
-**v0.1.7**
+**v0.2.0**
 
 The default Dark+ Theme, with material palette.
 

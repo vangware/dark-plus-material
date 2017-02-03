@@ -1,3 +1,6 @@
+## 0.2.0
+- Better yet code.
+
 ## 0.1.7
 - Added update script for easy fix of styles in the future.
 
