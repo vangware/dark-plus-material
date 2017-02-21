@@ -1,3 +1,6 @@
+## 0.2.4
+- Fixed issue with icon size.
+
 ## 0.2.3
 - Fixed issue with the raw logo.
 
