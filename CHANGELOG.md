@@ -1,3 +1,6 @@
+## 0.2.3
+- Fixed issue with the raw logo.
+
 ## 0.2.2
 - Updated logo.
 - Added link to Light+ Material.
