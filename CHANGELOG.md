@@ -1,3 +1,7 @@
+## 0.2.2
+- Updated logo.
+- Added link to Light+ Material.
+
 ## 0.2.1
 - Finally working as intended.
 - Added new screnshots.
