@@ -93,11 +93,11 @@ request(darkDefaults, (errorDefaults, responseDefaults, bodyDefaults) => {
 		const darkVSSettings = JSON.parse(bodyVS).tokenColors;
 		request(darkPlus, (errorPlus, responsePlus, bodyPlus) => {
 			const darkPlusSettings = JSON.parse(bodyPlus).tokenColors;
-			const tokenColors = objectToSettings(settingsToObject(darkVSSettings
+			const settings = objectToSettings(settingsToObject(darkVSSettings
 				.concat(darkPlusSettings).map(setting => cleanAndSet(setting))));
 			writeFile(
 				`${__dirname}/dark-plus-material.json`,
-				JSON.stringify(Object.assign(theme, { tokenColors }), 2, " "),
+				JSON.stringify(Object.assign(theme, { settings }), 2, " "),
 				error => {
 					console.log(!error ? "dark-plus-material.json done!" : "Error with dark-plus-material.json");
 				}
