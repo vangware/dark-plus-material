@@ -1,6 +1,11 @@
 {
+ "$schema": "vscode://schemas/color-theme",
  "name": "Dark+ Material",
- "settings": [
+ "colors": {
+  "editorBackground": "#212121",
+  "editorForeground": "#9E9E9E"
+ },
+ "tokenColors": [
   {
    "settings": {
     "foreground": "#9E9E9E",

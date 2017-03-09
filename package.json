@@ -2,7 +2,7 @@
   "name": "dark-plus-material",
   "displayName": "Dark+ Material",
   "description": "Default Dark+ Theme, with material palette",
-  "version": "0.2.4",
+  "version": "0.3.0",
   "publisher": "vangware",
   "license": "MIT",
   "galleryBanner": {
@@ -43,7 +43,7 @@
     "url": "https://github.com/vangware/dark-plus-material"
   },
   "devDependencies": {
-    "@types/request": "0.0.39",
-    "request": "^2.79.0"
+    "@types/request": "0.0.41",
+    "request": "^2.81.0"
   }
 }

@@ -1,4 +1,6 @@
 .editorconfig
 .gitattributes
 .gitignore
+examples
 jsconfig.json
+update.js

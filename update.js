@@ -5,6 +5,7 @@ const { writeFile } = require("fs");
 
 // External files
 const repoBase = "https://raw.githubusercontent.com/Microsoft/vscode/master/extensions/theme-defaults/themes";
+const darkDefaults = `${repoBase}/dark_defaults.json`;
 const darkVS = `${repoBase}/dark_vs.json`;
 const darkPlus = `${repoBase}/dark_plus.json`;
 
@@ -46,7 +47,7 @@ const cleanAndSet = ({ scope, settings }) => {
 };
 
 /**
- * Transform settings to a plail oject (to address duplicates).
+ * Transform settings to a plain oject (to address duplicates).
  *
  * @param {any} out
  * @param {any} setting
@@ -78,15 +79,29 @@ const objectToSettings = settings => Object.keys(settings).map(setting => settin
 	settings: settings[setting]
 }))
 
-request(darkVS, (errorVS, responseVS, bodyVS) => {
-	const darkVSSettings = JSON.parse(bodyVS).settings;
-	request(darkPlus, (errorPlus, responsePlus, bodyPlus) => {
-		const darkPlusSettings = JSON.parse(bodyPlus).settings;
-		const settings = objectToSettings(settingsToObject(darkVSSettings
-			.concat(darkPlusSettings).map(setting => cleanAndSet(setting))));
-		const theme = { name: "Dark+ Material", settings };
-		writeFile(`${__dirname}/dark-plus-material.json`, JSON.stringify(theme, 2, " "), error => {
-			console.log(!error ? "dark-plus-material.json done!" : "Error with dark-plus-material.json");
+request(darkDefaults, (errorDefaults, responseDefaults, bodyDefaults) => {
+	const darkDefaultsSettings = JSON.parse(bodyDefaults).colors;
+	const theme = {
+		$schema: "vscode://schemas/color-theme",
+		name: "Dark+ Material",
+		colors: {
+			editorBackground: colorMap[darkDefaultsSettings.editorBackground.toUpperCase()],
+			editorForeground: colorMap[darkDefaultsSettings.editorForeground.toUpperCase()],
+		}
+	};
+	request(darkVS, (errorVS, responseVS, bodyVS) => {
+		const darkVSSettings = JSON.parse(bodyVS).tokenColors;
+		request(darkPlus, (errorPlus, responsePlus, bodyPlus) => {
+			const darkPlusSettings = JSON.parse(bodyPlus).tokenColors;
+			const tokenColors = objectToSettings(settingsToObject(darkVSSettings
+				.concat(darkPlusSettings).map(setting => cleanAndSet(setting))));
+			writeFile(
+				`${__dirname}/dark-plus-material.json`,
+				JSON.stringify(Object.assign(theme, { tokenColors }), 2, " "),
+				error => {
+					console.log(!error ? "dark-plus-material.json done!" : "Error with dark-plus-material.json");
+				}
+			);
 		});
 	});
 });

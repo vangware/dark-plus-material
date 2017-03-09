@@ -1,3 +1,7 @@
+## 0.3.0
+- Updated for the new theme structure.
+- Added some unnecesary files for the user in the .npmignore.
+
 ## 0.2.4
 - Fixed issue with icon size.
 
