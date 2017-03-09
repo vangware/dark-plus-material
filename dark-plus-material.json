@@ -5,7 +5,7 @@
   "editorBackground": "#212121",
   "editorForeground": "#9E9E9E"
  },
- "tokenColors": [
+ "settings": [
   {
    "settings": {
     "foreground": "#9E9E9E",

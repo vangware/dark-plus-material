@@ -1,3 +1,6 @@
+## 0.3.1
+- Fixed issue (new structure is not for plugins, yet).
+
 ## 0.3.0
 - Updated for the new theme structure.
 - Added some unnecesary files for the user in the .npmignore.
