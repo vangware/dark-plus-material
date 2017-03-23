@@ -1,3 +1,6 @@
+## 0.3.3
+- Quicker animation, because of reasons.
+
 ## 0.3.2
 - Updated to animated icon.
 
