@@ -1,3 +1,6 @@
+## 0.3.2
+- Updated to animated icon.
+
 ## 0.3.1
 - Fixed issue (new structure is not for plugins, yet).
 

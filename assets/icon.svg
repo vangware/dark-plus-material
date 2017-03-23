@@ -1,5 +1,29 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="-1 -1 18 18" xmlns:xlink="http://www.w3.org/1999/xlink">
 
+	<style type="text/css">
+	@keyframes spin {
+		from { transform: rotate(0deg); }
+		to { transform: rotate(360deg); }
+	}
+	@keyframes spin-inverse {
+		from { transform: rotate(360deg); }
+		to { transform: rotate(0deg); }
+	}
+	g > g {
+		animation-iteration-count: infinite;
+		animation-timing-function: linear;
+		transform-origin: 50%;
+	}
+	#bg, #mg, #sg {
+		animation-name: spin;
+		animation-duration: 30s;
+	}
+	#xg {
+		animation-name: spin-inverse;
+		animation-duration: 15s;
+	}
+	</style>
+
 	<defs>
 		<path id="b" d="M2.344 2.349A8 8 0 0 0 0 7.999a8 8 0 0 0 2.344 5.651v-11.3z" />
 		<path id="m" d="M2.344 2.349h5.657v5.657H2.344z"/>
@@ -7,29 +31,36 @@
 		<path id="x" d="M8 3.757a4.243 4.243 0 0 0-4.242 4.243H8v-4.243z"/>
 	</defs>
 
-
 	<circle fill="#212121" cx="8" cy="8" r="9"/>
 
 	<g transform="rotate(45 8 8)">
-		<use xlink:href="#b" fill="#f44336" />
-		<use xlink:href="#b" fill="#fff" transform="rotate(90 8 8)" />
-		<use xlink:href="#b" fill="#009688" transform="rotate(180 8 8)" />
-		<use xlink:href="#b" fill="#3f51b5" transform="rotate(270 8 8)" />
+		<g id="bg">
+			<use xlink:href="#b" fill="#f44336" />
+			<use xlink:href="#b" fill="#fff" transform="rotate(90 8 8)" />
+			<use xlink:href="#b" fill="#009688" transform="rotate(180 8 8)" />
+			<use xlink:href="#b" fill="#3f51b5" transform="rotate(270 8 8)" />
+		</g>
 
-		<use xlink:href="#m" fill="#8bc34a" />
-		<use xlink:href="#m" fill="#9c27b0" transform="rotate(90 8 8)" />
-		<use xlink:href="#m" fill="#607d8b" transform="rotate(180 8 8)" />
-		<use xlink:href="#m" fill="#03a9f4" transform="rotate(270 8 8)" />
+		<g id="mg">
+			<use xlink:href="#m" fill="#8bc34a" />
+			<use xlink:href="#m" fill="#9c27b0" transform="rotate(90 8 8)" />
+			<use xlink:href="#m" fill="#607d8b" transform="rotate(180 8 8)" />
+			<use xlink:href="#m" fill="#03a9f4" transform="rotate(270 8 8)" />
+		</g>
 
-		<use xlink:href="#s" fill="#ffc107" />
-		<use xlink:href="#s" fill="#00bcd4" transform="scale(-1 1) translate(-16)" />
-		<use xlink:href="#s" fill="#ff5722" transform="scale(-1 -1) translate(-16 -16)" />
-		<use xlink:href="#s" fill="#cddc39" transform="scale(1 -1) translate(0 -16)" />
+		<g id="sg">
+			<use xlink:href="#s" fill="#ffc107" />
+			<use xlink:href="#s" fill="#00bcd4" transform="scale(-1 1) translate(-16)" />
+			<use xlink:href="#s" fill="#ff5722" transform="scale(-1 -1) translate(-16 -16)" />
+			<use xlink:href="#s" fill="#cddc39" transform="scale(1 -1) translate(0 -16)" />
+		</g>
 
-		<use xlink:href="#x" fill="#e91e63" />
-		<use xlink:href="#x" fill="#ffeb3b" transform="rotate(90 8 8)" />
-		<use xlink:href="#x" fill="#ff9800" transform="rotate(180 8 8)" />
-		<use xlink:href="#x" fill="#9e9e9e" transform="rotate(270 8 8)" />
+		<g id="xg">
+			<use xlink:href="#x" fill="#e91e63" />
+			<use xlink:href="#x" fill="#ffeb3b" transform="rotate(90 8 8)" />
+			<use xlink:href="#x" fill="#ff9800" transform="rotate(180 8 8)" />
+			<use xlink:href="#x" fill="#9e9e9e" transform="rotate(270 8 8)" />
+		</g>
 
 		<circle fill="#2196f3" cx="8" cy="8" r="2.121"/>
 	</g>
