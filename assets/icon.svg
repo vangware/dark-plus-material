@@ -16,11 +16,11 @@
 	}
 	#bg, #mg, #sg {
 		animation-name: spin;
-		animation-duration: 30s;
+		animation-duration: 10s;
 	}
 	#xg {
 		animation-name: spin-inverse;
-		animation-duration: 15s;
+		animation-duration: 5s;
 	}
 	</style>
 
