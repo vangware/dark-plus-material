@@ -1,3 +1,7 @@
+## 0.3.4
+- Micro-update for v1.11 of VSCode.
+- Added update script to package.json.
+
 ## 0.3.3
 - Quicker animation, because of reasons.
 
