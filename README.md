@@ -1,11 +1,13 @@
 ![](https://cdn.rawgit.com/vangware/dark-plus-material/master/assets/logo.svg)
-**v0.3.4**
+**v0.3.5**
 
 The default Dark+ Theme, with material palette. For the Light alternative, [click here](https://marketplace.visualstudio.com/items?itemName=vangware.light-plus-material)!
 
 ## Reason
 
 I really love the default Dark+ Theme that comes with Visual Studio Code, but also love the Material Design Palette. The thing is I didn't found a good material theme (the coloring is always ugly for my taste). So I made this theme that implements the Material Design Palette in the Dark+ theme that comes with Visual Studio Code.
+
+More than 10k downloads! Thanks a lot for the love!
 
 ## Screenshots
 

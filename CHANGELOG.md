@@ -1,3 +1,7 @@
+## 0.3.5
+- Updated dependencies.
+- Added gratitude in the README.md.
+
 ## 0.3.4
 - Micro-update for v1.11 of VSCode.
 - Added update script to package.json.
