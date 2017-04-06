@@ -280,6 +280,12 @@
    }
   },
   {
+   "scope": "punctuation.definition.template-expression.begin.js",
+   "settings": {
+    "foreground": "#2196F3"
+   }
+  },
+  {
    "scope": "punctuation.definition.template-expression.begin.ts",
    "settings": {
     "foreground": "#2196F3"
@@ -287,6 +293,12 @@
   },
   {
    "scope": "punctuation.definition.template-expression.end.ts",
+   "settings": {
+    "foreground": "#2196F3"
+   }
+  },
+  {
+   "scope": "punctuation.definition.template-expression.end.js",
    "settings": {
     "foreground": "#2196F3"
    }
@@ -347,6 +359,18 @@
   },
   {
    "scope": "keyword.operator.expression",
+   "settings": {
+    "foreground": "#2196F3"
+   }
+  },
+  {
+   "scope": "keyword.operator.cast",
+   "settings": {
+    "foreground": "#2196F3"
+   }
+  },
+  {
+   "scope": "keyword.operator.sizeof",
    "settings": {
     "foreground": "#2196F3"
    }
@@ -551,12 +575,6 @@
   },
   {
    "scope": "storage.type.primitive.groovy",
-   "settings": {
-    "foreground": "#009688"
-   }
-  },
-  {
-   "scope": "meta.return.type",
    "settings": {
     "foreground": "#009688"
    }
