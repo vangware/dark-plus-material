@@ -2,7 +2,7 @@
   "name": "dark-plus-material",
   "displayName": "Dark+ Material",
   "description": "Default Dark+ Theme, with material palette",
-  "version": "0.3.4",
+  "version": "0.3.5",
   "publisher": "vangware",
   "license": "MIT",
   "galleryBanner": {
@@ -46,7 +46,7 @@
     "update": "node ./update.js"
   },
   "devDependencies": {
-    "@types/request": "0.0.41",
+    "@types/request": "0.0.42",
     "request": "^2.81.0"
   }
 }
