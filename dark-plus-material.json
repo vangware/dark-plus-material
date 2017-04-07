@@ -156,7 +156,8 @@
   {
    "scope": "markup.italic",
    "settings": {
-    "fontStyle": "italic"
+    "fontStyle": "italic",
+    "foreground": "#EEEEEE"
    }
   },
   {
@@ -178,15 +179,51 @@
    }
   },
   {
+    "scope": "markup.raw.block",
+    "settings": {
+      "foreground": "#689F38"
+    }
+  },
+  {
+    "scope": "punctuation.definition.markdown",
+    "settings": {
+      "foreground": "#2196F3"
+    }
+  },
+  {
+    "scope": "markup.fenced_code.block",
+    "settings": {
+      "foreground": "#689F38"
+    }
+  },
+  {
+    "scope": "fenced_code.block.language",
+    "settings": {
+      "foreground": "#FFEB3B"
+    }
+  },
+  {
    "scope": "beginning.punctuation.definition.quote.markdown",
    "settings": {
-    "foreground": "#8BC34A"
+    "foreground": "#2196F3"
+   }
+  },
+  {
+   "scope": "markup.quote",
+   "settings": {
+    "foreground": "#F57C00"
+   }
+  },
+  {
+   "scope": "markup.list",
+   "settings": {
+    "foreground": "#607D8B"
    }
   },
   {
    "scope": "beginning.punctuation.definition.list.markdown",
    "settings": {
-    "foreground": "#03A9F4"
+    "foreground": "#2196F3"
    }
   },
   {
