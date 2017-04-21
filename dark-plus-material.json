@@ -376,6 +376,12 @@
    }
   },
   {
+   "scope": "keyword.operator.logical.python",
+   "settings": {
+    "foreground": "#2196F3"
+   }
+  },
+  {
    "scope": "keyword.other.unit",
    "settings": {
     "foreground": "#CDDC39"
