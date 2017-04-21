@@ -39,9 +39,15 @@ const cleanAndSet = ({ scope, settings }) => {
 	const { background, foreground } = settings;
 	if (background) {
 		settings.background = colorMap[background.toUpperCase()];
+		if (settings.background === void 0) {
+			throw new Error(`${background} is missing in colorMap.`);
+		}
 	}
 	if (foreground) {
 		settings.foreground = colorMap[foreground.toUpperCase()];
+		if (settings.foreground === void 0) {
+			throw new Error(`${foreground} is missing in colorMap.`);
+		}
 	}
 	return { scope, settings };
 };

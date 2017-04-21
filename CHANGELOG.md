@@ -1,3 +1,7 @@
+## 0.3.6
+- Updated theme.
+- Added undefined colors detection on update script.
+
 ## 0.3.5
 - Updated dependencies.
 - Added gratitude in the README.md.
