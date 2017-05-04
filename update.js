@@ -2,6 +2,7 @@
 
 const request = require("request");
 const { writeFile } = require("fs");
+const missingColors = require("./missing-colors.json");
 
 // External files
 const repoBase = "https://raw.githubusercontent.com/Microsoft/vscode/master/extensions/theme-defaults/themes";
@@ -9,25 +10,64 @@ const darkDefaults = `${repoBase}/dark_defaults.json`;
 const darkVS = `${repoBase}/dark_vs.json`;
 const darkPlus = `${repoBase}/dark_plus.json`;
 
-const colorMap = {
-	"#000080": "#3F51B5",
-	"#1E1E1E": "#212121",
-	"#4EC9B0": "#009688",
-	"#569CD6": "#2196F3",
-	"#608B4E": "#8BC34A",
-	"#646695": "#9C27B0",
-	"#6796E6": "#03A9F4",
-	"#808080": "#607D8B",
-	"#9CDCFE": "#00BCD4",
-	"#B5CEA8": "#CDDC39",
-	"#C586C0": "#E91E63",
-	"#CE9178": "#FFC107",
-	"#D16969": "#FF5722",
-	"#D4D4D4": "#9E9E9E",
-	"#D7BA7D": "#FF9800",
-	"#DCDCAA": "#FFEB3B",
-	"#F44747": "#F44336"
-};
+const colorMap = (colorMap => Object.keys(colorMap).reduce(
+	(map, color) => Object.assign(
+		map,
+		colorMap[color].reduce(
+			(base, baseColor) => Object.assign(base, {
+				[baseColor]: color
+			}),
+			Object.create(null)
+		)
+	),
+	Object.create(null)
+))({
+	// Red
+	"#F44336": ["#F44747", "#3C2120"], // 500
+	"#B71C1C": ["#471F1D"], // 900
+	// Pink
+	"#E91E63": ["#C586C0"],
+	// Purple
+	"#9C27B0": ["#646695"],
+	// Indigo
+	"#3F51B5": ["#000080"],
+	// Blue
+	"#2196F3": ["#569CD6", "#297FC9"],
+	// Green
+	"#1B5E20": ["#3B3E2B"], // 900
+	// Light Blue
+	"#03A9F4": ["#6796E6", "#2F7AB8"],
+	// Cyan
+	"#00BCD4": ["#9CDCFE"],
+	// Teal
+	"#009688": ["#4EC9B0"],
+	// Light Green
+	"#8BC34A": ["#608B4E"],
+	// Lime
+	"#CDDC39": ["#B5CEA8"],
+	// Yellow
+	"#FFEB3B": ["#DCDCAA"],
+	// Amber
+	"#FFC107": ["#CE9178"],
+	// Orange
+	"#FF9800": ["#D7BA7D"],
+	// Deep Orange
+	"#FF5722": ["#D16969"],
+	// Brown:
+	"#795548": ["#4B382C", "#282E32"],
+	// White
+	"#FFFFFF": ["#FFFFFF", "#ADADAD", "#AEAFAD"],
+	// Grey
+	"#9E9E9E": ["#D4D4D4", "#585858"], // 500
+	"#424242": ["#404040", "#333333", "#3C3C3C", "#535C69"], // 800
+	"#212121": ["#1E1E1E"], // 900
+	// Blue Grey
+	"#607D8B": ["#808080"], // 500
+	"#37474F": ["#2D5176"], // 800
+	"#263238": ["#27394C"], // 900
+	// N/A
+	"#FF00FF": ["#3A3D41", "#ADD6FF26", "#3A3D41", "#383B3D"]
+});
 
 /**
  * Removes unwanted properties and set the material colors based on colorMap.
@@ -86,14 +126,20 @@ const objectToSettings = settings => Object.keys(settings).map(setting => settin
 }))
 
 request(darkDefaults, (errorDefaults, responseDefaults, bodyDefaults) => {
-	const darkDefaultsSettings = JSON.parse(bodyDefaults).colors;
+	const darkDefaultColors = Object.assign(JSON.parse(bodyDefaults).colors, missingColors);
+	const themeColors = Object.keys(darkDefaultColors).reduce((colors, property) => Object.assign(colors, {
+		[property]: colorMap[darkDefaultColors[property].toUpperCase()],
+	}), {});
+	Object.keys(themeColors).forEach(property => {
+		const color = themeColors[property];
+		if (color === void 0) {
+			throw new Error(`${property} (${darkDefaultColors[property].toUpperCase()}) is missing in colorMap.`);
+		}
+	});
 	const theme = {
 		$schema: "vscode://schemas/color-theme",
 		name: "Dark+ Material",
-		colors: {
-			editorBackground: colorMap[darkDefaultsSettings.editorBackground.toUpperCase()],
-			editorForeground: colorMap[darkDefaultsSettings.editorForeground.toUpperCase()],
-		}
+		colors: themeColors
 	};
 	request(darkVS, (errorVS, responseVS, bodyVS) => {
 		const darkVSSettings = JSON.parse(bodyVS).tokenColors;

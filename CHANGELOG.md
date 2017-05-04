@@ -1,3 +1,8 @@
+## 0.4.0
+- Updated theme to have editor customizations.
+- There are lots of properties missing from the default Dark+ Theme, so I created `missing-colors.json` with some of them.
+- In the next version all missing colors will be available in `missing-colors.json` until they are added to the default theme.
+
 ## 0.3.6
 - Updated theme.
 - Added undefined colors detection on update script.
