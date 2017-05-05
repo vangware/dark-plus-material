@@ -1,3 +1,8 @@
+## 1.0.0
+- Changed update script to use TypeScript, fetch and promises.
+- Moved update stuff to src directory.
+- In next patch all the missing colors and update in the screenshots.
+
 ## 0.4.0
 - Updated theme to have editor customizations.
 - There are lots of properties missing from the default Dark+ Theme, so I created `missing-colors.json` with some of them.
