@@ -23,7 +23,6 @@ export const missingDefaultColors = {
 	"editor.findMatchHighlightBackground": "#4B382C",
 	"editor.hoverHighlightBackground": "#404040",
 	"editor.inactiveSelectionBackground": "#27394C",
-	"editor.lineHighlightBackground": "#404040",
 	"editor.selectionBackground": "#2D5176",
 	"editor.selectionHighlightBackground": "#282E32",
 	"editorCursor.foreground": "#AEAFAD",
