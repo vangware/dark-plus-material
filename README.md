@@ -1,5 +1,5 @@
 ![](https://cdn.rawgit.com/vangware/dark-plus-material/master/assets/logo.svg)
-**v0.4.0**
+**v1.0.1**
 
 The default Dark+ Theme, with material palette. For the Light alternative, [click here](https://marketplace.visualstudio.com/items?itemName=vangware.light-plus-material)!
 

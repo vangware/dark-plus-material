@@ -1,3 +1,6 @@
+## 1.0.1
+- Temporary fix for issue 2.
+
 ## 1.0.0
 - Changed update script to use TypeScript, fetch and promises.
 - Moved update stuff to src directory.
