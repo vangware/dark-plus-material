@@ -28,6 +28,6 @@ Promise
 		colors,
 		tokenColors
 	}))
-	.then(theme => writeFile(`${__dirname}/../dark-plus-material.json`, JSON.stringify(theme)))
+	.then(theme => writeFile(`${__dirname}/../dark-plus-material.json`, JSON.stringify(theme, null, "  ")))
 	.then(() => console.log("dark-plus-material.json done!"))
 	.catch(() => console.error("Error with dark-plus-material.json update"))

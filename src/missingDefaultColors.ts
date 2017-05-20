@@ -41,5 +41,7 @@ export const missingDefaultColors = {
 	"input.foreground": "#D4D4D4",
 	"inputValidation.errorBackground": "#3C2120",
 	"inputValidation.errorBorder": "#3C2120",
-	"sideBar.background": "#1E1E1E"
+	"list.dropBackground": "#383B3D",
+	"sideBar.background": "#1E1E1E",
+	"sideBarTitle.foreground": "#BBBBBB"
 };
