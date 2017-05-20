@@ -1,3 +1,7 @@
+## 1.0.2
+- Minimal update to latest VSCode Dark+ Theme.
+- Hopefuly the default theme will come with tall the default colors to be replaced by this theme.
+
 ## 1.0.1
 - Temporary fix for issue 2.
 
