@@ -41,7 +41,6 @@
     "editorWidget.background": "#424242",
     "input.background": "#424242",
     "input.foreground": "#9E9E9E",
-    "inputValidation.errorBackground": "#F44336",
     "inputValidation.errorBorder": "#F44336",
     "sideBar.background": "#212121"
   },

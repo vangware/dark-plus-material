@@ -1,3 +1,6 @@
+## 1.0.3
+- Removed error color for now ... all colors should be defined on the default dark themes.
+
 ## 1.0.2
 - Minimal update to latest VSCode Dark+ Theme.
 - Hopefuly the default theme will come with tall the default colors to be replaced by this theme.
