@@ -39,7 +39,6 @@ export const missingDefaultColors = {
 	"editorWidget.background": "#404040",
 	"input.background": "#404040",
 	"input.foreground": "#D4D4D4",
-	"inputValidation.errorBackground": "#3C2120",
 	"inputValidation.errorBorder": "#3C2120",
 	"list.dropBackground": "#383B3D",
 	"sideBar.background": "#1E1E1E",
