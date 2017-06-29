@@ -1,3 +1,10 @@
+## 1.0.4
+- Changed SVG icon to PNG.
+- Updated theme.
+- Added package-lock.json for latest version of NPM.
+- Updated old packages.
+- Removed pn to use promisify from native package utils.
+
 ## 1.0.3
 - Removed error color for now ... all colors should be defined on the default dark themes.
 
