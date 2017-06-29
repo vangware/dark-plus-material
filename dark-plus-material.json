@@ -342,6 +342,12 @@
       }
     },
     {
+      "scope": "punctuation.section.embedded.coffee",
+      "settings": {
+        "foreground": "#2196F3"
+      }
+    },
+    {
       "scope": "support.type.vendored.property-name",
       "settings": {
         "foreground": "#00BCD4"
@@ -367,6 +373,12 @@
     },
     {
       "scope": "variable.other.less",
+      "settings": {
+        "foreground": "#00BCD4"
+      }
+    },
+    {
+      "scope": "source.coffee.embedded",
       "settings": {
         "foreground": "#00BCD4"
       }

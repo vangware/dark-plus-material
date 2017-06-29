@@ -1,9 +1,12 @@
-import { writeFile } from "pn/fs";
+import { writeFile } from "fs";
+import { promisify } from "util";
 import fetch from "node-fetch";
 import { missingDefaultColors } from "./missingDefaultColors";
 import { defaultsUrl, plusUrl, vsUrl, colorMap } from "./config";
 import { replaceColors, removeDuplicatedColors } from "./helpers";
 import { Theme } from "./interfaces";
+
+const writeFileAsync = promisify(writeFile);
 
 Promise
 	.all([
@@ -28,6 +31,6 @@ Promise
 		colors,
 		tokenColors
 	}))
-	.then(theme => writeFile(`${__dirname}/../dark-plus-material.json`, JSON.stringify(theme, null, "  ")))
+	.then(theme => writeFileAsync(`${__dirname}/../dark-plus-material.json`, JSON.stringify(theme, null, "  ")))
 	.then(() => console.log("dark-plus-material.json done!"))
 	.catch(() => console.error("Error with dark-plus-material.json update"))
