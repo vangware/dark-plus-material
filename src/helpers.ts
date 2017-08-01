@@ -7,10 +7,14 @@ import { TokenColor, PlainSettings } from "./interfaces";
  * @param {object} source Source map.
  * @returns {object} Inverted map.
  */
-export const invertMap = (source: object) => Object.keys(source).reduce((map, item) => ({
-	...map,
-	...source[item].reduce((base, baseItem) => ({ ...base, [baseItem]: item }), {})
-}), {});
+export const invertMap = (source: object) =>
+	Object.keys(source).reduce(
+		(map, item) => ({
+			...map,
+			...source[item].reduce((base, baseItem) => ({ ...base, [baseItem]: item }), {})
+		}),
+		{}
+	);
 
 /**
  * Removes unwanted properties and set the material colors based on colorMap.
@@ -38,13 +42,20 @@ export const replaceColors = ({ scope, settings }: TokenColor, map: object) => {
  * @param {TokenColor[]} settings
  * @returns {PlainSettings}
  */
-export const flattenTokenColors = (tokenColors: TokenColor[]) => tokenColors.reduce((out, setting): PlainSettings => ({
-	...out,
-	...(Array.isArray(setting.scope) ? setting.scope : [setting.scope]).reduce((out, key) => ({
-		...out,
-		[key || "vscode"]: out[key] ? ({ ...out[key], ...setting.settings }) : setting.settings
-	}), {})
-}), {});
+export const flattenTokenColors = (tokenColors: TokenColor[]): PlainSettings =>
+	<PlainSettings>tokenColors.reduce(
+		(out, setting) => ({
+			...out,
+			...(Array.isArray(setting.scope) ? setting.scope : [setting.scope]).reduce(
+				(out, key) => ({
+					...out,
+					[key || "vscode"]: out[key] ? { ...out[key], ...setting.settings } : setting.settings
+				}),
+				{}
+			)
+		}),
+		{}
+	);
 
 /**
  * Transform object to settings file.
@@ -53,13 +64,18 @@ export const flattenTokenColors = (tokenColors: TokenColor[]) => tokenColors.red
  * @param {Settings} settings
  * @returns {TokenColor[]}
  */
-export const expandTokenColors = (settings: PlainSettings): TokenColor[] => Object.keys(settings)
-	.map(setting => setting !== "vscode" ? ({
-		scope: setting,
-		settings: settings[setting]
-	}) : ({
-		settings: settings[setting]
-	}));
+export const expandTokenColors = (settings: PlainSettings): TokenColor[] =>
+	Object.keys(settings).map(
+		setting =>
+			setting !== "vscode"
+				? {
+						scope: setting,
+						settings: settings[setting]
+					}
+				: {
+						settings: settings[setting]
+					}
+	);
 
 /**
  * Removes duplicated colors by flatting and then expanding tokenColors.
@@ -68,4 +84,5 @@ export const expandTokenColors = (settings: PlainSettings): TokenColor[] => Obje
  * @param {tokenColor[]} tokenColors
  * @returns {TokenColor[]}
  */
-export const removeDuplicatedColors = (tokenColors: TokenColor[]): TokenColor[] => expandTokenColors(flattenTokenColors(tokenColors));
+export const removeDuplicatedColors = (tokenColors: TokenColor[]): TokenColor[] =>
+	expandTokenColors(flattenTokenColors(tokenColors));

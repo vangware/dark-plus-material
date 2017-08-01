@@ -1,3 +1,9 @@
+## 1.0.5
+- Updated TS code.
+- Updated theme to latests VSCode repo stuff.
+- Updated node dependencies.
+- Removed SVGs from README.md because sudenly VSCode team is afraid or alergic to SVGs.
+
 ## 1.0.4
 - Changed SVG icon to PNG.
 - Updated theme.
