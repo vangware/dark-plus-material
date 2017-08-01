@@ -8,12 +8,7 @@ import { Theme } from "./interfaces";
 
 const writeFileAsync = promisify(writeFile);
 
-Promise
-	.all([
-		defaultsUrl,
-		vsUrl,
-		plusUrl
-	].map(url => fetch(url)))
+Promise.all([defaultsUrl, vsUrl, plusUrl].map(url => fetch(url)))
 	.then(responses => Promise.all<Theme>(responses.map(response => response.json())))
 	.then(([defaults, vs, plus]) => ({
 		defaults: { ...defaults.colors, ...missingDefaultColors },
@@ -21,7 +16,8 @@ Promise
 		plus: plus.tokenColors
 	}))
 	.then(({ defaults, vs, plus }) => ({
-		colors: Object.keys(defaults).map(key => ({ key, value: defaults[key].toUpperCase() }))
+		colors: Object.keys(defaults)
+			.map(key => ({ key, value: defaults[key].toUpperCase() }))
 			.reduce((colors, { key, value }) => ({ ...colors, [key]: colorMap[value] || "MISSING" }), {}),
 		tokenColors: removeDuplicatedColors([...vs, ...plus].map(setting => replaceColors(setting, colorMap)))
 	}))
@@ -33,4 +29,4 @@ Promise
 	}))
 	.then(theme => writeFileAsync(`${__dirname}/../dark-plus-material.json`, JSON.stringify(theme, null, "  ")))
 	.then(() => console.log("dark-plus-material.json done!"))
-	.catch(() => console.error("Error with dark-plus-material.json update"))
+	.catch(() => console.error("Error with dark-plus-material.json update"));
