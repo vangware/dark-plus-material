@@ -348,6 +348,18 @@
       }
     },
     {
+      "scope": "meta.template.expression.js",
+      "settings": {
+        "foreground": "#9E9E9E"
+      }
+    },
+    {
+      "scope": "meta.template.expression.ts",
+      "settings": {
+        "foreground": "#9E9E9E"
+      }
+    },
+    {
       "scope": "support.type.vendored.property-name",
       "settings": {
         "foreground": "#00BCD4"
