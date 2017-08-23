@@ -1,3 +1,7 @@
+## 1.0.6
+- Updated to latest version of styles.
+- Updated dependencies.
+
 ## 1.0.5
 - Updated TS code.
 - Updated theme to latests VSCode repo stuff.

@@ -2,7 +2,7 @@
   "name": "dark-plus-material",
   "displayName": "Dark+ Material",
   "description": "Default Dark+ Theme, with material palette",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "publisher": "vangware",
   "license": "MIT",
   "galleryBanner": {
@@ -46,10 +46,10 @@
     "update": "ts-node ./src/update.ts"
   },
   "devDependencies": {
-    "@types/node": "^8.0.17",
+    "@types/node": "^8.0.24",
     "@types/node-fetch": "^1.6.7",
-    "node-fetch": "^1.7.1",
+    "node-fetch": "^1.7.2",
     "ts-node": "^3.3.0",
-    "typescript": "^2.4.2"
+    "typescript": "^2.5.1"
   }
 }

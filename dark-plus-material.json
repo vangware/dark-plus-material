@@ -318,25 +318,13 @@
       }
     },
     {
-      "scope": "punctuation.definition.template-expression.begin.js",
+      "scope": "punctuation.definition.template-expression.begin",
       "settings": {
         "foreground": "#2196F3"
       }
     },
     {
-      "scope": "punctuation.definition.template-expression.begin.ts",
-      "settings": {
-        "foreground": "#2196F3"
-      }
-    },
-    {
-      "scope": "punctuation.definition.template-expression.end.ts",
-      "settings": {
-        "foreground": "#2196F3"
-      }
-    },
-    {
-      "scope": "punctuation.definition.template-expression.end.js",
+      "scope": "punctuation.definition.template-expression.end",
       "settings": {
         "foreground": "#2196F3"
       }
@@ -348,13 +336,7 @@
       }
     },
     {
-      "scope": "meta.template.expression.js",
-      "settings": {
-        "foreground": "#9E9E9E"
-      }
-    },
-    {
-      "scope": "meta.template.expression.ts",
+      "scope": "meta.template.expression",
       "settings": {
         "foreground": "#9E9E9E"
       }
