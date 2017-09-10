@@ -52,6 +52,13 @@
       }
     },
     {
+      "scope": "meta.embedded",
+      "settings": {
+        "foreground": "#9E9E9E",
+        "background": "#212121"
+      }
+    },
+    {
       "scope": "emphasis",
       "settings": {
         "fontStyle": "italic"

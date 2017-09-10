@@ -1,3 +1,7 @@
+## 1.0.7
+- Updated to lates version of styles.
+- Updated dependencies.
+
 ## 1.0.6
 - Updated to latest version of styles.
 - Updated dependencies.
