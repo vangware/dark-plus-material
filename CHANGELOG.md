@@ -1,3 +1,6 @@
+## 1.0.8
+- Updated thanks on README.md.
+
 ## 1.0.7
 - Updated to lates version of styles.
 - Updated dependencies.
