@@ -59,6 +59,13 @@
       }
     },
     {
+      "scope": "source.groovy.embedded",
+      "settings": {
+        "foreground": "#9E9E9E",
+        "background": "#212121"
+      }
+    },
+    {
       "scope": "emphasis",
       "settings": {
         "fontStyle": "italic"
@@ -337,7 +344,7 @@
       }
     },
     {
-      "scope": "punctuation.section.embedded.coffee",
+      "scope": "punctuation.section.embedded",
       "settings": {
         "foreground": "#2196F3"
       }
@@ -748,6 +755,102 @@
       "scope": "support.constant.color",
       "settings": {
         "foreground": "#FFC107"
+      }
+    },
+    {
+      "scope": "punctuation.definition.group.regexp",
+      "settings": {
+        "foreground": "#FFC107"
+      }
+    },
+    {
+      "scope": "punctuation.definition.group.assertion.regexp",
+      "settings": {
+        "foreground": "#FFC107"
+      }
+    },
+    {
+      "scope": "punctuation.definition.character-class.regexp",
+      "settings": {
+        "foreground": "#FFC107"
+      }
+    },
+    {
+      "scope": "punctuation.character.set.begin.regexp",
+      "settings": {
+        "foreground": "#FFC107"
+      }
+    },
+    {
+      "scope": "punctuation.character.set.end.regexp",
+      "settings": {
+        "foreground": "#FFC107"
+      }
+    },
+    {
+      "scope": "keyword.operator.negation.regexp",
+      "settings": {
+        "foreground": "#FFC107"
+      }
+    },
+    {
+      "scope": "support.other.parenthesis.regexp",
+      "settings": {
+        "foreground": "#FFC107"
+      }
+    },
+    {
+      "scope": "constant.character.character-class.regexp",
+      "settings": {
+        "foreground": "#FF5722"
+      }
+    },
+    {
+      "scope": "constant.other.character-class.set.regexp",
+      "settings": {
+        "foreground": "#FF5722"
+      }
+    },
+    {
+      "scope": "constant.other.character-class.regexp",
+      "settings": {
+        "foreground": "#FF5722"
+      }
+    },
+    {
+      "scope": "constant.character.set.regexp",
+      "settings": {
+        "foreground": "#FF5722"
+      }
+    },
+    {
+      "scope": "keyword.operator.or.regexp",
+      "settings": {
+        "foreground": "#FFEB3B"
+      }
+    },
+    {
+      "scope": "keyword.control.anchor.regexp",
+      "settings": {
+        "foreground": "#FFEB3B"
+      }
+    },
+    {
+      "scope": "keyword.operator.quantifier.regexp",
+      "settings": {
+        "foreground": "#FF9800"
+      }
+    },
+    {
+      "scope": "constant.character",
+      "settings": {
+        "foreground": "#2196F3"
+      }
+    },
+    {
+      "scope": "constant.character.escape",
+      "settings": {
+        "foreground": "#FF9800"
       }
     }
   ]
