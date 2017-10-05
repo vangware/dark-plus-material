@@ -1,3 +1,6 @@
+## 1.0.10
+- Removed reference to deprecated light-plus-material.
+
 ## 1.0.9
 - Updated for VSCode 1.17.
 
