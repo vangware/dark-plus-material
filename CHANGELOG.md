@@ -1,3 +1,6 @@
+## 1.0.11
+- Updated dependencies.
+
 ## 1.0.10
 - Removed reference to deprecated light-plus-material.
 
