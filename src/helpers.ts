@@ -11,7 +11,10 @@ export const invertMap = (source: object) =>
 	Object.keys(source).reduce(
 		(map, item) => ({
 			...map,
-			...source[item].reduce((base, baseItem) => ({ ...base, [baseItem]: item }), {})
+			...source[item].reduce(
+				(base, baseItem) => ({ ...base, [baseItem]: item }),
+				{}
+			)
 		}),
 		{}
 	);
@@ -46,10 +49,15 @@ export const flattenTokenColors = (tokenColors: TokenColor[]): PlainSettings =>
 	<PlainSettings>tokenColors.reduce(
 		(out, setting) => ({
 			...out,
-			...(Array.isArray(setting.scope) ? setting.scope : [setting.scope]).reduce(
+			...(Array.isArray(setting.scope)
+				? setting.scope
+				: [setting.scope]
+			).reduce(
 				(out, key) => ({
 					...out,
-					[key || "vscode"]: out[key] ? { ...out[key], ...setting.settings } : setting.settings
+					[key || "vscode"]: out[key]
+						? { ...out[key], ...setting.settings }
+						: setting.settings
 				}),
 				{}
 			)
@@ -84,5 +92,6 @@ export const expandTokenColors = (settings: PlainSettings): TokenColor[] =>
  * @param {tokenColor[]} tokenColors
  * @returns {TokenColor[]}
  */
-export const removeDuplicatedColors = (tokenColors: TokenColor[]): TokenColor[] =>
-	expandTokenColors(flattenTokenColors(tokenColors));
+export const removeDuplicatedColors = (
+	tokenColors: TokenColor[]
+): TokenColor[] => expandTokenColors(flattenTokenColors(tokenColors));

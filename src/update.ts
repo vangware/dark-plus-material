@@ -6,10 +6,15 @@ import { defaultsUrl, plusUrl, vsUrl, colorMap } from "./config";
 import { replaceColors, removeDuplicatedColors } from "./helpers";
 import { Theme } from "./interfaces";
 
+/**
+ * Promosified fs.writeFile.
+ */
 const writeFileAsync = promisify(writeFile);
 
 Promise.all([defaultsUrl, vsUrl, plusUrl].map(url => fetch(url)))
-	.then(responses => Promise.all<Theme>(responses.map(response => response.json())))
+	.then(responses =>
+		Promise.all<Theme>(responses.map(response => response.json()))
+	)
 	.then(([defaults, vs, plus]) => ({
 		defaults: { ...defaults.colors, ...missingDefaultColors },
 		vs: vs.tokenColors,
@@ -18,8 +23,16 @@ Promise.all([defaultsUrl, vsUrl, plusUrl].map(url => fetch(url)))
 	.then(({ defaults, vs, plus }) => ({
 		colors: Object.keys(defaults)
 			.map(key => ({ key, value: defaults[key].toUpperCase() }))
-			.reduce((colors, { key, value }) => ({ ...colors, [key]: colorMap[value] || "MISSING" }), {}),
-		tokenColors: removeDuplicatedColors([...vs, ...plus].map(setting => replaceColors(setting, colorMap)))
+			.reduce(
+				(colors, { key, value }) => ({
+					...colors,
+					[key]: colorMap[value] || "MISSING"
+				}),
+				{}
+			),
+		tokenColors: removeDuplicatedColors(
+			[...vs, ...plus].map(setting => replaceColors(setting, colorMap))
+		)
 	}))
 	.then(({ colors, tokenColors }) => ({
 		$schema: "vscode://schemas/color-theme",
@@ -27,6 +40,11 @@ Promise.all([defaultsUrl, vsUrl, plusUrl].map(url => fetch(url)))
 		colors,
 		tokenColors
 	}))
-	.then(theme => writeFileAsync(`${__dirname}/../dark-plus-material.json`, JSON.stringify(theme, null, "  ")))
+	.then(theme =>
+		writeFileAsync(
+			`${__dirname}/../dark-plus-material.json`,
+			JSON.stringify(theme, null, "  ")
+		)
+	)
 	.then(() => console.log("dark-plus-material.json done!"))
 	.catch(() => console.error("Error with dark-plus-material.json update"));
