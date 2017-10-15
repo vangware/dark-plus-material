@@ -1,5 +1,5 @@
 ![](https://cdn.rawgit.com/vangware/dark-plus-material/master/assets/logo.png)
-**v1.0.11**
+**v1.0.12**
 
 The default Dark+ Theme, with material palette.
 

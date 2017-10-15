@@ -3,7 +3,8 @@ import { invertMap } from "./helpers";
 /**
  * VSCode git repository URL.
  */
-const repository: string = "https://raw.githubusercontent.com/Microsoft/vscode/master";
+const repository: string =
+	"https://raw.githubusercontent.com/Microsoft/vscode/master";
 
 /**
  * Repository directory with default themes.
