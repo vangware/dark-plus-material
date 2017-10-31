@@ -1,3 +1,6 @@
+## 1.0.13
+- Updated dependencies.
+
 ## 1.0.12
 - Minor code tweaks.
 
