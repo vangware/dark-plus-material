@@ -46,23 +46,15 @@
   },
   "tokenColors": [
     {
-      "settings": {
-        "foreground": "#9E9E9E",
-        "background": "#212121"
-      }
-    },
-    {
       "scope": "meta.embedded",
       "settings": {
-        "foreground": "#9E9E9E",
-        "background": "#212121"
+        "foreground": "#9E9E9E"
       }
     },
     {
       "scope": "source.groovy.embedded",
       "settings": {
-        "foreground": "#9E9E9E",
-        "background": "#212121"
+        "foreground": "#9E9E9E"
       }
     },
     {
