@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.0.16
+
+- Fixed PayPal link.
+
 ## 1.0.15
 
 - General improvements on code.

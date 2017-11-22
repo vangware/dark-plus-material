@@ -39,4 +39,4 @@ ext install dark-plus-material
 
 ## I code for food
 
-You can do donations if you want in the following link: [PayPal](paypal.me/lucasmciruzzi/5).
+You can do donations if you want in the following link: [PayPal](https://paypal.me/lucasmciruzzi/5).
