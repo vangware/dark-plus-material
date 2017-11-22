@@ -36,3 +36,7 @@ ext install dark-plus-material
 
 - [Material Icon Theme](https://marketplace.visualstudio.com/items?itemName=PKief.material-icon-theme) (by [Philipp Kief](https://github.com/PKief)): Beautiful icon theme that looks awesome with this theme.
 - [FiraCode](https://github.com/tonsky/FiraCode) (by [Nikita Prokopov](https://github.com/tonsky)): The best code ligature font I found, used in the screenshots.
+
+## I code for food
+
+You can do donations if you want in the following link: [PayPal](paypal.me/lucasmciruzzi/5).

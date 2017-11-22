@@ -1,7 +1,5 @@
 /**
  * Missing default colors for the UI.
- *
- * @export
  */
 export const missingDefaultColors = {
 	"activityBar.background": "#333333",

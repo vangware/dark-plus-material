@@ -2,10 +2,8 @@ import { TokenColor, PlainSettings } from "./interfaces";
 
 /**
  * Takes a map { key: [value1, value2] } and returns { value1: key, value2: key }
- *
- * @export
- * @param {object} source Source map.
- * @returns {object} Inverted map.
+ * @param source Source map.
+ * @returns Inverted map.
  */
 export const invertMap = (source: object) =>
 	Object.keys(source).reduce(
@@ -21,11 +19,8 @@ export const invertMap = (source: object) =>
 
 /**
  * Removes unwanted properties and set the material colors based on colorMap.
- *
- * @export
- * @param {TokenColor} { scope, settings }
- * @param {object} map Map to make the replacements
- * @returns {TokenColor} { scope, settings }
+ * @param map Map to make the replacements
+ * @returns Token color object.
  */
 export const replaceColors = ({ scope, settings }: TokenColor, map: object) => {
 	const { background, foreground } = settings;
@@ -39,11 +34,9 @@ export const replaceColors = ({ scope, settings }: TokenColor, map: object) => {
 };
 
 /**
- * Transform tokenColors array to a plain oject.
- *
- * @export
- * @param {TokenColor[]} settings
- * @returns {PlainSettings}
+ * Transform tokenColors array to a plain object.
+ * @param settings Token color array.
+ * @returns Plain settings.
  */
 export const flattenTokenColors = (tokenColors: TokenColor[]): PlainSettings =>
 	<PlainSettings>tokenColors.reduce(
@@ -67,10 +60,8 @@ export const flattenTokenColors = (tokenColors: TokenColor[]): PlainSettings =>
 
 /**
  * Transform object to settings file.
- *
- * @export
- * @param {Settings} settings
- * @returns {TokenColor[]}
+ * @param settings Settings object.
+ * @returns Token color array.
  */
 export const expandTokenColors = (settings: PlainSettings): TokenColor[] =>
 	Object.keys(settings).map(
@@ -87,10 +78,8 @@ export const expandTokenColors = (settings: PlainSettings): TokenColor[] =>
 
 /**
  * Removes duplicated colors by flatting and then expanding tokenColors.
- *
- * @export
- * @param {tokenColor[]} tokenColors
- * @returns {TokenColor[]}
+ * @param tokenColors Token color array.
+ * @returns Token color array.
  */
 export const removeDuplicatedColors = (
 	tokenColors: TokenColor[]
