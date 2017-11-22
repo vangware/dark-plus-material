@@ -1,8 +1,5 @@
 /**
  * Settings interface.
- *
- * @export
- * @interface Settings
  */
 export interface Settings {
 	background?: string;
@@ -12,9 +9,6 @@ export interface Settings {
 
 /**
  * Plain Settings interface.
- *
- * @export
- * @interface PlainSettings
  */
 export interface PlainSettings {
 	[key: string]: Settings;
@@ -22,9 +16,6 @@ export interface PlainSettings {
 
 /**
  * TokenColor interface.
- *
- * @export
- * @interface TokenColor
  */
 export interface TokenColor {
 	settings?: Settings;
@@ -34,9 +25,6 @@ export interface TokenColor {
 
 /**
  * Color interface.
- *
- * @export
- * @interface Colors
  */
 export interface Colors {
 	[key: string]: string;
@@ -44,9 +32,6 @@ export interface Colors {
 
 /**
  * Theme interface.
- *
- * @export
- * @interface Theme
  */
 export interface Theme {
 	$schema: string;

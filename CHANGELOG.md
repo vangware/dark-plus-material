@@ -1,5 +1,10 @@
 # Changelog
 
+## 1.0.15
+
+- General improvements on code.
+- Added link to PayPal.
+
 ## 1.0.14
 
 - Updated dependencies.
