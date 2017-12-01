@@ -1,5 +1,11 @@
 # Changelog
 
+## 1.0.17
+
+- Updated screenshots.
+- Updated dependencies.
+- Updated README.md.
+
 ## 1.0.16
 
 - Fixed PayPal link.
