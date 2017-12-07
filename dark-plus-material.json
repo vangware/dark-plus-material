@@ -702,12 +702,6 @@
       }
     },
     {
-      "scope": "meta.object-literal.key entity.name.function",
-      "settings": {
-        "foreground": "#00BCD4"
-      }
-    },
-    {
       "scope": "support.constant.property-value",
       "settings": {
         "foreground": "#FFC107"
