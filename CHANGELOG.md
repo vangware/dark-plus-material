@@ -1,5 +1,10 @@
 # Changelog
 
+## 1.0.18
+
+- Updated json to latest on VSCode repository.
+- Updated dependencies.
+
 ## 1.0.17
 
 - Updated screenshots.
