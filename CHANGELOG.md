@@ -1,5 +1,10 @@
 # Changelog
 
+## 1.0.19
+
+- New logo!
+- Updated dependencies.
+
 ## 1.0.18
 
 - Updated json to latest on VSCode repository.
