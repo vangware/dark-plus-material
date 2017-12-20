@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.0.20
+
+- Added `yarn` and `pnpm` support.
+
 ## 1.0.19
 
 - New logo!
