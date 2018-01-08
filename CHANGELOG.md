@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.0.21
+
+- Updated `package-lock.json`.
+
 ## 1.0.20
 
 - Added `yarn` and `pnpm` support.
