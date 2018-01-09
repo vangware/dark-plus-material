@@ -1,5 +1,10 @@
 # Changelog
 
+## 1.0.22
+
+- Updated dependencies.
+- Added a new achievement in the `README.md`.
+
 ## 1.0.21
 
 - Updated `package-lock.json`.
