@@ -534,6 +534,36 @@
       }
     },
     {
+      "scope": "storage.type.numeric.go",
+      "settings": {
+        "foreground": "#009688"
+      }
+    },
+    {
+      "scope": "storage.type.byte.go",
+      "settings": {
+        "foreground": "#009688"
+      }
+    },
+    {
+      "scope": "storage.type.boolean.go",
+      "settings": {
+        "foreground": "#009688"
+      }
+    },
+    {
+      "scope": "storage.type.string.go",
+      "settings": {
+        "foreground": "#009688"
+      }
+    },
+    {
+      "scope": "storage.type.uintptr.go",
+      "settings": {
+        "foreground": "#009688"
+      }
+    },
+    {
       "scope": "storage.type.cs",
       "settings": {
         "foreground": "#009688"
