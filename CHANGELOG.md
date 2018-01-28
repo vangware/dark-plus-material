@@ -1,5 +1,10 @@
 # Changelog
 
+## 1.0.23
+
+- Updated dependencies.
+- Updated styles.
+
 ## 1.0.22
 
 - Updated dependencies.
