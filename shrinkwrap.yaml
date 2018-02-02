@@ -3,7 +3,7 @@ devDependencies:
   '@types/node-fetch': 1.6.7
   node-fetch: 1.7.3
   ts-node: 4.1.0
-  typescript: 2.6.2
+  typescript: 2.7.1
 packages:
   /@types/node-fetch/1.6.7:
     dependencies:
@@ -194,12 +194,12 @@ packages:
     dev: true
     resolution:
       integrity: sha512-vZXmzPrL+EmC4T/4rVlT2jNVMWCi/O4DIiSj3UHg1OE5kCKbk4mfrXc6dZksLgRM/TZlKnousKH9bbTazUWRRw==
-  /typescript/2.6.2:
+  /typescript/2.7.1:
     dev: true
     engines:
       node: '>=4.2.0'
     resolution:
-      integrity: sha1-PFtv1/beCRQmkCfwPAlGdY92c6Q=
+      integrity: sha512-bqB1yS6o9TNA9ZC/MJxM0FZzPnZdtHj0xWK/IZ5khzVqdpGul/R/EIiHRgFXlwTD7PSIaYVnGKq1QgMCu2mnqw==
   /v8flags/3.0.1:
     dependencies:
       homedir-polyfill: 1.0.1
@@ -222,4 +222,4 @@ specifiers:
   '@types/node-fetch': ^1.6.7
   node-fetch: ^1.7.3
   ts-node: ^4.1.0
-  typescript: ^2.6.2
+  typescript: ^2.7.1
