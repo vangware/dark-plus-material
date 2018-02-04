@@ -1,7 +1,7 @@
 devDependencies:
   '@types/node': 9.4.0
   '@types/node-fetch': 1.6.7
-  node-fetch: 1.7.3
+  node-fetch: 2.0.0
   ts-node: 4.1.0
   typescript: 2.7.1
 packages:
@@ -67,12 +67,6 @@ packages:
       node: '>=0.3.1'
     resolution:
       integrity: sha512-QpVuMTEoJMF7cKzi6bvWhRulU1fZqZnvyVQgNhPaxxuTYwyjn/j1v9falseQ/uXWwPnO56RBfwtg4h/EQXmucA==
-  /encoding/0.1.12:
-    dependencies:
-      iconv-lite: 0.4.19
-    dev: true
-    resolution:
-      integrity: sha1-U4tm8+5izRq1HsMjgp0flIDHS+s=
   /escape-string-regexp/1.0.5:
     dev: true
     engines:
@@ -93,18 +87,6 @@ packages:
       node: '>=0.10.0'
     resolution:
       integrity: sha1-TCu8inWJmP7r9e1oWA921GdotLw=
-  /iconv-lite/0.4.19:
-    dev: true
-    engines:
-      node: '>=0.10.0'
-    resolution:
-      integrity: sha512-oTZqweIP51xaGPI4uPa56/Pri/480R+mo7SeU+YETByQNhDG55ycFyNLIgta9vXhILrxXDmF7ZGhqZIcuN0gJQ==
-  /is-stream/1.1.0:
-    dev: true
-    engines:
-      node: '>=0.10.0'
-    resolution:
-      integrity: sha1-EtSj3U5o4Lec6428hBc66A2RykQ=
   /make-error/1.3.2:
     dev: true
     resolution:
@@ -123,13 +105,12 @@ packages:
     dev: true
     resolution:
       integrity: sha1-MAV0OOrGz3+MR2fzhkjWaX11yQM=
-  /node-fetch/1.7.3:
-    dependencies:
-      encoding: 0.1.12
-      is-stream: 1.1.0
+  /node-fetch/2.0.0:
     dev: true
+    engines:
+      node: 4.x || >=6.0.0
     resolution:
-      integrity: sha512-NhZ4CsKx7cYm2vSrBAr2PvFOe6sWDf0UYLRqA6svUYg7+/TSfVAu49jYC4BvQ4Sms9SZgdqGBgroqfDhJdTyKQ==
+      integrity: sha1-mCu6Q+zU8pIqKcwYamu7C7c/y6Y=
   /parse-passwd/1.0.0:
     dev: true
     engines:
@@ -220,6 +201,6 @@ shrinkwrapVersion: 3
 specifiers:
   '@types/node': ^9.4.0
   '@types/node-fetch': ^1.6.7
-  node-fetch: ^1.7.3
+  node-fetch: ^2.0.0
   ts-node: ^4.1.0
   typescript: ^2.7.1
