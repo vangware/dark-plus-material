@@ -1,5 +1,10 @@
 # Changelog
 
+## 1.0.26
+
+- Updated dependencies.
+- New milestone!
+
 ## 1.0.25
 
 - Updated dependencies.
