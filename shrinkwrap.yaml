@@ -1,5 +1,5 @@
 devDependencies:
-  '@types/node': 9.4.6
+  '@types/node': 9.4.7
   '@types/node-fetch': 1.6.7
   node-fetch: 2.1.1
   ts-node: 5.0.1
@@ -15,10 +15,10 @@ packages:
     dev: true
     resolution:
       integrity: sha512-wNBfvNjzsJl4tswIZKXCFQY0lss9nKUyJnG6T94X/eqjRgI2jHZ4evdjhQYBSan/vGtF6XVXPApOmNH2rf0KKw==
-  /@types/node/9.4.6:
+  /@types/node/9.4.7:
     dev: true
     resolution:
-      integrity: sha512-CTUtLb6WqCCgp6P59QintjHWqzf4VL1uPA27bipLAPxFqrtK1gEYllePzTICGqQ8rYsCbpnsNypXjjDzGAAjEQ==
+      integrity: sha512-4Ba90mWNx8ddbafuyGGwjkZMigi+AWfYLSDCpovwsE63ia8w93r3oJ8PIAQc3y8U+XHcnMOHPIzNe3o438Ywcw==
   /ansi-styles/3.2.1:
     dependencies:
       color-convert: 1.9.1
@@ -146,7 +146,7 @@ registry: 'https://registry.npmjs.org/'
 shrinkwrapMinorVersion: 4
 shrinkwrapVersion: 3
 specifiers:
-  '@types/node': ^9.4.6
+  '@types/node': ^9.4.7
   '@types/node-fetch': ^1.6.7
   node-fetch: ^2.1.1
   ts-node: ^5.0.1
