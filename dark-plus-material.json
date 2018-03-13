@@ -426,6 +426,12 @@
       }
     },
     {
+      "scope": "keyword.operator.instanceof",
+      "settings": {
+        "foreground": "#2196F3"
+      }
+    },
+    {
       "scope": "keyword.operator.logical.python",
       "settings": {
         "foreground": "#2196F3"
