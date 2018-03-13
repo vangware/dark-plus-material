@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.0.31
+
+- Updated colors to latests.
+
 ## 1.0.30
 
 - Updated dependencies.
