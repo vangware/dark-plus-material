@@ -1,9 +1,9 @@
 devDependencies:
   '@types/node': 9.6.0
   '@types/node-fetch': 1.6.7
-  node-fetch: 2.1.1
+  node-fetch: 2.1.2
   ts-node: 5.0.1
-  typescript: 2.7.2
+  typescript: 2.8.1
 packages:
   /@types/node-fetch/1.6.7:
     dependencies:
@@ -89,12 +89,12 @@ packages:
     dev: true
     resolution:
       integrity: sha1-MAV0OOrGz3+MR2fzhkjWaX11yQM=
-  /node-fetch/2.1.1:
+  /node-fetch/2.1.2:
     dev: true
     engines:
       node: 4.x || >=6.0.0
     resolution:
-      integrity: sha1-NpynC4L1DIZJYQSmx3bSdPTkotQ=
+      integrity: sha1-q4hOjn5X44qUR1POxwb3iNF2i7U=
   /source-map-support/0.5.3:
     dependencies:
       source-map: 0.6.1
@@ -130,12 +130,12 @@ packages:
       node: '>=4.2.0'
     resolution:
       integrity: sha512-XK7QmDcNHVmZkVtkiwNDWiERRHPyU8nBqZB1+iv2UhOG0q3RQ9HsZ2CMqISlFbxjrYFGfG2mX7bW4dAyxBVzUw==
-  /typescript/2.7.2:
+  /typescript/2.8.1:
     dev: true
     engines:
       node: '>=4.2.0'
     resolution:
-      integrity: sha512-p5TCYZDAO0m4G344hD+wx/LATebLWZNkkh2asWUFqSsD2OrDNhbAHuSjobrmsUmdzjJjEeZVU9g1h3O6vpstnw==
+      integrity: sha512-Ao/f6d/4EPLq0YwzsQz8iXflezpTkQzqAyenTiw4kCUGr1uPiFLC3+fZ+gMZz6eeI/qdRUqvC+HxIJzUAzEFdg==
   /yn/2.0.0:
     dev: true
     engines:
@@ -148,6 +148,6 @@ shrinkwrapVersion: 3
 specifiers:
   '@types/node': ^9.6.0
   '@types/node-fetch': ^1.6.7
-  node-fetch: ^2.1.1
+  node-fetch: ^2.1.2
   ts-node: ^5.0.1
-  typescript: ^2.7.2
+  typescript: ^2.8.1
