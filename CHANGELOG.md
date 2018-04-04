@@ -1,5 +1,10 @@
 # Changelog
 
+## 1.0.34
+
+- Updated dependencies.
+- Updated description.
+
 ## 1.0.33
 
 - Updated dependencies.
