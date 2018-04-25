@@ -6,6 +6,7 @@
     "editor.foreground": "#9E9E9E",
     "editor.inactiveSelectionBackground": "#263238",
     "editorIndentGuide.background": "#424242",
+    "editorIndentGuide.activeBackground": "#757575",
     "editor.selectionHighlightBackground": "#795548",
     "list.dropBackground": "#424242",
     "activityBarBadge.background": "#2196F3",

@@ -1,24 +1,20 @@
 devDependencies:
-  '@types/node': 9.6.5
-  '@types/node-fetch': 1.6.8
+  '@types/node': 9.6.6
+  '@types/node-fetch': 1.6.9
   node-fetch: 2.1.2
   ts-node: 6.0.0
-  typescript: 2.8.1
+  typescript: 2.8.3
 packages:
-  /@types/node-fetch/1.6.8:
+  /@types/node-fetch/1.6.9:
     dependencies:
-      '@types/node': 9.6.2
+      '@types/node': 9.6.6
     dev: true
     resolution:
-      integrity: sha512-O8DUwXf7KUBu036HAbF5RKRaA1vvE0BsaPfAnC9YD7Xy4eNoJmNIdEjBIEEHAVszozRgH4m9JnVCsueSKiKXMA==
-  /@types/node/9.6.2:
+      integrity: sha512-n2r6WLoY7+uuPT7pnEtKJCmPUGyJ+cbyBR8Avnu4+m1nzz7DwBVuyIvvlBzCZ/nrpC7rIgb3D6pNavL7rFEa9g==
+  /@types/node/9.6.6:
     dev: true
     resolution:
-      integrity: sha512-UWkRY9X7RQHp5OhhRIIka58/gVVycL1zHZu0OTsT5LI86ABaMOSbUjAl+b0FeDhQcxclrkyft3kW5QWdMRs8wQ==
-  /@types/node/9.6.5:
-    dev: true
-    resolution:
-      integrity: sha512-NOLEgsT6UiDTjnWG5Hd2Mg25LRyz/oe8ql3wbjzgSFeRzRROhPmtlsvIrei4B46UjERF0td9SZ1ZXPLOdcrBHg==
+      integrity: sha512-SJe0g5cZeGNDP5sD8mIX3scb+eq8LQQZ60FXiKZHipYSeEFZ5EKml+NNMiO76F74TY4PoMWlNxF/YRY40FOvZQ==
   /ansi-styles/3.2.1:
     dependencies:
       color-convert: 1.9.1
@@ -130,12 +126,12 @@ packages:
       node: '>=4.2.0'
     resolution:
       integrity: sha512-+CQev+4J7BAUNUnW9piRzSfSZZWeFCjgUjMSgGs4+dJ2RZa86NVW9MOlP4e6/kEHTyOqdxHxcIMd7KgmY/ynVw==
-  /typescript/2.8.1:
+  /typescript/2.8.3:
     dev: true
     engines:
       node: '>=4.2.0'
     resolution:
-      integrity: sha512-Ao/f6d/4EPLq0YwzsQz8iXflezpTkQzqAyenTiw4kCUGr1uPiFLC3+fZ+gMZz6eeI/qdRUqvC+HxIJzUAzEFdg==
+      integrity: sha512-K7g15Bb6Ra4lKf7Iq2l/I5/En+hLIHmxWZGq3D4DIRNFxMNV6j2SHSvDOqs2tGd4UvD/fJvrwopzQXjLrT7Itw==
   /yn/2.0.0:
     dev: true
     engines:
@@ -146,8 +142,8 @@ registry: 'https://registry.npmjs.org/'
 shrinkwrapMinorVersion: 5
 shrinkwrapVersion: 3
 specifiers:
-  '@types/node': ^9.6.5
-  '@types/node-fetch': ^1.6.8
+  '@types/node': ^9.6.6
+  '@types/node-fetch': ^1.6.9
   node-fetch: ^2.1.2
   ts-node: ^6.0.0
-  typescript: ^2.8.1
+  typescript: ^2.8.3

@@ -2,9 +2,9 @@
 # yarn lockfile v1
 
 
-"@types/node-fetch@^1.6.8":
-  version "1.6.8"
-  resolved "https://registry.yarnpkg.com/@types/node-fetch/-/node-fetch-1.6.8.tgz#a59d8c75b300ddc3ca3eef23d449d677f9486c3d"
+"@types/node-fetch@^1.6.9":
+  version "1.6.9"
+  resolved "https://registry.yarnpkg.com/@types/node-fetch/-/node-fetch-1.6.9.tgz#a750fb0f4cf2960bf72b462e4c86908022dd69c5"
   dependencies:
     "@types/node" "*"
 
@@ -12,9 +12,9 @@
   version "8.5.2"
   resolved "https://registry.yarnpkg.com/@types/node/-/node-8.5.2.tgz#83b8103fa9a2c2e83d78f701a9aa7c9539739aa5"
 
-"@types/node@^9.6.5":
-  version "9.6.5"
-  resolved "https://registry.yarnpkg.com/@types/node/-/node-9.6.5.tgz#ee700810fdf49ac1c399fc5980b7559b3e5a381d"
+"@types/node@^9.6.6":
+  version "9.6.6"
+  resolved "https://registry.yarnpkg.com/@types/node/-/node-9.6.6.tgz#439b91f9caf3983cad2eef1e11f6bedcbf9431d2"
 
 ansi-styles@^3.1.0:
   version "3.2.0"
@@ -107,9 +107,9 @@ ts-node@^6.0.0:
     source-map-support "^0.5.3"
     yn "^2.0.0"
 
-typescript@^2.8.1:
-  version "2.8.1"
-  resolved "https://registry.yarnpkg.com/typescript/-/typescript-2.8.1.tgz#6160e4f8f195d5ba81d4876f9c0cc1fbc0820624"
+typescript@^2.8.3:
+  version "2.8.3"
+  resolved "https://registry.yarnpkg.com/typescript/-/typescript-2.8.3.tgz#5d817f9b6f31bb871835f4edf0089f21abe6c170"
 
 yn@^2.0.0:
   version "2.0.0"

@@ -75,6 +75,7 @@ export const colorMap = invertMap({
 	"#FFFFFF": ["#FFFFFF", "#ADADAD", "#AEAFAD"],
 	// Grey
 	"#9E9E9E": ["#D4D4D4", "#585858", "#BBBBBB"], // 500
+	"#757575": ["#707070"], // 600
 	"#424242": ["#404040", "#333333", "#3C3C3C", "#535C69", "#383B3D"], // 800
 	"#212121": ["#1E1E1E"], // 900
 	// Blue Grey
