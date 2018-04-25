@@ -1,5 +1,11 @@
 # Changelog
 
+## 1.1.0
+
+- Updated dependencies.
+- Updated color map.
+- Updated theme.
+
 ## 1.0.35
 
 - Updated dependencies.
