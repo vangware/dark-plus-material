@@ -1,5 +1,10 @@
 # Changelog
 
+## 1.1.1
+
+- Updated dependencies.
+- New milestone!
+
 ## 1.1.0
 
 - Updated dependencies.
