@@ -1,5 +1,11 @@
 # Changelog
 
+## 1.1.4
+
+- Updated dependencies.
+- Updated theme.
+- New Milestone!
+
 ## 1.1.3
 
 - Updated dependencies.
