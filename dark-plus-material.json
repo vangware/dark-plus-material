@@ -733,6 +733,12 @@
       }
     },
     {
+      "scope": "entity.name.variable",
+      "settings": {
+        "foreground": "#00BCD4"
+      }
+    },
+    {
       "scope": "meta.object-literal.key",
       "settings": {
         "foreground": "#00BCD4"
