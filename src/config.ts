@@ -40,6 +40,7 @@ export const plusUrl: string = `${themeDefaults}/dark_plus.json`;
 export const colorMap = invertMap({
 	// Red
 	"#F44336": ["#F44747", "#3C2120"], // 500
+	"#D32F2F": ["#651F1C"], // 700
 	"#B71C1C": ["#471F1D"], // 900
 	// Pink
 	"#E91E63": ["#C586C0"],
@@ -50,6 +51,7 @@ export const colorMap = invertMap({
 	// Blue
 	"#2196F3": ["#569CD6", "#297FC9"],
 	// Green
+	"#388E3C": ["#4E5433"], // 700
 	"#1B5E20": ["#3B3E2B"], // 900
 	// Light Blue
 	"#03A9F4": ["#6796E6", "#2F7AB8"],
