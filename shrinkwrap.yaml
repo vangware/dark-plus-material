@@ -1,5 +1,5 @@
 devDependencies:
-  '@types/node': 10.3.6
+  '@types/node': 10.5.2
   '@types/node-fetch': 2.1.1
   node-fetch: 2.1.2
   ts-node: 7.0.0
@@ -7,18 +7,14 @@ devDependencies:
 packages:
   /@types/node-fetch/2.1.1:
     dependencies:
-      '@types/node': 10.3.2
+      '@types/node': 10.5.2
     dev: true
     resolution:
       integrity: sha512-IfDil0fSMq59n4UsIzgRd5gsgmgn9dl9PzZbguKPsGBpLEIFC7Fr4AroQjIeCYOcDsP1Lszm10wirpaEP26Lhg==
-  /@types/node/10.3.2:
+  /@types/node/10.5.2:
     dev: true
     resolution:
-      integrity: sha512-9NfEUDp3tgRhmoxzTpTo+lq+KIVFxZahuRX0LHF/9IzKHaWuoWsIrrJ61zw5cnnlGINX8lqJzXYfQTOICS5Q+A==
-  /@types/node/10.3.6:
-    dev: true
-    resolution:
-      integrity: sha512-h7VDRFL8IhdPw1JjiNVvhr+WynfKW09q2BOflIOA0yeuXNeXBP1bIRuBrysSryH4keaJ5bYUNp63aIyQL9YpDQ==
+      integrity: sha512-m9zXmifkZsMHZBOyxZWilMwmTlpC8x5Ty360JKTiXvlXZfBWYpsg9ZZvP/Ye+iZUh+Q+MxDLjItVTWIsfwz+8Q==
   /arrify/1.0.1:
     dev: true
     engines:
@@ -51,6 +47,7 @@ packages:
     dependencies:
       minimist: 0.0.8
     dev: true
+    hasBin: true
     resolution:
       integrity: sha1-MAV0OOrGz3+MR2fzhkjWaX11yQM=
   /node-fetch/2.1.2:
@@ -85,12 +82,14 @@ packages:
     dev: true
     engines:
       node: '>=4.2.0'
+    hasBin: true
     resolution:
       integrity: sha512-klJsfswHP0FuOLsvBZ/zzCfUvakOSSxds78mVeK7I+qP76YWtxf16hEZsp3U+b0kIo82R5UatGFeblYMqabb2Q==
   /typescript/2.9.2:
     dev: true
     engines:
       node: '>=4.2.0'
+    hasBin: true
     resolution:
       integrity: sha512-Gr4p6nFNaoufRIY4NMdpQRNmgxVIGMs4Fcu/ujdYk3nAZqk7supzBE9idmvfZIlH/Cuj//dvi+019qEue9lV0w==
   /yn/2.0.0:
@@ -100,10 +99,10 @@ packages:
     resolution:
       integrity: sha1-5a2ryKz0CPY4X8dklWhMiOavaJo=
 registry: 'https://registry.npmjs.org/'
-shrinkwrapMinorVersion: 7
+shrinkwrapMinorVersion: 8
 shrinkwrapVersion: 3
 specifiers:
-  '@types/node': ^10.3.6
+  '@types/node': ^10.5.2
   '@types/node-fetch': ^2.1.1
   node-fetch: ^2.1.2
   ts-node: ^7.0.0
