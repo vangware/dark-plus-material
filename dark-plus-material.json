@@ -2,7 +2,7 @@
   "$schema": "vscode://schemas/color-theme",
   "name": "Dark+ Material",
   "colors": {
-    "editor.background": "#000000",
+    "editor.background": "#212121",
     "editor.foreground": "#9E9E9E",
     "editor.inactiveSelectionBackground": "#263238",
     "editorIndentGuide.background": "#424242",
@@ -35,10 +35,10 @@
     "editor.hoverHighlightBackground": "#424242",
     "editor.selectionBackground": "#37474F",
     "editorCursor.foreground": "#FFFFFF",
-    "editorHoverWidget.background": "#000000",
+    "editorHoverWidget.background": "#212121",
     "editorHoverWidget.border": "#424242",
     "editorLineNumber.foreground": "#424242",
-    "editorSuggestWidget.background": "#000000",
+    "editorSuggestWidget.background": "#212121",
     "editorSuggestWidget.border": "#424242",
     "editorSuggestWidget.foreground": "#9E9E9E",
     "editorSuggestWidget.highlightForeground": "#FFFFFF",
@@ -48,7 +48,7 @@
     "input.background": "#424242",
     "input.foreground": "#9E9E9E",
     "inputValidation.errorBorder": "#F44336",
-    "sideBar.background": "#000000"
+    "sideBar.background": "#212121"
   },
   "tokenColors": [
     {
