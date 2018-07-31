@@ -1,5 +1,13 @@
 # Changelog
 
+## 1.3.0
+
+- True black background for dark gray.
+- Added support for new colors.
+- Updated dependencies.
+- New Milestone!
+- Removed PayPal link (nobody used it anyways).
+
 ## 1.2.0
 
 - Added styles for diff editor to make it nicer.
