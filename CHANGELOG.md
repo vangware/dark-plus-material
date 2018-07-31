@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.3.1
+
+- True black is too dark, lets gray it again!
+
 ## 1.3.0
 
 - True black background for dark gray.
