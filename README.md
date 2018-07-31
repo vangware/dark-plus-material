@@ -4,7 +4,7 @@
 
 The default Dark+ Theme, with material palette and always up to date.
 
-**Almost 300k downloads! In the top 10 of most downloaded themes!** Thanks a lot for the love ♥
+**More than 300k downloads! In the top 10 of most downloaded themes!** Thanks a lot for the love ♥
 
 ## Reason
 
@@ -36,7 +36,3 @@ ext install dark-plus-material
 
 - [Material Icon Theme](https://marketplace.visualstudio.com/items?itemName=PKief.material-icon-theme) (by [Philipp Kief](https://github.com/PKief)): Beautiful icon theme that looks awesome with this theme.
 - [FiraCode](https://github.com/tonsky/FiraCode) (by [Nikita Prokopov](https://github.com/tonsky)): The best code ligature font I found, used in the screenshots.
-
-## I code for food
-
-You can do donations if you want in the following link: [PayPal](https://paypal.me/lucasmciruzzi/5).

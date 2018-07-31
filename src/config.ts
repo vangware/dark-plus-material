@@ -1,10 +1,14 @@
 import { invertMap } from "./helpers";
 
 /**
+ * Repo base URL
+ */
+const repositoryBase: string = "https://raw.githubusercontent.com";
+
+/**
  * VSCode git repository URL.
  */
-const repository: string =
-	"https://raw.githubusercontent.com/Microsoft/vscode/master";
+const repository: string = `${repositoryBase}/Microsoft/vscode/master`;
 
 /**
  * Repository directory with default themes.
@@ -60,7 +64,7 @@ export const colorMap = invertMap({
 	// Teal
 	"#009688": ["#4EC9B0"],
 	// Light Green
-	"#8BC34A": ["#608B4E"],
+	"#8BC34A": ["#6A9955"],
 	// Lime
 	"#CDDC39": ["#B5CEA8"],
 	// Yellow
@@ -76,10 +80,13 @@ export const colorMap = invertMap({
 	// White
 	"#FFFFFF": ["#FFFFFF", "#ADADAD", "#AEAFAD"],
 	// Grey
+	"#BDBDBD": ["#A6A6A6"], // 400
 	"#9E9E9E": ["#D4D4D4", "#585858", "#BBBBBB"], // 500
 	"#757575": ["#707070"], // 600
 	"#424242": ["#404040", "#333333", "#3C3C3C", "#535C69", "#383B3D"], // 800
-	"#212121": ["#1E1E1E"], // 900
+	"#212121": ["#292929"], // 900
+	// Black
+	"#000000": ["#1E1E1E"],
 	// Blue Grey
 	"#607D8B": ["#808080"], // 500
 	"#37474F": ["#2D5176"], // 800
