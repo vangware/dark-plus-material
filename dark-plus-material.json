@@ -576,6 +576,18 @@
       }
     },
     {
+      "scope": "storage.type.error.go",
+      "settings": {
+        "foreground": "#009688"
+      }
+    },
+    {
+      "scope": "storage.type.rune.go",
+      "settings": {
+        "foreground": "#009688"
+      }
+    },
+    {
       "scope": "storage.type.cs",
       "settings": {
         "foreground": "#009688"
