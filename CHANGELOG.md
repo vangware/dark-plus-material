@@ -1,5 +1,10 @@
 # Changelog
 
+## 1.3.2
+
+- Updated dependencies.
+- Updated theme.
+
 ## 1.3.1
 
 - True black is too dark, lets gray it again!
