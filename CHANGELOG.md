@@ -1,5 +1,11 @@
 # Changelog
 
+## 1.4.0
+
+- Updated dependencies.
+- Added resolutions for flat installation.
+- Updated theme.
+
 ## 1.3.2
 
 - Updated dependencies.

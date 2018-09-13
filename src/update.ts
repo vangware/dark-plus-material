@@ -7,7 +7,7 @@ import { replaceColors, removeDuplicatedColors } from "./helpers";
 import { Theme } from "./interfaces";
 
 /**
- * Promosified fs.writeFile.
+ * Promisified fs.writeFile.
  */
 const writeFileAsync = promisify(writeFile);
 
