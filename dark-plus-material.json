@@ -14,6 +14,8 @@
     "input.placeholderForeground": "#BDBDBD",
     "settings.textInputBackground": "#212121",
     "settings.numberInputBackground": "#212121",
+    "menu.background": "#212121",
+    "menu.foreground": "#BDBDBD",
     "activityBar.background": "#424242",
     "activityBar.dropBackground": "#9E9E9E",
     "activityBar.foreground": "#FFFFFF",
@@ -243,12 +245,6 @@
       "scope": "markup.inline.raw",
       "settings": {
         "foreground": "#FFC107"
-      }
-    },
-    {
-      "scope": "meta.selector",
-      "settings": {
-        "foreground": "#FF9800"
       }
     },
     {

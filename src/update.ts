@@ -26,7 +26,7 @@ Promise.all([defaultsUrl, vsUrl, plusUrl].map(url => fetch(url)))
 			.reduce(
 				(colors, { key, value }) => ({
 					...colors,
-					[key]: colorMap[value] || "MISSING"
+					[key]: colorMap[value] || `MISSING [${value}]`
 				}),
 				{}
 			),
