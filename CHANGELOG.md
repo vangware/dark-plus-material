@@ -1,5 +1,12 @@
 # Changelog
 
+## 1.4.1
+
+- Updated dependencies.
+- Updated theme.
+- Sorted properties of `package.json` with [fixpack](https://npm.im/fixpack).
+- New Milestone!
+
 ## 1.4.0
 
 - Updated dependencies.
