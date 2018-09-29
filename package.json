@@ -1,7 +1,7 @@
 {
   "name": "dark-plus-material",
   "description": "The default Dark+ Theme, with material palette and always up to date",
-  "version": "1.4.1",
+  "version": "1.4.2",
   "author": {
     "name": "Vangware",
     "url": "https://vangware.com"
@@ -48,7 +48,6 @@
     "vscode"
   ],
   "license": "MIT",
-  "main": "./dark-plus-material.json",
   "publisher": "vangware",
   "repository": {
     "type": "git",
