@@ -1,5 +1,10 @@
 # Changelog
 
+## 1.4.3
+
+- Updated dependencies.
+- New Milestone!
+
 ## 1.4.2
 
 - Bug fix (main shouldn't be used on a theme's `package.json`).
