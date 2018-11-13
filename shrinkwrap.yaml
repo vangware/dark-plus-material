@@ -1,9 +1,9 @@
 devDependencies:
-  '@types/node': 10.11.4
+  '@types/node': 10.12.6
   '@types/node-fetch': 2.1.2
-  node-fetch: 2.2.0
+  node-fetch: 2.3.0
   tslint: 5.11.0
-  typescript: 3.1.1
+  typescript: 3.1.6
 packages:
   /@types/node-fetch/2.1.2:
     dependencies:
@@ -15,10 +15,10 @@ packages:
     dev: true
     resolution:
       integrity: sha512-Mash7eQv0HOs/fBVywUGR7NLSXyMl3XHkIo/kcWBgD9ppwPYOp8UDFxZfKy9hWeVHT2p+69vgXTPbPpoeqoM8w==
-  /@types/node/10.11.4:
+  /@types/node/10.12.6:
     dev: true
     resolution:
-      integrity: sha512-ojnbBiKkZFYRfQpmtnnWTMw+rzGp/JiystjluW9jgN3VzRwilXddJ6aGQ9V/7iuDG06SBgn7ozW9k3zcAnYjYQ==
+      integrity: sha512-+ZWB5Ec1iki99xQFzBlivlKxSZQ+fuUKBott8StBOnLN4dWbRHlgdg1XknpW6g0tweniN5DcOqA64CJyOUPSAw==
   /ansi-regex/2.1.1:
     dev: true
     engines:
@@ -194,12 +194,12 @@ packages:
     dev: true
     resolution:
       integrity: sha512-yJHVQEhyqPLUTgt9B83PXu6W3rx4MvvHvSUvToogpwoGDOUQ+yDrR0HRot+yOCdCO7u4hX3pWft6kWBBcqh0UA==
-  /node-fetch/2.2.0:
+  /node-fetch/2.3.0:
     dev: true
     engines:
       node: 4.x || >=6.0.0
     resolution:
-      integrity: sha512-OayFWziIxiHY8bCUyLX6sTpDH8Jsbp4FfYd1j1f7vZyfgkcOnAyM4oQR16f8a0s7Gl/viMGRey8eScYk4V4EZA==
+      integrity: sha512-MOd8pV3fxENbryESLgVIeaGKrdl+uaYhCSSVkjeOb/31/njTpcis5aWfdqgNlHIrKOLRbMnfPINPOML2CIFeXA==
   /once/1.4.0:
     dependencies:
       wrappy: 1.0.2
@@ -287,13 +287,13 @@ packages:
       typescript: '>=2.1.0 || >=2.1.0-dev || >=2.2.0-dev || >=2.3.0-dev || >=2.4.0-dev || >=2.5.0-dev || >=2.6.0-dev || >=2.7.0-dev || >=2.8.0-dev || >=2.9.0-dev || >= 3.0.0-dev || >= 3.1.0-dev'
     resolution:
       integrity: sha512-g5JVHCIJwzfISaXpXE1qvNalca5Jwob6FjI4AoPlqMusJ6ftFE7IkkFoMhVLRgK+4Kx3gkzb8UZK5t5yTTvEmA==
-  /typescript/3.1.1:
+  /typescript/3.1.6:
     dev: true
     engines:
       node: '>=4.2.0'
     hasBin: true
     resolution:
-      integrity: sha512-Veu0w4dTc/9wlWNf2jeRInNodKlcdLgemvPsrNpfu5Pq39sgfFjvIIgTsvUHCoLBnMhPoUA+tFxsXjU6VexVRQ==
+      integrity: sha512-tDMYfVtvpb96msS1lDX9MEdHrW4yOuZ4Kdc4Him9oU796XldPYF/t2+uKoX0BBa0hXXwDlqYQbXY5Rzjzc5hBA==
   /wrappy/1.0.2:
     dev: true
     resolution:
@@ -302,8 +302,8 @@ registry: 'https://registry.npmjs.org/'
 shrinkwrapMinorVersion: 9
 shrinkwrapVersion: 3
 specifiers:
-  '@types/node': ^10.11.4
+  '@types/node': ^10.12.6
   '@types/node-fetch': ^2.1.2
-  node-fetch: ^2.2.0
+  node-fetch: ^2.3.0
   tslint: ^5.11.0
-  typescript: ^3.1.1
+  typescript: ^3.1.6
