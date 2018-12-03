@@ -1,24 +1,20 @@
 devDependencies:
-  '@types/node': 10.12.6
-  '@types/node-fetch': 2.1.2
+  '@types/node': 10.12.11
+  '@types/node-fetch': 2.1.4
   node-fetch: 2.3.0
   tslint: 5.11.0
-  typescript: 3.1.6
+  typescript: 3.2.1
 packages:
-  /@types/node-fetch/2.1.2:
+  /@types/node-fetch/2.1.4:
     dependencies:
-      '@types/node': 10.11.1
+      '@types/node': 10.12.11
     dev: true
     resolution:
-      integrity: sha512-XroxUzLpKuL+CVkQqXlffRkEPi4Gh3Oui/mWyS7ztKiyqVxiU+h3imCW5I2NQmde5jK+3q++36/Q96cyRWsweg==
-  /@types/node/10.11.1:
+      integrity: sha512-tR1ekaXUGpmzOcDXWU9BW73YfA2/VW1DF1FH+wlJ82BbCSnWTbdX+JkqWQXWKIGsFPnPsYadbXfNgz28g+ccWg==
+  /@types/node/10.12.11:
     dev: true
     resolution:
-      integrity: sha512-Mash7eQv0HOs/fBVywUGR7NLSXyMl3XHkIo/kcWBgD9ppwPYOp8UDFxZfKy9hWeVHT2p+69vgXTPbPpoeqoM8w==
-  /@types/node/10.12.6:
-    dev: true
-    resolution:
-      integrity: sha512-+ZWB5Ec1iki99xQFzBlivlKxSZQ+fuUKBott8StBOnLN4dWbRHlgdg1XknpW6g0tweniN5DcOqA64CJyOUPSAw==
+      integrity: sha512-3iIOhNiPGTdcUNVCv9e5G7GotfvJJe2pc9w2UgDXlUwnxSZ3RgcUocIU+xYm+rTU54jIKih998QE4dMOyMN1NQ==
   /ansi-regex/2.1.1:
     dev: true
     engines:
@@ -287,13 +283,13 @@ packages:
       typescript: '>=2.1.0 || >=2.1.0-dev || >=2.2.0-dev || >=2.3.0-dev || >=2.4.0-dev || >=2.5.0-dev || >=2.6.0-dev || >=2.7.0-dev || >=2.8.0-dev || >=2.9.0-dev || >= 3.0.0-dev || >= 3.1.0-dev'
     resolution:
       integrity: sha512-g5JVHCIJwzfISaXpXE1qvNalca5Jwob6FjI4AoPlqMusJ6ftFE7IkkFoMhVLRgK+4Kx3gkzb8UZK5t5yTTvEmA==
-  /typescript/3.1.6:
+  /typescript/3.2.1:
     dev: true
     engines:
       node: '>=4.2.0'
     hasBin: true
     resolution:
-      integrity: sha512-tDMYfVtvpb96msS1lDX9MEdHrW4yOuZ4Kdc4Him9oU796XldPYF/t2+uKoX0BBa0hXXwDlqYQbXY5Rzjzc5hBA==
+      integrity: sha512-jw7P2z/h6aPT4AENXDGjcfHTu5CSqzsbZc6YlUIebTyBAq8XaKp78x7VcSh30xwSCcsu5irZkYZUSFP1MrAMbg==
   /wrappy/1.0.2:
     dev: true
     resolution:
@@ -302,8 +298,8 @@ registry: 'https://registry.npmjs.org/'
 shrinkwrapMinorVersion: 9
 shrinkwrapVersion: 3
 specifiers:
-  '@types/node': ^10.12.6
-  '@types/node-fetch': ^2.1.2
+  '@types/node': ^10.12.11
+  '@types/node-fetch': ^2.1.4
   node-fetch: ^2.3.0
   tslint: ^5.11.0
-  typescript: ^3.1.6
+  typescript: ^3.2.1
