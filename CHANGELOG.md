@@ -1,5 +1,10 @@
 # Changelog
 
+## 1.4.6
+
+- Updated dependencies.
+- New Milestone!
+
 ## 1.4.5
 
 - Updated dependencies.
