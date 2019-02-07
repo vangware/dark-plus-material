@@ -4,7 +4,7 @@
 
 The default Dark+ Theme, with material palette and always up to date.
 
-**Almost 500k downloads! Almost 80k installs! In the top 10 of most downloaded themes!**
+**More than 500k downloads! More than 80k installs! In the top 10 of most downloaded themes!**
 
 Thanks a lot for the love ♥
 
