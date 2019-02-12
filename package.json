@@ -1,7 +1,7 @@
 {
   "name": "dark-plus-material",
   "description": "The default Dark+ Theme, with material palette and always up to date",
-  "version": "1.4.8",
+  "version": "2.0.0",
   "author": {
     "name": "Vangware",
     "url": "https://vangware.com"
@@ -22,11 +22,13 @@
     ]
   },
   "devDependencies": {
-    "@types/node": "^10.12.21",
-    "@types/node-fetch": "^2.1.4",
+    "@types/color": "^3.0.0",
+    "@types/node": "^11.9.1",
+    "@types/node-fetch": "^2.1.6",
+    "color": "^3.1.0",
     "node-fetch": "^2.3.0",
     "tslint": "^5.12.1",
-    "typescript": "^3.3.1"
+    "typescript": "^3.3.3"
   },
   "displayName": "Dark+ Material",
   "engines": {

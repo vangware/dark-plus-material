@@ -1,37 +1,87 @@
 import { writeFile } from "fs";
 import { promisify } from "util";
 import fetch from "node-fetch";
-import { missingDefaultColors } from "./missingDefaultColors";
-import { defaultsUrl, plusUrl, vsUrl, colorMap } from "./config";
-import { replaceColors, removeDuplicatedColors } from "./helpers";
-import { Theme } from "./interfaces";
+import { defaultsUrl, plusUrl, vsUrl } from "./config";
+import { replaceColors, removeDuplicatedColors } from "./utils";
+import baseTheme from "./base/baseTheme";
+import editorColorRegistry from "./base/editorColorRegistry";
+import colorRegistry from "./base/colorRegistry";
+import debugToolbar from "./base/debugToolbar";
+import exceptionWidget from "./base/exceptionWidget";
+import suggestWidget from "./base/suggestWidget";
+import { closestMaterial } from "./closestMaterial";
+import { colorMap } from "./config/colorMap";
 
 /**
  * Promisified fs.writeFile.
  */
 const writeFileAsync = promisify(writeFile);
 
-Promise.all([defaultsUrl, vsUrl, plusUrl].map(url => fetch(url)))
-	.then(responses =>
-		Promise.all<Theme>(responses.map(response => response.json()))
+Promise.all([
+	baseTheme,
+	editorColorRegistry,
+	colorRegistry,
+	debugToolbar,
+	exceptionWidget,
+	suggestWidget,
+	...[defaultsUrl, vsUrl, plusUrl].map(url =>
+		fetch(url).then(response => response.json())
 	)
-	.then(([defaults, vs, plus]) => ({
-		defaults: { ...defaults.colors, ...missingDefaultColors },
-		vs: vs.tokenColors,
-		plus: plus.tokenColors
-	}))
+])
+	.then(
+		([
+			baseTheme,
+			colorRegistry,
+			editorColorRegistry,
+			debugToolbar,
+			exceptionWidget,
+			suggestWidget,
+			defaults,
+			vs,
+			plus
+		]) => ({
+			defaults: {
+				...baseTheme,
+				...colorRegistry,
+				...editorColorRegistry,
+				...debugToolbar,
+				...exceptionWidget,
+				...suggestWidget,
+				...defaults.colors
+			},
+			vs: vs.tokenColors,
+			plus: plus.tokenColors
+		})
+	)
 	.then(({ defaults, vs, plus }) => ({
 		colors: Object.keys(defaults)
-			.map(key => ({ key, value: defaults[key].toUpperCase() }))
+			.filter(key => key.includes("."))
+			.sort()
+			.map(key => ({ key, value: defaults[key] }))
+			.map(color => ({
+				...color,
+				value: color.value.substr(0, 7).toUpperCase(),
+				opacity: color.value.substr(7) || ""
+			}))
 			.reduce(
-				(colors, { key, value }) => ({
+				(
+					colors,
+					{
+						key,
+						opacity,
+						value
+					}: { key: string; opacity: string; value: string }
+				) => ({
 					...colors,
-					[key]: colorMap[value] || `MISSING [${value}]`
+					[key]: `${colorMap[value] ||
+						`${value}|${closestMaterial(value)}|`}${
+						opacity ? opacity.padStart(2, "0").toUpperCase() : ""
+					}`
 				}),
 				{}
 			),
 		tokenColors: removeDuplicatedColors(
-			[...vs, ...plus].map(setting => replaceColors(setting, colorMap))
+			[...vs, ...plus].map(setting => replaceColors(setting))
 		)
 	}))
 	.then(({ colors, tokenColors }) => ({
@@ -47,4 +97,4 @@ Promise.all([defaultsUrl, vsUrl, plusUrl].map(url => fetch(url)))
 		)
 	)
 	.then(() => console.log("dark-plus-material.json done!"))
-	.catch(() => console.error("Error with dark-plus-material.json update"));
+	.catch(e => console.error("Error with dark-plus-material.json update", e));
