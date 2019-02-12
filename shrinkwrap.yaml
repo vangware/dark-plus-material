@@ -1,24 +1,38 @@
 devDependencies:
-  '@types/node': 10.12.21
-  '@types/node-fetch': 2.1.4
+  '@types/color': 3.0.0
+  '@types/node': 11.9.1
+  '@types/node-fetch': 2.1.6
+  color: 3.1.0
   node-fetch: 2.3.0
   tslint: 5.12.1
-  typescript: 3.3.1
+  typescript: 3.3.3
 packages:
-  /@types/node-fetch/2.1.4:
+  /@types/color-convert/1.9.0:
     dependencies:
-      '@types/node': 10.12.11
+      '@types/color-name': 1.1.0
     dev: true
     resolution:
-      integrity: sha512-tR1ekaXUGpmzOcDXWU9BW73YfA2/VW1DF1FH+wlJ82BbCSnWTbdX+JkqWQXWKIGsFPnPsYadbXfNgz28g+ccWg==
-  /@types/node/10.12.11:
+      integrity: sha512-OKGEfULrvSL2VRbkl/gnjjgbbF7ycIlpSsX7Nkab4MOWi5XxmgBYvuiQ7lcCFY5cPDz7MUNaKgxte2VRmtr4Fg==
+  /@types/color-name/1.1.0:
     dev: true
     resolution:
-      integrity: sha512-3iIOhNiPGTdcUNVCv9e5G7GotfvJJe2pc9w2UgDXlUwnxSZ3RgcUocIU+xYm+rTU54jIKih998QE4dMOyMN1NQ==
-  /@types/node/10.12.21:
+      integrity: sha512-gZ/Rb+MFXF0pXSEQxdRoPMm5jeO3TycjOdvbpbcpHX/B+n9AqaHFe5q6Ga9CsZ7ir/UgIWPfrBzUzn3F19VH/w==
+  /@types/color/3.0.0:
+    dependencies:
+      '@types/color-convert': 1.9.0
     dev: true
     resolution:
-      integrity: sha512-CBgLNk4o3XMnqMc0rhb6lc77IwShMEglz05deDcn2lQxyXEZivfwgYJu7SMha9V5XcrP6qZuevTHV/QrN2vjKQ==
+      integrity: sha512-5qqtNia+m2I0/85+pd2YzAXaTyKO8j+svirO5aN+XaQJ5+eZ8nx0jPtEWZLxCi50xwYsX10xUHetFzfb1WEs4Q==
+  /@types/node-fetch/2.1.6:
+    dependencies:
+      '@types/node': 11.9.1
+    dev: true
+    resolution:
+      integrity: sha512-Hv1jgh3pfpUEl2F2mqUd1AfLSk1YbUCeBJFaP36t7esAO617dErqdxWb5cdG2NfJGOofkmBW36fdx0dVewxDRg==
+  /@types/node/11.9.1:
+    dev: true
+    resolution:
+      integrity: sha512-XJHvu7fvycZ7ORTyThXiKCtld+R4Y1GGerYRrVSf/GhaNahRBIf/Nx+7Xh3AvI5nudOVt/L671CxHGkJt1/+hQ==
   /ansi-regex/2.1.1:
     dev: true
     engines:
@@ -102,6 +116,24 @@ packages:
     dev: true
     resolution:
       integrity: sha1-p9BVi9icQveV3UIyj3QIMcpTvCU=
+  /color-name/1.1.4:
+    dev: true
+    resolution:
+      integrity: sha512-dOy+3AuW3a2wNbZHIuMZpTcgjGuLU/uBL/ubcZF9OXbDo8ff4O8yVp5Bf0efS8uEoYo5q4Fx7dY9OgQGXgAsQA==
+  /color-string/1.5.3:
+    dependencies:
+      color-name: 1.1.4
+      simple-swizzle: 0.2.2
+    dev: true
+    resolution:
+      integrity: sha512-dC2C5qeWoYkxki5UAXapdjqO672AM4vZuPGRQfO8b5HKuKGBbKWpITyDYN7TOFKvRW7kOgAn3746clDBMDJyQw==
+  /color/3.1.0:
+    dependencies:
+      color-convert: 1.9.3
+      color-string: 1.5.3
+    dev: true
+    resolution:
+      integrity: sha512-CwyopLkuRYO5ei2EpzpIh6LqJMt6Mt+jZhO5VI5f/wJLZriXQE32/SSqzmrh+QB+AZT81Cj8yv+7zwToW8ahZg==
   /commander/2.19.0:
     dev: true
     resolution:
@@ -175,6 +207,10 @@ packages:
     dev: true
     resolution:
       integrity: sha1-Yzwsg+PaQqUC9SRmAiSA9CCCYd4=
+  /is-arrayish/0.3.2:
+    dev: true
+    resolution:
+      integrity: sha512-eVRqCvVlZbuw3GrM63ovNSNAeA1K16kaR/LRY/92w0zxQ5/1YzwblUX652i4Xs9RwAGjW9d9y6X88t8OaAJfWQ==
   /js-tokens/3.0.2:
     dev: true
     resolution:
@@ -226,6 +262,12 @@ packages:
     hasBin: true
     resolution:
       integrity: sha512-RS9R6R35NYgQn++fkDWaOmqGoj4Ek9gGs+DPxNUZKuwE183xjJroKvyo1IzVFeXvUrvmALy6FWD5xrdJT25gMg==
+  /simple-swizzle/0.2.2:
+    dependencies:
+      is-arrayish: 0.3.2
+    dev: true
+    resolution:
+      integrity: sha1-pNprY1/8zMoz9w0Xy5JZLeleVXo=
   /sprintf-js/1.0.3:
     dev: true
     resolution:
@@ -286,13 +328,13 @@ packages:
       typescript: '>=2.1.0 || >=2.1.0-dev || >=2.2.0-dev || >=2.3.0-dev || >=2.4.0-dev || >=2.5.0-dev || >=2.6.0-dev || >=2.7.0-dev || >=2.8.0-dev || >=2.9.0-dev || >= 3.0.0-dev || >= 3.1.0-dev'
     resolution:
       integrity: sha512-g5JVHCIJwzfISaXpXE1qvNalca5Jwob6FjI4AoPlqMusJ6ftFE7IkkFoMhVLRgK+4Kx3gkzb8UZK5t5yTTvEmA==
-  /typescript/3.3.1:
+  /typescript/3.3.3:
     dev: true
     engines:
       node: '>=4.2.0'
     hasBin: true
     resolution:
-      integrity: sha512-cTmIDFW7O0IHbn1DPYjkiebHxwtCMU+eTy30ZtJNBPF9j2O1ITu5XH2YnBeVRKWHqF+3JQwWJv0Q0aUgX8W7IA==
+      integrity: sha512-Y21Xqe54TBVp+VDSNbuDYdGw0BpoR/Q6wo/+35M8PAU0vipahnyduJWirxxdxjsAkS7hue53x2zp8gz7F05u0A==
   /wrappy/1.0.2:
     dev: true
     resolution:
@@ -301,8 +343,10 @@ registry: 'https://registry.npmjs.org/'
 shrinkwrapMinorVersion: 9
 shrinkwrapVersion: 3
 specifiers:
-  '@types/node': ^10.12.21
-  '@types/node-fetch': ^2.1.4
+  '@types/color': ^3.0.0
+  '@types/node': ^11.9.1
+  '@types/node-fetch': ^2.1.6
+  color: ^3.1.0
   node-fetch: ^2.3.0
   tslint: ^5.12.1
-  typescript: ^3.3.1
+  typescript: ^3.3.3
