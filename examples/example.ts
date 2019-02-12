@@ -1,7 +1,5 @@
 /**
  * Example JSDoc
- *
- * @export
  * @class Foobar
  */
 export class Foobar {

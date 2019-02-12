@@ -1,5 +1,15 @@
 # Changelog
 
+## 2.0.0
+
+- Big update, changed all the update scripts to load default styles from several sources.
+- Added a lot of color support to the UI.
+- Yes, the theme now is darker (which is nicer for my eyes, but maybe you hate is, so feedback is appreciated).
+- Updated `README.md`.
+- Updated dependencies.
+- Added build to test theme when coding.
+- TODO: Update screenshots (and maybe add some more).
+
 ## 1.4.8
 
 - Updated dependencies.
