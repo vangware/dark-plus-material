@@ -1,5 +1,9 @@
 # Changelog
 
+## 2.0.3
+
+- Improved contrast for suggestions selected element.
+
 ## 2.0.2
 
 - Reverted back from true black background to gray by popular demand.
