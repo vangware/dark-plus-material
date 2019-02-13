@@ -1,5 +1,10 @@
 # Changelog
 
+## 2.0.2
+
+- Reverted back from true black background to gray by popular demand.
+- Will add an option in the future to have it true black (I like that contrast better).
+
 ## 2.0.1
 
 - Fixed issue with transparency on `editorUnnecessaryCode.opacity`.
