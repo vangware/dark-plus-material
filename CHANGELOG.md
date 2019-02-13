@@ -1,5 +1,9 @@
 # Changelog
 
+## 2.0.1
+
+- Fixed issue with transparency on `editorUnnecessaryCode.opacity`.
+
 ## 2.0.0
 
 - Big update, changed all the update scripts to load default styles from several sources.
