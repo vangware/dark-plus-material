@@ -14,6 +14,12 @@ I really love the default Dark+ Theme that comes with Visual Studio Code, but al
 
 Thanks a lot for the love ♥
 
+## The update process
+
+```
+VSCode update -> mapping (1 VSCode color => 1 Material color) -> Dark+ Material update.
+```
+
 ## Screenshots
 
 ### JavaScript

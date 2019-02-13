@@ -1,5 +1,10 @@
 # Changelog
 
+## 2.0.4
+
+- Completely updated colorMap to match with the old one and add the new colors on top of that (should be better for old users).
+- Added simple description of the update process in the README.
+
 ## 2.0.3
 
 - Improved contrast for suggestions selected element.
