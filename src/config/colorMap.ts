@@ -21,7 +21,7 @@ export const colorMap = invertMap({
 	// Purple
 	"#9C27B0": ["#646695", "#68217A"],
 	// Indigo
-	"#3F51B5": ["#000080", "#121288", "#094771"],
+	"#3F51B5": ["#000080", "#121288", "#094771", "#062F4A", "#063B49"],
 	// Blue
 	"#2196F3": [
 		"#0E70C0",
@@ -52,7 +52,7 @@ export const colorMap = invertMap({
 	// Cyan
 	"#00BCD4": ["#9CDCFE", "#ADD6FF"],
 	// Teal
-	"#009688": ["#4EC9B0", "#40C8AE", "#062F4A", "#063B49"],
+	"#009688": ["#4EC9B0", "#40C8AE"],
 	// Light Green
 	"#8BC34A": ["#6A9955", "#9BB955"],
 	// Lime
