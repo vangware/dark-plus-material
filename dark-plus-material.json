@@ -76,7 +76,7 @@
     "editorSuggestWidget.foreground": "#BDBDBD",
     "editorSuggestWidget.highlightForeground": "#03A9F4",
     "editorSuggestWidget.selectedBackground": "#009688",
-    "editorUnnecessaryCode.opacity": "#0000000A",
+    "editorUnnecessaryCode.opacity": "#000000A0",
     "editorWarning.foreground": "#4CAF50",
     "editorWhitespace.foreground": "#E0E0E029",
     "editorWidget.background": "#101010",
