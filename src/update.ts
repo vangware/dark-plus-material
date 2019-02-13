@@ -75,7 +75,7 @@ Promise.all([
 					...colors,
 					[key]: `${colorMap[value] ||
 						`${value}|${closestMaterial(value)}|`}${
-						opacity ? opacity.padStart(2, "0").toUpperCase() : ""
+						opacity ? opacity.padEnd(2, "0").toUpperCase() : ""
 					}`
 				}),
 				{}
