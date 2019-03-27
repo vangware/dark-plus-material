@@ -100,6 +100,7 @@ export const missingColors = (tsFileText: string) =>
 	tsFileText
 		.replace(/Color.transparent/g, "'#00000000'")
 		.replace(/Color.white/g, "'#FFFFFF'")
+		.replace(/Color.black/g, "'#000000'")
 		.replace(/contentTransparency/g, "0.4")
 		.replace(/contrastBorder/g, "'null'")
 		.replace(/dark: commonBaseColor/g, "dark: '#606060'")
