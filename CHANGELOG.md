@@ -1,5 +1,10 @@
 # Changelog
 
+## 2.0.5
+
+- Updated dependencies.
+- Updated colors to latest from VSCode's GitHub.
+
 ## 2.0.4
 
 - Completely updated colorMap to match with the old one and add the new colors on top of that (should be better for old users).

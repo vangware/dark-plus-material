@@ -10,7 +10,7 @@ This is the default Dark+ Theme that comes with Visual Studio Code, but with the
 
 I really love the default Dark+ Theme that comes with Visual Studio Code, but also love the Material Design Palette. The thing is I didn't found a good material theme (the coloring is always ugly for my taste). So I made this theme that implements the Material Design Palette in the Dark+ theme that comes with Visual Studio Code.
 
-**Almost 525k downloads! More than 80k installs! In the top 10 of most downloaded themes!**
+**Almost 600k downloads! Almost 90k installs! In the top 10 of most downloaded themes!**
 
 Thanks a lot for the love ♥
 
