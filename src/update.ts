@@ -11,6 +11,7 @@ import exceptionWidget from "./base/exceptionWidget";
 import suggestWidget from "./base/suggestWidget";
 import { closestMaterial } from "./closestMaterial";
 import { colorMap } from "./config/colorMap";
+import opacityMap from "./config/opacityMap";
 
 /**
  * Promisified fs.writeFile.
@@ -61,7 +62,7 @@ Promise.all([
 			.map(color => ({
 				...color,
 				value: color.value.substr(0, 7).toUpperCase(),
-				opacity: color.value.substr(7) || ""
+				opacity: color.value.substr(7) || opacityMap[color.key] || ""
 			}))
 			.reduce(
 				(

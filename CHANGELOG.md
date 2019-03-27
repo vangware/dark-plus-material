@@ -1,5 +1,10 @@
 # Changelog
 
+## 2.0.6
+
+- Git conflicts are now easier on the eyes.
+- Added opacityMap to force opacity on some properties.
+
 ## 2.0.5
 
 - Updated dependencies.
