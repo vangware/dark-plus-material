@@ -1,5 +1,10 @@
 # Changelog
 
+## 2.0.7
+
+- Updated dependencies.
+- Updated theme.
+
 ## 2.0.6
 
 - Git conflicts are now easier on the eyes.

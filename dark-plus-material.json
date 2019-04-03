@@ -148,6 +148,7 @@
     "statusBarItem.hostBackground": "#00000080",
     "statusBarItem.hoverBackground": "#FFFFFF1F",
     "statusBarItem.prominentBackground": "#00000080",
+    "statusBarItem.prominentForeground": "#FFFFFF",
     "statusBarItem.prominentHoverBackground": "#0000004D",
     "tab.activeBackground": "#101010",
     "tab.activeForeground": "#FFFFFF",
