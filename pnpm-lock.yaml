@@ -1,11 +1,11 @@
 devDependencies:
   '@types/color': 3.0.0
-  '@types/node': 11.12.0
+  '@types/node': 11.13.0
   '@types/node-fetch': 2.1.7
   color: 3.1.0
   node-fetch: 2.3.0
-  tslint: 5.14.0
-  typescript: 3.3.4000
+  tslint: 5.15.0
+  typescript: 3.4.1
 lockfileVersion: 5
 packages:
   /@types/color-convert/1.9.0:
@@ -26,14 +26,14 @@ packages:
       integrity: sha512-5qqtNia+m2I0/85+pd2YzAXaTyKO8j+svirO5aN+XaQJ5+eZ8nx0jPtEWZLxCi50xwYsX10xUHetFzfb1WEs4Q==
   /@types/node-fetch/2.1.7:
     dependencies:
-      '@types/node': 11.12.0
+      '@types/node': 11.13.0
     dev: true
     resolution:
       integrity: sha512-TZozHCDVrs0Aj1B9ZR5F4Q9MknDNcVd+hO5lxXOCzz07ELBey6s1gMUSZHUYHlPfRFKJFXiTnNuD7ePiI6S4/g==
-  /@types/node/11.12.0:
+  /@types/node/11.13.0:
     dev: true
     resolution:
-      integrity: sha512-Lg00egj78gM+4aE0Erw05cuDbvX9sLJbaaPwwRtdCdAMnIudqrQZ0oZX98Ek0yiSK/A2nubHgJfvII/rTT2Dwg==
+      integrity: sha512-rx29MMkRdVmzunmiA4lzBYJNnXsW/PhG4kMBy2ATsYaDjGGR75dCFEVVROKpNwlVdcUX3xxlghKQOeDPBJobng==
   /ansi-regex/2.1.1:
     dev: true
     engines:
@@ -135,10 +135,10 @@ packages:
     dev: true
     resolution:
       integrity: sha512-CwyopLkuRYO5ei2EpzpIh6LqJMt6Mt+jZhO5VI5f/wJLZriXQE32/SSqzmrh+QB+AZT81Cj8yv+7zwToW8ahZg==
-  /commander/2.19.0:
+  /commander/2.20.0:
     dev: true
     resolution:
-      integrity: sha512-6tvAOO+D6OENvRAh524Dh9jcfKTYDQAqvqezbCW82xj5X0pSrcpxtvRKHLG0yBY6SD7PSDrJaj+0AiOcKVd1Xg==
+      integrity: sha512-7j2y+40w61zy6YC2iRNpUe/NwhNyoXrYpHMrSunaMG64nRnaf96zO/KMQR4OyN/UnE5KLyEBnKHd4aG3rskjpQ==
   /concat-map/0.0.1:
     dev: true
     resolution:
@@ -310,12 +310,12 @@ packages:
     dev: true
     resolution:
       integrity: sha512-4krF8scpejhaOgqzBEcGM7yDIEfi0/8+8zDRZhNZZ2kjmHJ4hv3zCbQWxoJGz1iw5U0Jl0nma13xzHXcncMavQ==
-  /tslint/5.14.0:
+  /tslint/5.15.0:
     dependencies:
       babel-code-frame: 6.26.0
       builtin-modules: 1.1.1
       chalk: 2.4.2
-      commander: 2.19.0
+      commander: 2.20.0
       diff: 3.5.0
       glob: 7.1.3
       js-yaml: 3.13.0
@@ -332,7 +332,7 @@ packages:
     peerDependencies:
       typescript: '>=2.1.0 || >=2.1.0-dev || >=2.2.0-dev || >=2.3.0-dev || >=2.4.0-dev || >=2.5.0-dev || >=2.6.0-dev || >=2.7.0-dev || >=2.8.0-dev || >=2.9.0-dev || >=3.0.0-dev || >= 3.1.0-dev || >= 3.2.0-dev'
     resolution:
-      integrity: sha512-IUla/ieHVnB8Le7LdQFRGlVJid2T/gaJe5VkjzRVSRR6pA2ODYrnfR1hmxi+5+au9l50jBwpbBL34txgv4NnTQ==
+      integrity: sha512-6bIEujKR21/3nyeoX2uBnE8s+tMXCQXhqMmaIPJpHmXJoBJPTLcI7/VHRtUwMhnLVdwLqqY3zmd8Dxqa5CVdJA==
   /tsutils/2.29.0:
     dependencies:
       tslib: 1.9.3
@@ -341,22 +341,22 @@ packages:
       typescript: '>=2.1.0 || >=2.1.0-dev || >=2.2.0-dev || >=2.3.0-dev || >=2.4.0-dev || >=2.5.0-dev || >=2.6.0-dev || >=2.7.0-dev || >=2.8.0-dev || >=2.9.0-dev || >= 3.0.0-dev || >= 3.1.0-dev'
     resolution:
       integrity: sha512-g5JVHCIJwzfISaXpXE1qvNalca5Jwob6FjI4AoPlqMusJ6ftFE7IkkFoMhVLRgK+4Kx3gkzb8UZK5t5yTTvEmA==
-  /typescript/3.3.4000:
+  /typescript/3.4.1:
     dev: true
     engines:
       node: '>=4.2.0'
     hasBin: true
     resolution:
-      integrity: sha512-jjOcCZvpkl2+z7JFn0yBOoLQyLoIkNZAs/fYJkUG6VKy6zLPHJGfQJYFHzibB6GJaF/8QrcECtlQ5cpvRHSMEA==
+      integrity: sha512-3NSMb2VzDQm8oBTLH6Nj55VVtUEpe/rgkIzMir0qVoLyjDZlnMBva0U6vDiV3IH+sl/Yu6oP5QwsAQtHPmDd2Q==
   /wrappy/1.0.2:
     dev: true
     resolution:
       integrity: sha1-tSQ9jz7BqjXxNkYFvA0QNuMKtp8=
 specifiers:
   '@types/color': ^3.0.0
-  '@types/node': ^11.12.0
+  '@types/node': ^11.13.0
   '@types/node-fetch': ^2.1.7
   color: ^3.1.0
   node-fetch: ^2.3.0
-  tslint: ^5.14.0
-  typescript: ^3.3.4000
+  tslint: ^5.15.0
+  typescript: ^3.4.1
