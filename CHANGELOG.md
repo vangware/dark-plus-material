@@ -1,5 +1,12 @@
 # Changelog
 
+## 2.1.0
+
+- Long overdue update.
+- Updated dependencies.
+- Updated theme.
+- Fixed some issues.
+
 ## 2.0.7
 
 - Updated dependencies.
