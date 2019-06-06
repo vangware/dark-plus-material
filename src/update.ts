@@ -12,6 +12,7 @@ import suggestWidget from "./base/suggestWidget";
 import { closestMaterial } from "./closestMaterial";
 import { colorMap } from "./config/colorMap";
 import opacityMap from "./config/opacityMap";
+import notAllowedOrDeprecated from "./config/notAllowedOrDeprecated";
 
 /**
  * Promisified fs.writeFile.
@@ -64,6 +65,7 @@ Promise.all([
 				value: color.value.substr(0, 7).toUpperCase(),
 				opacity: color.value.substr(7) || opacityMap[color.key] || ""
 			}))
+			.filter(({ key }) => !notAllowedOrDeprecated.includes(key))
 			.reduce(
 				(
 					colors,

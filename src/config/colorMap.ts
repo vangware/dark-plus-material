@@ -78,8 +78,9 @@ export const colorMap = invertMap({
 		"#40C8AE"
 	], // Teal
 	"#8BC34A": [
-		"#8BC34A",
+		"#16825D",
 		"#6A9955",
+		"#8BC34A",
 		"#9BB955"
 	], // Light Green
 	"#CDDC39": [
@@ -92,10 +93,11 @@ export const colorMap = invertMap({
 		"#DCDCAA"
 	], // Yellow
 	"#FFC107": [
-		"#FFC107",
+		"#B89500",
 		"#CE9178",
 		"#F6B94D",
-		"#B89500"
+		"#FFC107",
+		"#FFCC00"
 	], // Amber
 	"#FF9800": [
 		"#FF9800",
@@ -128,6 +130,7 @@ export const colorMap = invertMap({
 		"#53595D"
 	], // Blue Grey
 	"#FFFFFF": [
+		"#FFF",
 		"#FFFFFF",
 		"#ADADAD",
 		"#AEAFAD"
@@ -184,10 +187,10 @@ export const colorMap = invertMap({
 		"#282828",
 		"#2D2D2D",
 		"#3A3D41",
-		"#37373D",
 		"#3F3F46"
 	], // Grey 900
 	"#101010": [
+		"#37373D",
 		"#101010",
 		"#0A0A0A",
 		"#1E1E1E"
