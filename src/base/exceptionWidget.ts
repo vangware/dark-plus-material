@@ -9,6 +9,6 @@ export const exceptionWidget = themeLoader({
 	colorGroups: /(?:const )([a-zA-Z]+)(?: = registerColor\(')([^']+)(?:', { dark: )(.+)/,
 	colorTemplate: "$1|$2|$3",
 	url: exceptionWidgetUrl
-})
+});
 
 export default exceptionWidget;

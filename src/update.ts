@@ -1,18 +1,17 @@
 import { writeFile } from "fs";
-import { promisify } from "util";
 import fetch from "node-fetch";
-import { defaultsUrl, plusUrl, vsUrl } from "./config";
-import { replaceColors, removeDuplicatedColors } from "./utils";
+import { promisify } from "util";
 import baseTheme from "./base/baseTheme";
-import editorColorRegistry from "./base/editorColorRegistry";
 import colorRegistry from "./base/colorRegistry";
 import debugToolbar from "./base/debugToolbar";
+import editorColorRegistry from "./base/editorColorRegistry";
 import exceptionWidget from "./base/exceptionWidget";
 import suggestWidget from "./base/suggestWidget";
-import { closestMaterial } from "./closestMaterial";
+import { defaultsUrl, plusUrl, vsUrl } from "./config";
 import { colorMap } from "./config/colorMap";
-import opacityMap from "./config/opacityMap";
 import notAllowedOrDeprecated from "./config/notAllowedOrDeprecated";
+import opacityMap from "./config/opacityMap";
+import { removeDuplicatedColors, replaceColors } from "./utils";
 
 /**
  * Promisified fs.writeFile.
@@ -57,15 +56,19 @@ Promise.all([
 	)
 	.then(({ defaults, vs, plus }) => ({
 		colors: Object.keys(defaults)
-			.filter(key => key.includes("."))
+			.filter(
+				key =>
+					key.includes(".") && !notAllowedOrDeprecated.includes(key)
+			)
 			.sort()
 			.map(key => ({ key, value: defaults[key] }))
 			.map(color => ({
 				...color,
-				value: color.value.substr(0, 7).toUpperCase(),
+				value: color.value.includes("#")
+					? color.value.substr(0, 7).toUpperCase()
+					: color.value,
 				opacity: color.value.substr(7) || opacityMap[color.key] || ""
 			}))
-			.filter(({ key }) => !notAllowedOrDeprecated.includes(key))
 			.reduce(
 				(
 					colors,
@@ -76,16 +79,17 @@ Promise.all([
 					}: { key: string; opacity: string; value: string }
 				) => ({
 					...colors,
-					[key]: `${colorMap[value] ||
-						`${value}|${closestMaterial(value)}|`}${
-						opacity ? opacity.padEnd(2, "0").toUpperCase() : ""
-					}`
+					[key]: colorMap[value]
+						? `${colorMap[value]}${
+								opacity
+									? opacity.padEnd(2, "0").toUpperCase()
+									: ""
+						  }`
+						: `${value}[INVALID]`
 				}),
 				{}
 			),
-		tokenColors: removeDuplicatedColors(
-			[...vs, ...plus].map(setting => replaceColors(setting))
-		)
+		tokenColors: removeDuplicatedColors([...vs, ...plus].map(replaceColors))
 	}))
 	.then(({ colors, tokenColors }) => ({
 		$schema: "vscode://schemas/color-theme",

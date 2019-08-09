@@ -1,6 +1,7 @@
 {
   "compilerOptions": {
-    "lib": ["es2017", "dom"],
+    "importHelpers": true,
+    "lib": ["es2015", "dom"],
     "module": "commonjs",
     "moduleResolution": "node",
     "target": "esnext",

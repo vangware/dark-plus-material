@@ -1,11 +1,12 @@
-import fetch from "node-fetch";
 import * as Color from "color";
+import fetch from "node-fetch";
 
 /**
  * Parse string nulls.
  * @param value Value to parse.
  */
 export const stringNull = (value: string): string =>
+	// tslint:disable-next-line: no-null-keyword
 	value.includes("null") ? null : value;
 
 /**
@@ -38,7 +39,7 @@ export const transparentHex = (value: string) => {
 	const transparency = transparentValues.length
 		? transparentValues
 				.map(val => val.match(/[\d\.]+/)[0])
-				.map(val => parseFloat(val))
+				.map(parseFloat)
 				.reduce((total, val) => total * val, 1)
 		: false;
 
@@ -55,7 +56,7 @@ export const lightenHex = (value: string) => {
 	const light = lightenValues.length
 		? lightenValues
 				.map(val => val.match(/[\d\.]+/)[0])
-				.map(val => parseFloat(val))
+				.map(parseFloat)
 				.reduce((total, val) => total * val, 1)
 		: false;
 
@@ -98,9 +99,9 @@ export interface TSThemeMap {
  */
 export const missingColors = (tsFileText: string) =>
 	tsFileText
+		.replace(/Color.black/g, "'#000000'")
 		.replace(/Color.transparent/g, "'#00000000'")
 		.replace(/Color.white/g, "'#FFFFFF'")
-		.replace(/Color.black/g, "'#000000'")
 		.replace(/contentTransparency/g, "0.4")
 		.replace(/contrastBorder/g, "'null'")
 		.replace(/dark: commonBaseColor/g, "dark: '#606060'")
@@ -117,6 +118,9 @@ export const missingColors = (tsFileText: string) =>
 		.replace(/dark: listHighlightForeground/g, "dark: '#0097fb'")
 		.replace(/dark: rulerRangeDefault/g, "dark: '#007ACC99'")
 		.replace(/dark: textLinkForeground/g, "dark: '#3794FF'")
+		.replace(/editorInfoForeground/g, "'#2196F3'")
+		.replace(/editorWarningForeground/g, "'#FFEB3B'")
+		.replace(/editorWidgetForeground/g, "'#BDBDBD'")
 		.replace(/rulerTransparency/g, "1");
 
 /**
