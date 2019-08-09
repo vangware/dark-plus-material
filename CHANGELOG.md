@@ -1,5 +1,10 @@
 # Changelog
 
+## 2.1.1
+
+- Dependency update.
+- Theme update.
+
 ## 2.1.0
 
 - Long overdue update.

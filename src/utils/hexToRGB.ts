@@ -7,6 +7,7 @@ export const hexToRGB = (hex: string) => {
 		.replace(/#(\w{2})(\w{2})(\w{2})/, "$1|$2|$3")
 		.split("|")
 		.map(rgb => parseInt(rgb, 16));
+
 	return { hex, r, g, b };
 };
 

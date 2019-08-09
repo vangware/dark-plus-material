@@ -1,10 +1,10 @@
-import { hexToRGB, distance } from "./utils";
-import { materialGrays, materialColors } from "./config/materialColors";
+import { materialColors, materialGrays } from "./config/materialColors";
+import { distance, hexToRGB } from "./utils";
 
 /**
  * Already mapped colors (to improve performance).
  */
-let mapped = {
+const mapped = {
 	has(color: string) {
 		return Object.keys(this).indexOf(color) >= 0;
 	}
@@ -26,9 +26,10 @@ export const closestMaterial = (color: string) => {
 					(distance(g, material.g) ** 2) +
 					(distance(b, material.b) ** 2)
 				);
+
 				return ({
-					diff: Math.min(diff, min.diff),
-					color: diff <= min.diff ? material.hex : min.color
+					color: diff <= min.diff ? material.hex : min.color,
+					diff: Math.min(diff, min.diff)
 				});
 			},
 			{ diff: Number.MAX_SAFE_INTEGER, color: "" }
