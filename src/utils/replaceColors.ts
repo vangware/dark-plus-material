@@ -1,6 +1,6 @@
-import { TokenColor } from "../interfaces";
 import { closestMaterial } from "../closestMaterial";
 import { colorMap } from "../config/colorMap";
+import { TokenColor } from "../interfaces";
 
 /**
  * Removes unwanted properties and set the material colors with closestMaterial.
@@ -18,6 +18,7 @@ export const replaceColors = ({ scope, settings }: TokenColor) => {
 			colorMap[foreground.toUpperCase()] ||
 			`${foreground.toUpperCase()}|${closestMaterial(foreground)}`;
 	}
+
 	return { scope, settings };
 };
 

@@ -1,9 +1,10 @@
 import { suggestWidgetUrl } from "../config";
-import { TSThemeMap, themeLoader } from "./utils";
+import { themeLoader, TSThemeMap } from "./utils";
 
 const constantMap = (value: string, colors: TSThemeMap[]) => {
 	const [trueValue] = value.split(".");
-	const color = colors.find(color => color.constName === trueValue);
+	const color = colors.find(currentColor => currentColor.constName === trueValue);
+
 	return color ? constantMap(color.value, colors) : value;
 };
 
@@ -12,6 +13,7 @@ const constantMap = (value: string, colors: TSThemeMap[]) => {
  */
 export const suggestWidget = themeLoader({
 	colorDefs: /const ([a-zA-Z]+) = registerColor\('[^']+', { (light|dark): .+(?= })/g,
+	// tslint:disable-next-line: max-line-length
 	colorGroups: /(?:const )([a-zA-Z]+)(?: = registerColor\(')([^']+)(?:', { (?:(?:light: .+(?:, dark: )+)(.+)(?=, hc)|dark: (.+)(?=, light)))(?:.+)/,
 	colorTemplate: "$1|$2|$3$4",
 	constantMap,

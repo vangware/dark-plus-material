@@ -1,4 +1,4 @@
-import { TokenColor, PlainSettings } from "../interfaces";
+import { PlainSettings, TokenColor } from "../interfaces";
 
 /**
  * Transform tokenColors array to a plain object.
