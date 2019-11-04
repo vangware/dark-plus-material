@@ -44,11 +44,6 @@ export const editorColorRegistryUrl = `${tsFiles}/editor/common/view/editorColor
 export const exceptionWidgetUrl = `${tsWorkbench}/contrib/debug/browser/exceptionWidget.ts`;
 
 /**
- * Debug toolbar theme configuration (ts file).
- */
-export const debugToolbarUrl = `${tsWorkbench}/contrib/debug/browser/debugToolbar.ts`;
-
-/**
  * Suggests widget theme configuration (ts file).
  */
 export const suggestWidgetUrl = `${tsFiles}/editor/contrib/suggest/suggestWidget.ts`;

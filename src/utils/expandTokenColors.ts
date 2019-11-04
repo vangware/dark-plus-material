@@ -1,19 +1,20 @@
+import { objectMap } from "@vangware/micro";
 import { PlainSettings, TokenColor } from "../interfaces";
 
 /**
  * Transform object to settings file.
- * @param settings Settings object.
+ * @param plainSettings Settings object.
  * @returns Token color array.
  */
-export const expandTokenColors = (settings: PlainSettings): TokenColor[] =>
-	Object.keys(settings).map(setting =>
-		setting !== "vscode"
+export const expandTokenColors = (plainSettings: PlainSettings): TokenColor[] =>
+	objectMap(plainSettings, (settings, scope) =>
+		scope !== "vscode"
 			? {
-					scope: setting,
-					settings: settings[setting]
+					scope,
+					settings
 			  }
 			: {
-					settings: settings[setting]
+					settings
 			  }
 	);
 

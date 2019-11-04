@@ -1,3 +1,9 @@
+import {
+	arrayMap,
+	EMPTY_OBJECT,
+	EMPTY_STRING,
+	stringMapReplace
+} from "@vangware/micro";
 import * as Color from "color";
 import fetch from "node-fetch";
 
@@ -37,8 +43,7 @@ export const fromHex = (value: string) =>
 export const transparentHex = (value: string) => {
 	const [color, ...transparentValues] = value.split(".transparent");
 	const transparency = transparentValues.length
-		? transparentValues
-				.map(val => val.match(/[\d\.]+/)[0])
+		? arrayMap(transparentValues, val => val.match(/[\d\.]+/)[0])
 				.map(parseFloat)
 				.reduce((total, val) => total * val, 1)
 		: false;
@@ -54,8 +59,7 @@ export const transparentHex = (value: string) => {
 export const lightenHex = (value: string) => {
 	const [color, ...lightenValues] = value.split(".lighten");
 	const light = lightenValues.length
-		? lightenValues
-				.map(val => val.match(/[\d\.]+/)[0])
+		? arrayMap(lightenValues, val => val.match(/[\d\.]+/)[0])
 				.map(parseFloat)
 				.reduce((total, val) => total * val, 1)
 		: false;
@@ -98,30 +102,32 @@ export interface TSThemeMap {
  * @param tsFileText TS theme file.
  */
 export const missingColors = (tsFileText: string) =>
-	tsFileText
-		.replace(/Color.black/g, "'#000000'")
-		.replace(/Color.transparent/g, "'#00000000'")
-		.replace(/Color.white/g, "'#FFFFFF'")
-		.replace(/contentTransparency/g, "0.4")
-		.replace(/contrastBorder/g, "'null'")
-		.replace(/dark: commonBaseColor/g, "dark: '#606060'")
-		.replace(/dark: currentBaseColor/g, "dark: '#40C8AE'")
-		.replace(/dark: defaultInsertColor/g, "dark: '#9BB95533'")
-		.replace(/dark: defaultRemoveColor/g, "dark: '#FF000033'")
-		.replace(/dark: editorBackground/g, "dark: '#1E1E1E'")
-		.replace(/dark: editorForeground/g, "dark: '#BBBBBB'")
-		.replace(/dark: editorWidgetBackground/g, "dark: '#252526'")
-		.replace(/dark: editorWidgetBorder/g, "dark: '#454545'")
-		.replace(/dark: findMatchColorDefault/g, "dark: '#F6B94DB3'")
-		.replace(/dark: incomingBaseColor/g, "dark: '#40A6FF'")
-		.replace(/dark: listFocusBackground/g, "dark: '#062F4A'")
-		.replace(/dark: listHighlightForeground/g, "dark: '#0097fb'")
-		.replace(/dark: rulerRangeDefault/g, "dark: '#007ACC99'")
-		.replace(/dark: textLinkForeground/g, "dark: '#3794FF'")
-		.replace(/editorInfoForeground/g, "'#2196F3'")
-		.replace(/editorWarningForeground/g, "'#FFEB3B'")
-		.replace(/editorWidgetForeground/g, "'#BDBDBD'")
-		.replace(/rulerTransparency/g, "1");
+	stringMapReplace(tsFileText, {
+		"Color.black": "'#000000'",
+		"Color.transparent": "'#00000000'",
+		"Color.white": "'#FFFFFF'",
+		contentTransparency: "0.4",
+		contrastBorder: "'null'",
+		"dark: commonBaseColor": "dark: '#606060'",
+		"dark: currentBaseColor": "dark: '#40C8AE'",
+		"dark: defaultInsertColor": "dark: '#9BB95533'",
+		"dark: defaultRemoveColor": "dark: '#FF000033'",
+		"dark: editorBackground": "dark: '#1E1E1E'",
+		"dark: editorForeground": "dark: '#BBBBBB'",
+		"dark: editorWidgetBackground": "dark: '#252526'",
+		"dark: editorWidgetBorder": "dark: '#454545'",
+		"dark: findMatchColorDefault": "dark: '#F6B94DB3'",
+		"dark: incomingBaseColor": "dark: '#40A6FF'",
+		"dark: listFocusBackground": "dark: '#062F4A'",
+		"dark: listHighlightForeground": "dark: '#0097fb'",
+		"dark: rulerRangeDefault": "dark: '#007ACC99'",
+		"dark: textLinkForeground": "dark: '#3794FF'",
+		editorInfoForeground: "'#2196F3'",
+		editorWarningForeground: "'#FFEB3B'",
+		editorWidgetForeground: "'#BDBDBD'",
+		editorErrorForeground: "'#F48771'",
+		rulerTransparency: "1"
+	});
 
 /**
  * Options for theme loader.
@@ -172,46 +178,41 @@ export const themeLoader = ({
 
 			console.log(
 				`Parsing ${url} . . .${
-					matchedColorDefs === null ? " Error!" : ""
+					matchedColorDefs === null ? " Error!" : EMPTY_STRING
 				}`
 			);
 
-			return matchedColorDefs
-				? matchedColorDefs
-						.map(registeredColor =>
-							registeredColor.replace(colorGroups, colorTemplate)
-						)
-						.map(mapped => mapped.split("|"))
-						.map(([constName, propName, value]) => ({
-							constName,
-							propName,
-							value: value.replace(/'/g, "")
-						}))
-						.map(color => ({
-							...color,
-							value: standardLighten(
-								standardTransparent(fromHex(color.value))
-							)
-						}))
-						.map((color, index, colors) => ({
-							...color,
-							value: stringNull(constantMap(color.value, colors))
-						}))
-						.filter(({ value }) => value !== null)
-						.map(color => ({
-							...color,
-							value: standardLength(
-								lightenHex(
-									transparentHex(newColorHex(color.value))
-								)
-							)
-						}))
-						.reduce(
-							(output, { propName, value }) => ({
-								...output,
-								[propName]: value
-							}),
-							{}
-						)
-				: {};
+			return arrayMap(matchedColorDefs, registeredColor =>
+				registeredColor.replace(colorGroups, colorTemplate)
+			)
+				.map(mapped => mapped.split("|"))
+				.map(([constName, propName, value]) => ({
+					constName,
+					propName,
+					value: value.replace(/'/g, EMPTY_STRING)
+				}))
+				.map(color => ({
+					...color,
+					value: standardLighten(
+						standardTransparent(fromHex(color.value))
+					)
+				}))
+				.map((color, _index, colors) => ({
+					...color,
+					value: stringNull(constantMap(color.value, colors))
+				}))
+				.filter(({ value }) => value !== null)
+				.map(color => ({
+					...color,
+					value: standardLength(
+						lightenHex(transparentHex(newColorHex(color.value)))
+					)
+				}))
+				.reduce(
+					(output, { propName, value }) => ({
+						...output,
+						[propName]: value
+					}),
+					EMPTY_OBJECT
+				);
 		});

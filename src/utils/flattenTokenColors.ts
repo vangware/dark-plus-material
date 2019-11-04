@@ -1,3 +1,4 @@
+import { EMPTY_OBJECT } from "@vangware/micro";
 import { PlainSettings, TokenColor } from "../interfaces";
 
 /**
@@ -19,10 +20,10 @@ export const flattenTokenColors = (tokenColors: TokenColor[]): PlainSettings =>
 						? { ...out[key], ...setting.settings }
 						: setting.settings
 				}),
-				{}
+				EMPTY_OBJECT
 			)
 		}),
-		{}
+		EMPTY_OBJECT
 	);
 
 export default flattenTokenColors;
