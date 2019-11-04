@@ -1,9 +1,9 @@
+import { EMPTY_OBJECT, EMPTY_STRING, jsonParsePromise } from "@vangware/micro";
 import { writeFile } from "fs";
 import fetch from "node-fetch";
 import { promisify } from "util";
 import baseTheme from "./base/baseTheme";
 import colorRegistry from "./base/colorRegistry";
-import debugToolbar from "./base/debugToolbar";
 import editorColorRegistry from "./base/editorColorRegistry";
 import exceptionWidget from "./base/exceptionWidget";
 import suggestWidget from "./base/suggestWidget";
@@ -22,11 +22,20 @@ Promise.all([
 	baseTheme,
 	editorColorRegistry,
 	colorRegistry,
-	debugToolbar,
 	exceptionWidget,
 	suggestWidget,
 	...[defaultsUrl, vsUrl, plusUrl].map(url =>
-		fetch(url).then(response => response.json())
+		fetch(url)
+			.then(response => response.text())
+			/* TEMPORARY FIX BECAUSE dark_vs.json IS BROKEN */
+			.then(responseText =>
+				responseText.replace(
+					`"entity.name.operator.custom-literal.string",`,
+					`"entity.name.operator.custom-literal.string"`
+				)
+			)
+			// tslint:disable-next-line: no-unnecessary-callback-wrapper no-any
+			.then(json => jsonParsePromise<any>(json))
 	)
 ])
 	.then(
@@ -34,7 +43,6 @@ Promise.all([
 			baseTheme,
 			colorRegistry,
 			editorColorRegistry,
-			debugToolbar,
 			exceptionWidget,
 			suggestWidget,
 			defaults,
@@ -45,7 +53,6 @@ Promise.all([
 				...baseTheme,
 				...colorRegistry,
 				...editorColorRegistry,
-				...debugToolbar,
 				...exceptionWidget,
 				...suggestWidget,
 				...defaults.colors
@@ -67,7 +74,10 @@ Promise.all([
 				value: color.value.includes("#")
 					? color.value.substr(0, 7).toUpperCase()
 					: color.value,
-				opacity: color.value.substr(7) || opacityMap[color.key] || ""
+				opacity:
+					color.value.substr(7) ||
+					opacityMap[color.key] ||
+					EMPTY_STRING
 			}))
 			.reduce(
 				(
@@ -83,11 +93,11 @@ Promise.all([
 						? `${colorMap[value]}${
 								opacity
 									? opacity.padEnd(2, "0").toUpperCase()
-									: ""
+									: EMPTY_STRING
 						  }`
 						: `${value}[INVALID]`
 				}),
-				{}
+				EMPTY_OBJECT
 			),
 		tokenColors: removeDuplicatedColors([...vs, ...plus].map(replaceColors))
 	}))

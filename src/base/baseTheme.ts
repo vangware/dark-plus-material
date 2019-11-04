@@ -1,10 +1,11 @@
+import { EMPTY_STRING } from "@vangware/micro";
 import { baseThemeUrl } from "../config";
 import { themeLoader, TSThemeMap } from "./utils";
 
 const constantMap = (value: string, colors: TSThemeMap[]) => {
 	const CONSTANT_NAME = /([A-Z]+_)+[A-Z]+/;
 	const match = value.match(CONSTANT_NAME);
-	const CONST = match ? match[0] : "";
+	const CONST = match ? match[0] : EMPTY_STRING;
 	const color = colors.find(currentColor => currentColor.constName === CONST);
 	const final = color ? value.replace(CONST, color.value) : value;
 

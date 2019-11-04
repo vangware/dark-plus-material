@@ -1,3 +1,4 @@
+import { EMPTY_STRING } from "@vangware/micro";
 import { materialColors, materialGrays } from "./config/materialColors";
 import { distance, hexToRGB } from "./utils";
 
@@ -19,21 +20,21 @@ export const closestMaterial = (color: string) => {
 
 	const closest = mapped.has(color)
 		? mapped[color]
-		: ([...materialGrays, ...materialColors]).reduce(
-			(min, material) => {
-				const diff = Math.sqrt(
-					(distance(r, material.r) ** 2) +
-					(distance(g, material.g) ** 2) +
-					(distance(b, material.b) ** 2)
-				);
+		: [...materialGrays, ...materialColors].reduce(
+				(min, material) => {
+					const diff = Math.sqrt(
+						distance(r, material.r) ** 2 +
+							distance(g, material.g) ** 2 +
+							distance(b, material.b) ** 2
+					);
 
-				return ({
-					color: diff <= min.diff ? material.hex : min.color,
-					diff: Math.min(diff, min.diff)
-				});
-			},
-			{ diff: Number.MAX_SAFE_INTEGER, color: "" }
-		).color;
+					return {
+						color: diff <= min.diff ? material.hex : min.color,
+						diff: Math.min(diff, min.diff)
+					};
+				},
+				{ diff: Number.MAX_SAFE_INTEGER, color: EMPTY_STRING }
+		  ).color;
 
 	mapped[color] = closest;
 

@@ -2,7 +2,6 @@ export {
 	baseThemeUrl,
 	exceptionWidgetUrl,
 	colorRegistryUrl,
-	debugToolbarUrl,
 	defaultsUrl,
 	editorColorRegistryUrl,
 	plusUrl,
