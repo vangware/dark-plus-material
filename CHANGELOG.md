@@ -1,5 +1,11 @@
 # Changelog
 
+## 2.2.0
+
+- Dependency update.
+- Added hack to patch `dark_vs.json` until Microsoft fixes that.
+- Added license.
+
 ## 2.1.1
 
 - Dependency update.
