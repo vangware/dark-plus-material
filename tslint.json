@@ -1,9 +1,0 @@
-{
-  "extends": "@vangware/vangstyle/tslint",
-  "rules": {
-    "indent": false,
-    "no-shadowed-variable": false,
-    "object-literal-sort-keys": false,
-    "no-null-keyword": false
-  }
-}

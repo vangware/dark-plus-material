@@ -1,5 +1,13 @@
 # Changelog
 
+## 2.2.1
+
+- Dependency update.
+- Fixed bug with icon color (found it quick thanks to [@kjgalvan](https://github.com/kjgalvan)).
+- Updated prettier config.
+- Moved from TSLint to ESLint.
+- Fixed code based on eslint suggestions.
+
 ## 2.2.0
 
 - Dependency update.

@@ -1,6 +1,5 @@
 {
   "$schema": "vscode://schemas/color-theme",
-  "name": "Dark+ Material",
   "colors": {
     "activityBar.background": "#424242",
     "activityBar.dropBackground": "#FFFFFF1F",
@@ -38,6 +37,7 @@
     "editor.selectionHighlightBackground": "#75757526",
     "editor.snippetFinalTabstopHighlightBorder": "#424242",
     "editor.snippetTabstopHighlightBackground": "#757575",
+    "editor.symbolHighlightBackground": "#FFFFFF0B",
     "editorBracketMatch.background": "#4CAF501A",
     "editorBracketMatch.border": "#757575",
     "editorCodeLens.foreground": "#9E9E9E",
@@ -62,7 +62,7 @@
     "editorOverviewRuler.commonContentForeground": "#424242",
     "editorOverviewRuler.currentContentForeground": "#009688",
     "editorOverviewRuler.errorForeground": "#F44336",
-    "editorOverviewRuler.findMatchForeground": "#FF98007E",
+    "editorOverviewRuler.findMatchForeground": "#FFC1077E",
     "editorOverviewRuler.incomingContentForeground": "#03A9F4",
     "editorOverviewRuler.infoForeground": "#2196F3",
     "editorOverviewRuler.rangeHighlightForeground": "#2196F399",
@@ -81,7 +81,7 @@
     "editorWidget.border": "#424242",
     "extensionBadge.remoteBackground": "#2196F3",
     "extensionBadge.remoteForeground": "#FFFFFF",
-    "icon.foreground": "#424242",
+    "icon.foreground": "#BDBDBD",
     "imagePreview.border": "#607D8B59",
     "input.background": "#424242",
     "input.foreground": "#BDBDBD",
@@ -120,7 +120,7 @@
     "merge.currentHeaderBackground": "#00968880",
     "merge.incomingContentBackground": "#03A9F480",
     "merge.incomingHeaderBackground": "#03A9F480",
-    "minimap.findMatchHighlight": "#FF9800",
+    "minimap.findMatchHighlight": "#FFC107",
     "minimap.selectionHighlight": "#3F51B5",
     "notificationCenterHeader.background": "#607D8B",
     "notificationLink.foreground": "#2196F3",
@@ -185,6 +185,7 @@
     "titleBar.inactiveForeground": "#BDBDBD99",
     "widget.shadow": "#000000"
   },
+  "name": "Dark+ Material",
   "tokenColors": [
     {
       "scope": "meta.embedded",
@@ -1145,7 +1146,7 @@
     {
       "scope": "entity.name.label",
       "settings": {
-        "foreground": "#C8C8C8|#D7CCC8"
+        "foreground": "#607D8B"
       }
     }
   ]
