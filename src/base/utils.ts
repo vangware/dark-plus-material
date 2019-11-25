@@ -2,6 +2,7 @@ import {
 	arrayMap,
 	EMPTY_OBJECT,
 	EMPTY_STRING,
+	isNull,
 	stringMapReplace
 } from "@vangware/micro";
 import * as Color from "color";
@@ -12,7 +13,7 @@ import fetch from "node-fetch";
  * @param value Value to parse.
  */
 export const stringNull = (value: string): string =>
-	// tslint:disable-next-line: no-null-keyword
+	// eslint-disable-next-line no-null/no-null
 	value.includes("null") ? null : value;
 
 /**
@@ -20,21 +21,27 @@ export const stringNull = (value: string): string =>
  * @param value
  */
 export const standardTransparent = (value: string) =>
-	value.replace(/(transparent\()([^,]+)(?:, )([\d\.]+)(\))/, "$2.$1$3$4");
+	value.replace(
+		/(?<transparentFunction>transparent\()(?<untilComma>[^,]+)(?:, )(?<digits>[\d.]+)(?<closingParenthesis>\))/u,
+		"$2.$1$3$4"
+	);
 
 /**
  * Makes all lighten calls the same.
  * @param value
  */
 export const standardLighten = (value: string) =>
-	value.replace(/(lighten\()([^,]+)(?:, )([\d\.]+)(\))/, "$2.$1$3$4");
+	value.replace(
+		/(?<lightenFunction>lighten\()(?<untilComma>[^,]+)(?:, )(?<digits>[\d.]+)(?<closingParenthesis>\))/u,
+		"$2.$1$3$4"
+	);
 
 /**
  * Replace `Color.fromHex` with actual hex.
  * @param value
  */
 export const fromHex = (value: string) =>
-	value.replace(/(?:Color\.fromHex\()(#\w+)(?:\))/, "$1");
+	value.replace(/(?:Color\.fromHex\()(?<hexColor>#\w+)(?:\))/u, "$1");
 
 /**
  * Transform standard transparent calls into hex transparency.
@@ -43,7 +50,7 @@ export const fromHex = (value: string) =>
 export const transparentHex = (value: string) => {
 	const [color, ...transparentValues] = value.split(".transparent");
 	const transparency = transparentValues.length
-		? arrayMap(transparentValues, val => val.match(/[\d\.]+/)[0])
+		? arrayMap(transparentValues, val => val.match(/[\d.]+/u)[0])
 				.map(parseFloat)
 				.reduce((total, val) => total * val, 1)
 		: false;
@@ -59,7 +66,7 @@ export const transparentHex = (value: string) => {
 export const lightenHex = (value: string) => {
 	const [color, ...lightenValues] = value.split(".lighten");
 	const light = lightenValues.length
-		? arrayMap(lightenValues, val => val.match(/[\d\.]+/)[0])
+		? arrayMap(lightenValues, val => val.match(/[\d.]+/u)[0])
 				.map(parseFloat)
 				.reduce((total, val) => total * val, 1)
 		: false;
@@ -73,13 +80,13 @@ export const lightenHex = (value: string) => {
 
 export const newColorHex = (value: string) => {
 	const rgba = value.replace(
-		/new Color\(new RGBA\((?<r>\d+), (?<g>\d+), (?<b>\d+), (?<a>\d+\.\d+)/,
+		/new Color\(new RGBA\((?<r>\d+), (?<g>\d+), (?<b>\d+), (?<a>\d+\.\d+)/u,
 		"$1|$2|$3|$4"
 	);
 	const [r, g, b, a] = rgba.includes("|") ? rgba.split("|") : Array(4);
 
 	return rgba.includes("|")
-		? Color.rgb({ r, g, b })
+		? Color.rgb({ b, g, r })
 				.alpha(a)
 				.hex()
 		: value;
@@ -98,7 +105,8 @@ export interface TSThemeMap {
 }
 
 /**
- * Replace apperances of some variables and values because I'm lazy and I don't want to parse them.
+ * Replace appearances of some variables and values because I'm lazy and
+ * I don't want to parse them.
  * @param tsFileText TS theme file.
  */
 export const missingColors = (tsFileText: string) =>
@@ -122,10 +130,10 @@ export const missingColors = (tsFileText: string) =>
 		"dark: listHighlightForeground": "dark: '#0097fb'",
 		"dark: rulerRangeDefault": "dark: '#007ACC99'",
 		"dark: textLinkForeground": "dark: '#3794FF'",
+		editorErrorForeground: "'#F48771'",
 		editorInfoForeground: "'#2196F3'",
 		editorWarningForeground: "'#FFEB3B'",
 		editorWidgetForeground: "'#BDBDBD'",
-		editorErrorForeground: "'#F48771'",
 		rulerTransparency: "1"
 	});
 
@@ -178,7 +186,7 @@ export const themeLoader = ({
 
 			console.log(
 				`Parsing ${url} . . .${
-					matchedColorDefs === null ? " Error!" : EMPTY_STRING
+					isNull(matchedColorDefs) ? " Error!" : EMPTY_STRING
 				}`
 			);
 
@@ -189,7 +197,7 @@ export const themeLoader = ({
 				.map(([constName, propName, value]) => ({
 					constName,
 					propName,
-					value: value.replace(/'/g, EMPTY_STRING)
+					value: value.replace(/'/gu, EMPTY_STRING)
 				}))
 				.map(color => ({
 					...color,
@@ -201,7 +209,7 @@ export const themeLoader = ({
 					...color,
 					value: stringNull(constantMap(color.value, colors))
 				}))
-				.filter(({ value }) => value !== null)
+				.filter(({ value }) => !isNull(value))
 				.map(color => ({
 					...color,
 					value: standardLength(
