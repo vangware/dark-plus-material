@@ -4,11 +4,11 @@
  */
 export const hexToRGB = (hex: string) => {
 	const [r, g, b] = hex
-		.replace(/#(\w{2})(\w{2})(\w{2})/, "$1|$2|$3")
+		.replace(/#(?<red>\w{2})(?<green>\w{2})(?<blue>\w{2})/u, "$1|$2|$3")
 		.split("|")
 		.map(rgb => parseInt(rgb, 16));
 
-	return { hex, r, g, b };
+	return { b, g, hex, r };
 };
 
 export default hexToRGB;

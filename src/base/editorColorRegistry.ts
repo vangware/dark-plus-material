@@ -1,4 +1,4 @@
-import { editorColorRegistryUrl } from "../config";
+import { EDITOR_COLOR } from "../config";
 import { themeLoader, TSThemeMap } from "./utils";
 
 const constantMap = (value: string, colors: TSThemeMap[]) => {
@@ -14,12 +14,11 @@ const constantMap = (value: string, colors: TSThemeMap[]) => {
  * Promise with theme colors defined in TypeScript instead of json files.
  */
 export const editorColorRegistry = themeLoader({
-	colorDefs: /const ([a-zA-Z]+) = registerColor\('[^']+', { (light|dark): .+(?= })/g,
-	// tslint:disable-next-line: max-line-length
-	colorGroups: /(?:const )(?<constName>[a-zA-Z]+)(?: = registerColor\(')(?<propName>[^']+)(?:', { (?:(?:light: .+(?:, dark: )+)(?<value1>.+)(?=, hc)|dark: (?<value2>.+)(?=, light)))(?:.+)/,
+	colorDefs: /const (?<constName>[a-zA-Z]+) = registerColor\('[^']+', \{ (?<lightOrDark>light|dark): .+(?= \})/gu,
+	colorGroups: /(?:const )(?<constName>[a-zA-Z]+)(?: = registerColor\(')(?<propName>[^']+)(?:', \{ (?:(?:light: .+(?:, dark: )+)(?<value1>.+)(?=, hc)|dark: (?<value2>.+)(?=, light)))(?:.+)/u,
 	colorTemplate: "$1|$2|$3$4",
 	constantMap,
-	url: editorColorRegistryUrl
+	url: EDITOR_COLOR
 });
 
 export default editorColorRegistry;

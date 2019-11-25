@@ -1,10 +1,9 @@
 {
   "compilerOptions": {
-    "importHelpers": true,
-    "lib": ["es2015", "dom"],
+    "lib": ["es2018", "dom"],
     "module": "commonjs",
     "moduleResolution": "node",
-    "target": "esnext"
+    "target": "es2018"
   },
   "exclude": [
     "node_modules"

@@ -1,4 +1,4 @@
-import { EMPTY_OBJECT } from "@vangware/micro";
+import { arrayReduce, EMPTY_OBJECT, isArray, when } from "@vangware/micro";
 import { PlainSettings, TokenColor } from "../interfaces";
 
 /**
@@ -7,18 +7,22 @@ import { PlainSettings, TokenColor } from "../interfaces";
  * @returns Plain settings.
  */
 export const flattenTokenColors = (tokenColors: TokenColor[]): PlainSettings =>
-	<PlainSettings>tokenColors.reduce(
-		(out, setting) => ({
-			...out,
-			...(Array.isArray(setting.scope)
-				? setting.scope
-				: [setting.scope]
-			).reduce(
-				(out, key) => ({
-					...out,
-					[key || "vscode"]: out[key]
-						? { ...out[key], ...setting.settings }
-						: setting.settings
+	<PlainSettings>arrayReduce(
+		tokenColors,
+		(plainSettings, setting) => ({
+			...plainSettings,
+			...arrayReduce(
+				isArray(setting.scope) ? setting.scope : [setting.scope],
+				(plainSetting, key) => ({
+					...plainSetting,
+					[key || "vscode"]: when(
+						plainSetting[key],
+						settingProp => ({
+							...settingProp,
+							...setting.settings
+						}),
+						() => setting.settings
+					)
 				}),
 				EMPTY_OBJECT
 			)

@@ -1,4 +1,4 @@
-import { objectMap } from "@vangware/micro";
+import { objectMap, when } from "@vangware/micro";
 import { PlainSettings, TokenColor } from "../interfaces";
 
 /**
@@ -8,14 +8,16 @@ import { PlainSettings, TokenColor } from "../interfaces";
  */
 export const expandTokenColors = (plainSettings: PlainSettings): TokenColor[] =>
 	objectMap(plainSettings, (settings, scope) =>
-		scope !== "vscode"
-			? {
-					scope,
-					settings
-			  }
-			: {
-					settings
-			  }
+		when(
+			scope !== "vscode",
+			() => ({
+				scope,
+				settings
+			}),
+			() => ({
+				settings
+			})
+		)
 	);
 
 export default expandTokenColors;
