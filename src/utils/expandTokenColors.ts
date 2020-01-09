@@ -6,7 +6,9 @@ import { PlainSettings, TokenColor } from "../interfaces";
  * @param plainSettings Settings object.
  * @returns Token color array.
  */
-export const expandTokenColors = (plainSettings: PlainSettings): TokenColor[] =>
+export const expandTokenColors = (
+	plainSettings: PlainSettings
+): readonly TokenColor[] =>
 	objectMap(plainSettings, (settings, scope) =>
 		when(
 			scope !== "vscode",

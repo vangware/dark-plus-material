@@ -24,7 +24,8 @@ import { removeDuplicatedColors, replaceColors } from "./utils";
 const writeFileAsync = promisify(writeFile);
 
 /* TEMPORARY FIX BECAUSE dark_vs.json IS BROKEN */
-const buggedLine = "entity.name.operator.custom-literal.string";
+const buggedLine =
+	" // See https://en.cppreference.com/w/cpp/language/user_literal";
 
 Promise.all([
 	baseTheme,
@@ -36,9 +37,10 @@ Promise.all([
 		fetch(url)
 			.then(response => response.text())
 			/* TEMPORARY FIX BECAUSE dark_vs.json IS BROKEN */
-			.then(responseText =>
-				responseText.replace(`"${buggedLine}",`, `"${buggedLine}"`)
-			)
+			.then(responseText => {
+				console.log(`Parsing ${url} . . .`);
+				return responseText.replace(`${buggedLine}`, "");
+			})
 			// eslint-disable-next-line
 			.then(json => jsonParsePromise<any>(json))
 	)
