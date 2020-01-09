@@ -1,5 +1,11 @@
 # Changelog
 
+## 2.2.2
+
+- Dependency update.
+- Update colors with latest VSCode colors as base.
+- Some JSON files are still buggy (with comments).
+
 ## 2.2.1
 
 - Dependency update.
