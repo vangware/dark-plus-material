@@ -26,7 +26,6 @@
     "dropdown.foreground": "#EEEEEE",
     "editor.background": "#101010",
     "editor.findMatchBackground": "#607D8B",
-    "editor.findMatchHighlightBackground": "#FF572255",
     "editor.findRangeHighlightBackground": "#21212166",
     "editor.foreground": "#9E9E9E",
     "editor.hoverHighlightBackground": "#3F51B540",
@@ -37,7 +36,7 @@
     "editor.selectionHighlightBackground": "#75757526",
     "editor.snippetFinalTabstopHighlightBorder": "#424242",
     "editor.snippetTabstopHighlightBackground": "#757575",
-    "editor.symbolHighlightBackground": "#FFFFFF0B",
+    "editor.symbolHighlightBackground": "#FF572255",
     "editorBracketMatch.background": "#4CAF501A",
     "editorBracketMatch.border": "#757575",
     "editorCodeLens.foreground": "#9E9E9E",
@@ -98,6 +97,7 @@
     "list.activeSelectionForeground": "#FFFFFF",
     "list.dropBackground": "#424242",
     "list.errorForeground": "#FF5722",
+    "list.filterMatchBorder": "#FF572255",
     "list.focusBackground": "#3F51B5",
     "list.highlightForeground": "#03A9F4",
     "list.hoverBackground": "#607D8B80",
@@ -120,8 +120,10 @@
     "merge.currentHeaderBackground": "#00968880",
     "merge.incomingContentBackground": "#03A9F480",
     "merge.incomingHeaderBackground": "#03A9F480",
+    "minimap.errorHighlight": "#F44336",
     "minimap.findMatchHighlight": "#FFC107",
     "minimap.selectionHighlight": "#3F51B5",
+    "minimap.warningHighlight": "#FFEB3B",
     "notificationCenterHeader.background": "#607D8B",
     "notificationLink.foreground": "#2196F3",
     "notifications.background": "#212121",
@@ -144,6 +146,8 @@
     "scrollbarSlider.activeBackground": "#BDBDBD66",
     "scrollbarSlider.background": "#75757566",
     "scrollbarSlider.hoverBackground": "#757575B3",
+    "searchEditor.findMatchBackground": "#FF572255A8",
+    "searchEditor.findMatchBorder": "#FF572255A8",
     "settings.numberInputBackground": "#212121",
     "settings.textInputBackground": "#212121",
     "sideBar.background": "#212121",
@@ -418,6 +422,12 @@
       }
     },
     {
+      "scope": "entity.name.function.preprocessor",
+      "settings": {
+        "foreground": "#2196F3"
+      }
+    },
+    {
       "scope": "meta.preprocessor.string",
       "settings": {
         "foreground": "#FFC107"
@@ -473,6 +483,12 @@
     },
     {
       "scope": "entity.name.operator.custom-literal.string",
+      "settings": {
+        "foreground": "#FFC107"
+      }
+    },
+    {
+      "scope": "meta.embedded.assembly",
       "settings": {
         "foreground": "#FFC107"
       }
@@ -707,6 +723,12 @@
     },
     {
       "scope": "source.powershell variable.other.member",
+      "settings": {
+        "foreground": "#FFEB3B"
+      }
+    },
+    {
+      "scope": "entity.name.operator.custom-literal",
       "settings": {
         "foreground": "#FFEB3B"
       }

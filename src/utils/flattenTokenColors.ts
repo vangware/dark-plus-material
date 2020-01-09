@@ -6,8 +6,9 @@ import { PlainSettings, TokenColor } from "../interfaces";
  * @param settings Token color array.
  * @returns Plain settings.
  */
-export const flattenTokenColors = (tokenColors: TokenColor[]): PlainSettings =>
-	<PlainSettings>arrayReduce(
+export const flattenTokenColors = (
+	tokenColors: readonly TokenColor[]
+): PlainSettings => <PlainSettings>arrayReduce(
 		tokenColors,
 		(plainSettings, setting) => ({
 			...plainSettings,

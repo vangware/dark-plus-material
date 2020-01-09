@@ -8,7 +8,7 @@ import { flattenTokenColors } from "./flattenTokenColors";
  * @returns Token color array.
  */
 export const removeDuplicatedColors = (
-	tokenColors: TokenColor[]
-): TokenColor[] => expandTokenColors(flattenTokenColors(tokenColors));
+	tokenColors: readonly TokenColor[]
+): readonly TokenColor[] => expandTokenColors(flattenTokenColors(tokenColors));
 
 export default removeDuplicatedColors;
