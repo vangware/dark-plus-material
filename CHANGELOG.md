@@ -1,5 +1,9 @@
 # Changelog
 
+## 2.2.3
+
+- Dependency update.
+
 ## 2.2.2
 
 - Dependency update.
