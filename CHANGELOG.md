@@ -1,5 +1,10 @@
 # Changelog
 
+## 2.2.5
+
+- `README.md` updated.
+- Screenshots updated.
+
 ## 2.2.4
 
 - Dependency upgrade.
