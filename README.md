@@ -2,15 +2,13 @@
 
 ![Dark+ Material logo](https://cdn.rawgit.com/vangware/dark-plus-material/master/assets/logo.png)
 
-## Version 2: More Dark, More Material
-
-This is the default Dark+ Theme that comes with Visual Studio Code, but with the Material palette.
-
 ## Reason behind this
 
 I really love the default Dark+ Theme that comes with Visual Studio Code, but also love the Material Design Palette. The thing is I didn't found a good material theme (the coloring is always ugly for my taste). So I made this theme that implements the Material Design Palette in the Dark+ theme that comes with Visual Studio Code.
 
-## The update process
+## How is this theme updated?
+
+When VSCode makes an update, I run a script that takes the code from the VSCode repository, pipes it trough a mapping function and it results in the json file for this theme:
 
 ```plain
 VSCode update -> mapping (1 VSCode color => 1 Material color) -> Dark+ Material update.
@@ -20,15 +18,15 @@ VSCode update -> mapping (1 VSCode color => 1 Material color) -> Dark+ Material 
 
 ### JavaScript
 
-![JavaScript example](https://raw.githubusercontent.com/vangware/dark-plus-material/master/screenshots/javascript.jpeg)
+![JavaScript example](https://raw.githubusercontent.com/vangware/dark-plus-material/master/screenshots/javascript.png)
 
 ### LESS
 
-![LESS example](https://raw.githubusercontent.com/vangware/dark-plus-material/master/screenshots/less.jpeg)
+![LESS example](https://raw.githubusercontent.com/vangware/dark-plus-material/master/screenshots/less.png)
 
 ### TypeScript
 
-![TypeScript example](https://raw.githubusercontent.com/vangware/dark-plus-material/master/screenshots/typescript.jpeg)
+![TypeScript example](https://raw.githubusercontent.com/vangware/dark-plus-material/master/screenshots/typescript.png)
 
 ## Installing
 
