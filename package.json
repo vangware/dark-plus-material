@@ -1,7 +1,7 @@
 {
   "name": "dark-plus-material",
   "description": "The default Dark+ Theme, with material palette and always up to date",
-  "version": "2.2.3",
+  "version": "2.2.4",
   "author": {
     "name": "Vangware",
     "url": "https://vangware.com"
@@ -23,24 +23,24 @@
   },
   "devDependencies": {
     "@types/color": "^3.0.1",
-    "@types/node": "^13.7.0",
-    "@types/node-fetch": "^2.5.4",
-    "@types/prettier": "^1.19.0",
-    "@typescript-eslint/eslint-plugin": "^2.18.0",
-    "@typescript-eslint/parser": "^2.18.0",
-    "@vangware/micro": "^5.0.3",
-    "@vangware/vangstyle": "^4.0.13",
+    "@types/node": "^13.9.3",
+    "@types/node-fetch": "^2.5.5",
+    "@types/prettier": "^1.19.1",
+    "@typescript-eslint/eslint-plugin": "^2.25.0",
+    "@typescript-eslint/parser": "^2.25.0",
+    "@vangware/micro": "^5.1.0",
+    "@vangware/vangstyle": "^4.1.0",
     "color": "^3.1.2",
     "eslint": "^6.8.0",
-    "eslint-config-prettier": "^6.10.0",
+    "eslint-config-prettier": "^6.10.1",
     "eslint-plugin-ban": "^1.4.0",
-    "eslint-plugin-import": "^2.20.0",
+    "eslint-plugin-import": "^2.20.1",
     "eslint-plugin-no-null": "^1.0.2",
     "eslint-plugin-prefer-arrow": "^1.1.7",
     "eslint-plugin-prettier": "^3.1.2",
     "node-fetch": "^2.6.0",
-    "prettier": "^1.19.1",
-    "typescript": "^3.7.5"
+    "prettier": "^2.0.1",
+    "typescript": "^3.8.3"
   },
   "displayName": "Dark+ Material",
   "engines": {

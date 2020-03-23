@@ -8,10 +8,12 @@ export const notAllowedOrDeprecated = [
 	"checkbox.foreground",
 	"editorActiveLineNumber.foreground",
 	"editorHoverWidget.foreground",
+	"list.deemphasizedForeground",
 	"list.filterMatchBackground",
 	"problemsErrorIcon.foreground",
 	"problemsInfoIcon.foreground",
 	"problemsWarningIcon.foreground",
+	"quickInputTitle.background",
 	"tab.unfocusedActiveBackground",
 	"tree.indentGuidesStroke"
 ];
