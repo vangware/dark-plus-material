@@ -1,5 +1,5 @@
-import { objectMap, when } from "@vangware/micro";
-import { PlainSettings, TokenColor } from "../interfaces";
+import { arrayMap, Entry, objectEntries } from "@vangware/micro";
+import { PlainSettings, Settings, TokenColor } from "../interfaces";
 
 /**
  * Transform object to settings file.
@@ -9,17 +9,18 @@ import { PlainSettings, TokenColor } from "../interfaces";
 export const expandTokenColors = (
 	plainSettings: PlainSettings
 ): readonly TokenColor[] =>
-	objectMap(plainSettings, (settings, scope) =>
-		when(
-			scope !== "vscode",
-			() => ({
-				scope,
-				settings
-			}),
-			() => ({
-				settings
-			})
-		)
-	);
+	arrayMap<
+		Entry<PlainSettings>,
+		{ scope?: string; settings: Readonly<Settings> }
+	>(([scope, settings]) =>
+		scope !== "vscode"
+			? {
+					scope,
+					settings
+			  }
+			: {
+					settings
+			  }
+	)(objectEntries(plainSettings));
 
 export default expandTokenColors;

@@ -1,5 +1,11 @@
 # Changelog
 
+## 2.2.6
+
+- Color update to latest VSCode.
+- Dependency upgrade.
+- Code fixes to ignore comments and JSON errors in the JSON source files.
+
 ## 2.2.5
 
 - `README.md` updated.

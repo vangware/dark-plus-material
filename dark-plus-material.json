@@ -19,6 +19,7 @@
     "button.hoverBackground": "#3F51B5",
     "debugExceptionWidget.background": "#795548",
     "debugExceptionWidget.border": "#F44336",
+    "diffEditor.diagonalFill": "#BDBDBD33",
     "diffEditor.insertedTextBackground": "#8BC34A33",
     "diffEditor.removedTextBackground": "#F4433633",
     "dropdown.background": "#424242",
@@ -150,13 +151,14 @@
     "scrollbarSlider.activeBackground": "#BDBDBD66",
     "scrollbarSlider.background": "#75757566",
     "scrollbarSlider.hoverBackground": "#757575B3",
-    "searchEditor.findMatchBackground": "#FF572255A8",
-    "searchEditor.findMatchBorder": "#FF572255A8",
+    "searchEditor.findMatchBackground": "#FF5722A8",
+    "searchEditor.findMatchBorder": "#FF5722A8",
     "settings.numberInputBackground": "#212121",
     "settings.textInputBackground": "#212121",
     "sideBar.background": "#212121",
     "sideBar.dropBackground": "#FFFFFF1F",
-    "sideBarSectionHeader.background": "#607D8B33",
+    "sideBarSectionHeader.background": "#00000000",
+    "sideBarSectionHeader.border": "#BDBDBD33",
     "sideBarTitle.foreground": "#9E9E9E",
     "statusBar.background": "#2196F3",
     "statusBar.foreground": "#FFFFFF",
@@ -178,6 +180,7 @@
     "tab.inactiveModifiedBorder": "#03A9F480",
     "tab.unfocusedActiveForeground": "#FFFFFF80",
     "tab.unfocusedActiveModifiedBorder": "#03A9F480",
+    "tab.unfocusedInactiveBackground": "#212121",
     "tab.unfocusedInactiveForeground": "#FFFFFF40",
     "tab.unfocusedInactiveModifiedBorder": "#03A9F440",
     "textBlockQuote.background": "#7575751A",
@@ -252,7 +255,7 @@
     {
       "scope": "variable.other.enummember",
       "settings": {
-        "foreground": "#CDDC39"
+        "foreground": "#4DB6AC"
       }
     },
     {
@@ -1023,6 +1026,12 @@
       "scope": "entity.name.variable",
       "settings": {
         "foreground": "#00BCD4"
+      }
+    },
+    {
+      "scope": "variable.other.constant",
+      "settings": {
+        "foreground": "#4DB6AC"
       }
     },
     {

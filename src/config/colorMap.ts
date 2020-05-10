@@ -7,8 +7,11 @@ export const colorMap = invertMap({
 	// Black
 	"#000000": ["#000000"],
 
-	// Teal
+	// Teal 500
 	"#009688": ["#009688", "#4EC9B0", "#40C8AE"],
+
+	// Teal 400
+	"#4DB6AC": ["#51B6C4"],
 
 	// Cyan
 	"#00BCD4": ["#00BCD4", "#9CDCFE"],

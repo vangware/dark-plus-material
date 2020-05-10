@@ -40,3 +40,13 @@ export interface Theme {
 	tokenColors?: TokenColor[];
 	colors?: Colors;
 }
+
+/**
+ * RGB Data (returned by `hexToRGB`)
+ */
+export interface RGBData {
+	b: number;
+	g: number;
+	hex: string;
+	r: number;
+}
