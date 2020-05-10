@@ -1,5 +1,3 @@
-import { EMPTY_OBJECT } from "@vangware/micro";
-
 /**
  * Takes a map of key-values and returns values with key as their values.
  * @param source Source map.
@@ -13,10 +11,10 @@ export const invertMap = (source: {
 			...map,
 			...source[item].reduce(
 				(base, baseItem) => ({ ...base, [baseItem]: item }),
-				EMPTY_OBJECT
+				{}
 			)
 		}),
-		EMPTY_OBJECT
+		{}
 	);
 
 export default invertMap;

@@ -1,10 +1,4 @@
-import {
-	arrayMap,
-	EMPTY_OBJECT,
-	EMPTY_STRING,
-	isNull,
-	stringMapReplace
-} from "@vangware/micro";
+import { arrayMap, isNull, stringMapReplace } from "@vangware/micro";
 import * as Color from "color";
 import fetch from "node-fetch";
 
@@ -50,13 +44,13 @@ export const fromHex = (value: string) =>
 export const transparentHex = (value: string) => {
 	const [color, ...transparentValues] = value.split(".transparent");
 	const transparency = transparentValues.length
-		? arrayMap(transparentValues, val => val.match(/[\d.]+/u)[0])
+		? arrayMap<string>(val => val.match(/[\d.]+/u)[0])(transparentValues)
 				.map(parseFloat)
 				.reduce((total, val) => total * val, 1)
 		: false;
 
 	return transparency
-		? `${color}${Math.round(transparency * 255)
+		? `${color.substr(0, 7)}${Math.round(transparency * 255)
 				.toString(16)
 				.padStart(2, "0")
 				.toUpperCase()}`
@@ -66,16 +60,12 @@ export const transparentHex = (value: string) => {
 export const lightenHex = (value: string) => {
 	const [color, ...lightenValues] = value.split(".lighten");
 	const light = lightenValues.length
-		? arrayMap(lightenValues, val => val.match(/[\d.]+/u)[0])
+		? arrayMap<string>(val => val.match(/[\d.]+/u)[0])(lightenValues)
 				.map(parseFloat)
 				.reduce((total, val) => total * val, 1)
 		: false;
 
-	return light
-		? Color(color)
-				.lighten(light)
-				.hex()
-		: value;
+	return light ? Color(color).lighten(light).hex() : value;
 };
 
 export const newColorHex = (value: string) => {
@@ -85,11 +75,7 @@ export const newColorHex = (value: string) => {
 	);
 	const [r, g, b, a] = rgba.includes("|") ? rgba.split("|") : Array(4);
 
-	return rgba.includes("|")
-		? Color.rgb({ b, g, r })
-				.alpha(a)
-				.hex()
-		: value;
+	return rgba.includes("|") ? Color.rgb({ b, g, r }).alpha(a).hex() : value;
 };
 
 export const standardLength = (value: string) =>
@@ -110,7 +96,7 @@ export interface TSThemeMap {
  * @param tsFileText TS theme file.
  */
 export const missingColors = (tsFileText: string) =>
-	stringMapReplace(tsFileText, {
+	stringMapReplace({
 		"Color.black": "'#000000'",
 		"Color.transparent": "'#00000000'",
 		"Color.white": "'#FFFFFF'",
@@ -137,7 +123,7 @@ export const missingColors = (tsFileText: string) =>
 		editorWarningForeground: "'#FFEB3B'",
 		editorWidgetForeground: "'#BDBDBD'",
 		rulerTransparency: "1"
-	});
+	})(tsFileText);
 
 /**
  * Options for theme loader.
@@ -188,18 +174,18 @@ export const themeLoader = ({
 
 			console.log(
 				`Parsing ${url} . . .${
-					isNull(matchedColorDefs) ? " Error!" : EMPTY_STRING
+					isNull(matchedColorDefs) ? " Error!" : ""
 				}`
 			);
 
-			return arrayMap(matchedColorDefs, registeredColor =>
+			return arrayMap<string>(registeredColor =>
 				registeredColor.replace(colorGroups, colorTemplate)
-			)
+			)(matchedColorDefs)
 				.map(mapped => mapped.split("|"))
 				.map(([constName, propName, value]) => ({
 					constName,
 					propName,
-					value: value.replace(/'/gu, EMPTY_STRING)
+					value: value.replace(/'/gu, "")
 				}))
 				.map(color => ({
 					...color,
@@ -223,6 +209,6 @@ export const themeLoader = ({
 						...output,
 						[propName]: value
 					}),
-					EMPTY_OBJECT
+					{}
 				);
 		});

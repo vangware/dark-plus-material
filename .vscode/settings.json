@@ -1,7 +1,17 @@
 {
   "cSpell.words": [
+    "Preformat",
     "Promisified",
-    "vangware"
+    "alignas",
+    "alignof",
+    "enummember",
+    "instanceof",
+    "noexcept",
+    "scrollbar",
+    "uintptr",
+    "vangware",
+    "vendored",
+    "wordlike"
   ],
   "editor.codeActionsOnSave": {
     "source.organizeImports": true,

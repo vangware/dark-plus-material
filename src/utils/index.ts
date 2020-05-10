@@ -1,3 +1,4 @@
+export { colorFormatter } from "./colorFormatter";
 export { distance } from "./distance";
 export { expandTokenColors } from "./expandTokenColors";
 export { flattenTokenColors } from "./flattenTokenColors";

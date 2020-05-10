@@ -1,4 +1,4 @@
-import { arrayReduce, EMPTY_OBJECT, isArray, when } from "@vangware/micro";
+import { arrayReduce, isArray, isUndefined } from "@vangware/micro";
 import { PlainSettings, TokenColor } from "../interfaces";
 
 /**
@@ -8,27 +8,18 @@ import { PlainSettings, TokenColor } from "../interfaces";
  */
 export const flattenTokenColors = (
 	tokenColors: readonly TokenColor[]
-): PlainSettings => <PlainSettings>arrayReduce(
-		tokenColors,
-		(plainSettings, setting) => ({
-			...plainSettings,
-			...arrayReduce(
-				isArray(setting.scope) ? setting.scope : [setting.scope],
-				(plainSetting, key) => ({
-					...plainSetting,
-					[key || "vscode"]: when(
-						plainSetting[key],
-						settingProp => ({
-							...settingProp,
-							...setting.settings
-						}),
-						() => setting.settings
-					)
-				}),
-				EMPTY_OBJECT
-			)
-		}),
-		EMPTY_OBJECT
-	);
+): PlainSettings =>
+	arrayReduce<TokenColor, PlainSettings>(plainSettings => setting => ({
+		...plainSettings,
+		...arrayReduce<string, PlainSettings>(plainSetting => key => ({
+			...plainSetting,
+			[key || "vscode"]: !isUndefined(plainSetting[key])
+				? {
+						...plainSetting[key],
+						...setting.settings
+				  }
+				: setting.settings
+		}))({})(isArray(setting.scope) ? setting.scope : [setting.scope])
+	}))({})(tokenColors) as PlainSettings;
 
 export default flattenTokenColors;
