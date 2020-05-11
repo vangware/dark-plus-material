@@ -1,5 +1,9 @@
 # Changelog
 
+## 2.2.7
+
+- Dependency upgrade.
+
 ## 2.2.6
 
 - Color update to latest VSCode.
