@@ -1,5 +1,9 @@
 # Changelog
 
+## 2.2.8
+
+- Dependency upgrade.
+
 ## 2.2.7
 
 - Dependency upgrade.
