@@ -2,7 +2,7 @@
   "$schema": "vscode://schemas/color-theme",
   "colors": {
     "activityBar.background": "#424242",
-    "activityBar.dropBackground": "#FFFFFF1F",
+    "activityBar.dropBorder": "#FFFFFF",
     "activityBar.foreground": "#FFFFFF",
     "activityBar.inactiveForeground": "#FFFFFF66",
     "activityBarBadge.background": "#2196F3",
@@ -88,6 +88,7 @@
     "input.placeholderForeground": "#BDBDBD",
     "inputOption.activeBackground": "#3F51B5CC",
     "inputOption.activeBorder": "#2196F300",
+    "inputOption.activeForeground": "#FFFFFF",
     "inputValidation.errorBackground": "#795548",
     "inputValidation.errorBorder": "#F44336",
     "inputValidation.infoBackground": "#3F51B5",
@@ -138,7 +139,10 @@
     "notificationsWarningIcon.foreground": "#FFEB3B",
     "panel.background": "#101010",
     "panel.border": "#607D8B59",
-    "panel.dropBackground": "#FFFFFF1F",
+    "panel.dropBorder": "#EEEEEE",
+    "panelSection.border": "#607D8B59",
+    "panelSection.dropBackground": "#607D8B80",
+    "panelSectionHeader.background": "#607D8B33",
     "panelTitle.activeBorder": "#EEEEEE",
     "panelTitle.activeForeground": "#EEEEEE",
     "panelTitle.inactiveForeground": "#EEEEEE99",
@@ -156,7 +160,7 @@
     "settings.numberInputBackground": "#212121",
     "settings.textInputBackground": "#212121",
     "sideBar.background": "#212121",
-    "sideBar.dropBackground": "#FFFFFF1F",
+    "sideBar.dropBackground": "#607D8B80",
     "sideBarSectionHeader.background": "#00000000",
     "sideBarSectionHeader.border": "#BDBDBD33",
     "sideBarTitle.foreground": "#9E9E9E",
@@ -255,7 +259,7 @@
     {
       "scope": "variable.other.enummember",
       "settings": {
-        "foreground": "#4DB6AC"
+        "foreground": "#4FC3F7"
       }
     },
     {
@@ -1031,7 +1035,7 @@
     {
       "scope": "variable.other.constant",
       "settings": {
-        "foreground": "#4DB6AC"
+        "foreground": "#4FC3F7"
       }
     },
     {
