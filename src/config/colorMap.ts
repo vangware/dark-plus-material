@@ -24,7 +24,8 @@ export const colorMap = invertMap({
 		"#40A6FF",
 		"#3399CC",
 		"#0097FB",
-		"#0288D1"
+		"#0288D1",
+		"#007FD4"
 	],
 
 	// Light Blue 300

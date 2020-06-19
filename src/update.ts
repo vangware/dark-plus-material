@@ -8,6 +8,7 @@ import colorRegistry from "./base/colorRegistry";
 import editorColorRegistry from "./base/editorColorRegistry";
 import exceptionWidget from "./base/exceptionWidget";
 import suggestWidget from "./base/suggestWidget";
+import { closestMaterial } from "./closestMaterial";
 import { DARK_DEFAULTS, DARK_PLUS, DARK_VS } from "./config";
 import colorMap from "./config/colorMap";
 import notAllowedOrDeprecated from "./config/notAllowedOrDeprecated";
@@ -99,7 +100,7 @@ Promise.all([
 									? opacity.padEnd(2, "0").toUpperCase()
 									: ""
 						  }`
-						: `${value}[INVALID]`
+						: `${value}[INVALID:${closestMaterial(value)}]`
 				}),
 				{}
 			),
