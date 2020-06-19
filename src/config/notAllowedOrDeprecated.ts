@@ -3,6 +3,9 @@
  */
 export const notAllowedOrDeprecated = [
 	"activityBar.activeBorder",
+	"button.secondaryBackground",
+	"button.secondaryForeground",
+	"button.secondaryHoverBackground",
 	"checkbox.background",
 	"checkbox.border",
 	"checkbox.foreground",
