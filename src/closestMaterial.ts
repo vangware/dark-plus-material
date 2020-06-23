@@ -1,4 +1,4 @@
-import { arrayReduce } from "@vangware/micro";
+import { arrayReduce } from "@vangware/utils";
 import { materialColors, materialGrays } from "./config";
 import { RGBData } from "./interfaces";
 import { distance, hexToRGB } from "./utils";
@@ -21,8 +21,10 @@ export const closestMaterial = (color: string) => {
 
 	const closest = mapped.has(color)
 		? mapped[color]
-		: arrayReduce<RGBData, { color: number | string; diff: number }>(
-				min => material => {
+		: arrayReduce(
+				(min: { color: number | string; diff: number }) => (
+					material: RGBData
+				) => {
 					const diff = Math.sqrt(
 						distance(r, material.r) ** 2 +
 							distance(g, material.g) ** 2 +

@@ -1,4 +1,4 @@
-import { arrayMap, isNull, stringMapReplace } from "@vangware/micro";
+import { arrayMap, isNull, stringMapReplace } from "@vangware/utils";
 import * as Color from "color";
 import fetch from "node-fetch";
 
@@ -44,7 +44,7 @@ export const fromHex = (value: string) =>
 export const transparentHex = (value: string) => {
 	const [color, ...transparentValues] = value.split(".transparent");
 	const transparency = transparentValues.length
-		? arrayMap<string>(val => val.match(/[\d.]+/u)[0])(transparentValues)
+		? arrayMap((val: string) => val.match(/[\d.]+/u)[0])(transparentValues)
 				.map(parseFloat)
 				.reduce((total, val) => total * val, 1)
 		: false;
@@ -60,7 +60,7 @@ export const transparentHex = (value: string) => {
 export const lightenHex = (value: string) => {
 	const [color, ...lightenValues] = value.split(".lighten");
 	const light = lightenValues.length
-		? arrayMap<string>(val => val.match(/[\d.]+/u)[0])(lightenValues)
+		? arrayMap((val: string) => val.match(/[\d.]+/u)[0])(lightenValues)
 				.map(parseFloat)
 				.reduce((total, val) => total * val, 1)
 		: false;
@@ -178,7 +178,7 @@ export const themeLoader = ({
 				}`
 			);
 
-			return arrayMap<string>(registeredColor =>
+			return arrayMap((registeredColor: string) =>
 				registeredColor.replace(colorGroups, colorTemplate)
 			)(matchedColorDefs)
 				.map(mapped => mapped.split("|"))
