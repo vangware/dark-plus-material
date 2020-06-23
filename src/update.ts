@@ -1,4 +1,4 @@
-import { arrayMap, jsonParsePromise } from "@vangware/micro";
+import { arrayMap, jsonParsePromise } from "@vangware/utils";
 import { writeFile } from "fs";
 import fetch from "node-fetch";
 import * as stripJsonComments from "strip-json-comments";

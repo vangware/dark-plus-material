@@ -1,4 +1,4 @@
-import { arrayMap } from "@vangware/micro";
+import { arrayMap } from "@vangware/utils";
 import { hexToRGB } from "../utils";
 
 const hexToRGBMAp = arrayMap(hexToRGB);
