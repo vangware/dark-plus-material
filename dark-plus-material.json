@@ -251,12 +251,6 @@
       }
     },
     {
-      "scope": "entity.name.operator.custom-literal.number",
-      "settings": {
-        "foreground": "#CDDC39"
-      }
-    },
-    {
       "scope": "variable.other.enummember",
       "settings": {
         "foreground": "#4FC3F7"
@@ -488,12 +482,6 @@
     },
     {
       "scope": "string",
-      "settings": {
-        "foreground": "#FFC107"
-      }
-    },
-    {
-      "scope": "entity.name.operator.custom-literal.string",
       "settings": {
         "foreground": "#FFC107"
       }

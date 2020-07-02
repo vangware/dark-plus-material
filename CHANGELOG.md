@@ -1,5 +1,10 @@
 # Changelog
 
+## 2.3.1
+
+- Dependencies upgrade.
+- Theme update to latest.
+
 ## 2.3.0
 
 - Dependencies upgrades/changes.
