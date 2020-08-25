@@ -1,5 +1,10 @@
 # Changelog
 
+## 2.3.4
+
+- Dependencies upgrade.
+- Logo update.
+
 ## 2.3.3
 
 - Dependencies upgrade.
