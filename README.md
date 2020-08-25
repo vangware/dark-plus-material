@@ -1,6 +1,6 @@
 # Dark+ Material
 
-![Dark+ Material logo](https://cdn.rawgit.com/vangware/dark-plus-material/master/assets/logo.png)
+![Dark+ Material logo](https://i.imgur.com/dbU1a3i.png)
 
 ## Reason behind this
 
