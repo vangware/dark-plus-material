@@ -10,9 +10,7 @@ export interface Settings {
 /**
  * Plain Settings interface.
  */
-export interface PlainSettings {
-	[key: string]: Settings;
-}
+export type PlainSettings = Record<string, Settings>;
 
 /**
  * TokenColor interface.
@@ -26,9 +24,7 @@ export interface TokenColor {
 /**
  * Color interface.
  */
-export interface Colors {
-	[key: string]: string;
-}
+export type Colors = Record<string, string>;
 
 /**
  * Theme interface.
