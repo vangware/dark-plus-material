@@ -1,5 +1,10 @@
 # Changelog
 
+## 2.3.8
+
+- Dependencies upgrade.
+- Theme update to latest.
+
 ## 2.3.7
 
 - Dependencies upgrade.

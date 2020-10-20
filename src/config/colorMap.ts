@@ -86,6 +86,9 @@ export const colorMap = invertMap({
 		"#606060"
 	],
 
+	// Green 300
+	"#81C784": ["#89D185"],
+
 	// Green
 	"#4CAF50": [
 		"#006400",
@@ -142,6 +145,9 @@ export const colorMap = invertMap({
 
 	// Light Green
 	"#8BC34A": ["#16825D", "#6A9955", "#8BC34A", "#9BB955"],
+
+	// Purple 200
+	"#B39DDB": ["#B180D7"],
 
 	// Purple
 	"#9C27B0": ["#9C27B0", "#646695"],
