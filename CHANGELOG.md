@@ -1,5 +1,9 @@
 # Changelog
 
+## 2.3.9
+
+- Dependencies upgrade.
+
 ## 2.3.8
 
 - Dependencies upgrade.

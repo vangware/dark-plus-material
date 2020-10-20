@@ -6,7 +6,7 @@ devDependencies:
   '@typescript-eslint/eslint-plugin': 4.5.0_f877203403d334e633a89a1c42a84f8a
   '@typescript-eslint/parser': 4.5.0_eslint@7.11.0+typescript@4.0.3
   '@vangware/base': 2.2.3
-  '@vangware/utils': 4.3.0
+  '@vangware/utils': 4.3.1
   color: 3.1.3
   eslint: 7.11.0
   eslint-config-prettier: 6.13.0_eslint@7.11.0
@@ -237,10 +237,10 @@ packages:
     dev: true
     resolution:
       integrity: sha512-xhu9MTnrkZ4clbGHzCW65JECzY6vCK+0+jNK77TtkazAiFeUnjptzvVv8O0R3iVl6a7hlFJ+XPuPneYT27x7sw==
-  /@vangware/utils/4.3.0:
+  /@vangware/utils/4.3.1:
     dev: true
     resolution:
-      integrity: sha512-soqJK8jqgRKdRzwvT6hO7nq4HXfBxS1YlkRUbqQDV3GToVHQOg5G3i6/GGewhvBMz/S17z+4UePYo7Bg9qYxrg==
+      integrity: sha512-x4IxIZi+pZUcviZEpiA3CnsIuN6knRZ5ExuoLrCFoHZlLG74nj+hyyhqk223IrSZGOZnQ1VkTxzwdl/DeQ1FmQ==
   /acorn-jsx/5.3.1_acorn@7.4.1:
     dependencies:
       acorn: 7.4.1
@@ -1802,7 +1802,7 @@ specifiers:
   '@typescript-eslint/eslint-plugin': ^4.5.0
   '@typescript-eslint/parser': ^4.5.0
   '@vangware/base': ^2.2.3
-  '@vangware/utils': ^4.3.0
+  '@vangware/utils': ^4.3.1
   color: ^3.1.3
   eslint: ^7.11.0
   eslint-config-prettier: ^6.13.0
