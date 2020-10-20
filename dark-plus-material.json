@@ -17,6 +17,14 @@
     "button.background": "#3F51B5",
     "button.foreground": "#FFFFFF",
     "button.hoverBackground": "#3F51B5",
+    "charts.blue": "#2196F3",
+    "charts.foreground": "#BDBDBD",
+    "charts.green": "#89D185[INVALID:#81C784]",
+    "charts.lines": "#BDBDBD",
+    "charts.orange": "#FFC107",
+    "charts.purple": "#B180D7[INVALID:#B39DDB]",
+    "charts.red": "#FF5722",
+    "charts.yellow": "#FFEB3B",
     "debugExceptionWidget.background": "#795548",
     "debugExceptionWidget.border": "#F44336",
     "diffEditor.diagonalFill": "#BDBDBD33",
@@ -157,8 +165,6 @@
     "scrollbarSlider.hoverBackground": "#757575B3",
     "searchEditor.findMatchBackground": "#FF5722A8",
     "searchEditor.findMatchBorder": "#FF5722A8",
-    "settings.numberInputBackground": "#212121",
-    "settings.textInputBackground": "#212121",
     "sideBar.background": "#212121",
     "sideBar.dropBackground": "#607D8B80",
     "sideBarSectionHeader.background": "#00000000",
@@ -182,6 +188,7 @@
     "tab.inactiveBackground": "#212121",
     "tab.inactiveForeground": "#FFFFFF80",
     "tab.inactiveModifiedBorder": "#03A9F480",
+    "tab.lastPinnedBorder": "#BDBDBD33",
     "tab.unfocusedActiveForeground": "#FFFFFF80",
     "tab.unfocusedActiveModifiedBorder": "#03A9F480",
     "tab.unfocusedInactiveBackground": "#212121",
@@ -330,12 +337,6 @@
     },
     {
       "scope": "source.css.less entity.other.attribute-name.id",
-      "settings": {
-        "foreground": "#FF9800"
-      }
-    },
-    {
-      "scope": "entity.other.attribute-name.attribute.scss",
       "settings": {
         "foreground": "#FF9800"
       }
