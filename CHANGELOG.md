@@ -1,5 +1,10 @@
 # Changelog
 
+## 2.3.10
+
+- Dependencies upgrade.
+- Fix wrong colors.
+
 ## 2.3.9
 
 - Dependencies upgrade.
