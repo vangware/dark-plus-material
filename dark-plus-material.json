@@ -205,7 +205,7 @@
     "titleBar.activeForeground": "#BDBDBD",
     "titleBar.inactiveBackground": "#42424299",
     "titleBar.inactiveForeground": "#BDBDBD99",
-    "widget.shadow": "#000000"
+    "widget.shadow": "#0000005C"
   },
   "name": "Dark+ Material",
   "tokenColors": [

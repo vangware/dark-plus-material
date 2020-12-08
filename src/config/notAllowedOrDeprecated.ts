@@ -17,6 +17,8 @@ export const notAllowedOrDeprecated = [
 	"problemsInfoIcon.foreground",
 	"problemsWarningIcon.foreground",
 	"quickInputTitle.background",
+	"statusBarItem.errorBackground",
+	"statusBarItem.errorForeground",
 	"tab.unfocusedActiveBackground",
 	"tree.indentGuidesStroke"
 ];
