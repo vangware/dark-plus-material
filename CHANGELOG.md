@@ -1,5 +1,9 @@
 # Changelog
 
+## 2.3.12
+
+- Dependency upgrade.
+
 ## 2.3.11
 
 - Dependency upgrade.
