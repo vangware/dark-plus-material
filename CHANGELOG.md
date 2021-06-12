@@ -1,5 +1,10 @@
 # Changelog
 
+## 2.4.0
+
+- Dependency upgrade (It's been a while).
+- Theme update.
+
 ## 2.3.12
 
 - Dependency upgrade.

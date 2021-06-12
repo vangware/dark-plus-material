@@ -1,7 +1,6 @@
-import { arrayMap, jsonParsePromise } from "@vangware/utils";
+import { arrayMap } from "@vangware/utils";
 import { writeFile } from "fs";
 import fetch from "node-fetch";
-import * as stripJsonComments from "strip-json-comments";
 import { promisify } from "util";
 import baseTheme from "./base/baseTheme";
 import colorRegistry from "./base/colorRegistry";
@@ -9,11 +8,12 @@ import editorColorRegistry from "./base/editorColorRegistry";
 import exceptionWidget from "./base/exceptionWidget";
 import suggestWidget from "./base/suggestWidget";
 import { closestMaterial } from "./closestMaterial";
-import { DARK_DEFAULTS, DARK_PLUS, DARK_VS } from "./config";
+import { DARK_PLUS, DARK_VS } from "./config";
 import colorMap from "./config/colorMap";
 import notAllowedOrDeprecated from "./config/notAllowedOrDeprecated";
 import opacityMap from "./config/opacityMap";
 import { colorFormatter, removeDuplicatedColors, replaceColors } from "./utils";
+import { jsonParsePromise } from "./utils/jsonParsePromise";
 
 /**
  * Promisified fs.writeFile.
@@ -26,17 +26,12 @@ Promise.all([
 	colorRegistry,
 	exceptionWidget,
 	suggestWidget,
-	...[DARK_DEFAULTS, DARK_VS, DARK_PLUS].map(url =>
+	...[DARK_VS, DARK_PLUS].map(url =>
 		fetch(url)
 			.then(response => response.text())
 			.then(responseText => {
 				console.log(`Parsing ${url} . . .`);
-				// eslint-disable-next-line
-				return jsonParsePromise<any>(
-					stripJsonComments(
-						responseText.replace(/,(?=\s*?[\}\]])/gu, "")
-					)
-				);
+				return jsonParsePromise(responseText);
 			})
 	)
 ])
@@ -47,7 +42,6 @@ Promise.all([
 			editorColorRegistryResponse,
 			exceptionWidgetResponse,
 			suggestWidgetResponse,
-			defaults,
 			vs,
 			plus
 		]) => ({
@@ -56,8 +50,7 @@ Promise.all([
 				...colorRegistryResponse,
 				...editorColorRegistryResponse,
 				...exceptionWidgetResponse,
-				...suggestWidgetResponse,
-				...defaults.colors
+				...suggestWidgetResponse
 			},
 			plus: plus.tokenColors,
 			vs: vs.tokenColors
@@ -82,7 +75,9 @@ Promise.all([
 			.map(color => ({
 				...color,
 				opacity: color.value.substr(7) || opacityMap[color.key] || "",
-				value: color.value.substr(0, 7).toUpperCase()
+				value: /#[0-9a-fA-F]{3,8}/gu.test(color.value)
+					? color.value.substr(0, 7).toUpperCase()
+					: color.value
 			}))
 			.reduce(
 				(

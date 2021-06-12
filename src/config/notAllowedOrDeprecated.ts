@@ -20,7 +20,10 @@ export const notAllowedOrDeprecated = [
 	"statusBarItem.errorBackground",
 	"statusBarItem.errorForeground",
 	"tab.unfocusedActiveBackground",
-	"tree.indentGuidesStroke"
+	"tree.indentGuidesStroke",
+	// I was lazy so I'm omitting these ones (no broken, just weird format):
+	"editor.selectionHighlightBackground",
+	"list.filterMatchBorder"
 ];
 
 export default notAllowedOrDeprecated;

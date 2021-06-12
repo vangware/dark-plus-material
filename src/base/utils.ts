@@ -117,11 +117,17 @@ export const missingColors = (tsFileText: string) =>
 		"dark: rulerRangeDefault": "dark: '#007ACC99'",
 		"dark: textLinkForeground": "dark: '#3794FF'",
 		editorErrorForeground: "'#F48771'",
-		editorFindMatchHighlightBorder: "'#EA5C0055'",
 		editorFindMatchHighlight: "'#EA5C0055'",
+		editorFindMatchHighlightBorder: "'#EA5C0055'",
 		editorInfoForeground: "'#2196F3'",
 		editorWarningForeground: "'#FFEB3B'",
 		editorWidgetForeground: "'#BDBDBD'",
+		listActiveSelectionBackground: "'#094771'",
+		listActiveSelectionForeground: "'#FFFFFF'",
+		listFocusHighlightForeground: "'#18A3FF'",
+		quickInputListFocusBackground: "'#094771'",
+		quickInputListFocusForeground: "'#FFFFFF'",
+		treeIndentGuidesStroke: "'#585858'",
 		rulerTransparency: "1"
 	})(tsFileText);
 
