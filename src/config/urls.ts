@@ -55,11 +55,6 @@ export const EXCEPTION_WIDGET = `${TS_WORKBENCH}/contrib/debug/browser/exception
 export const SUGGEST_WIDGET = `${TS_EDITOR}/contrib/suggest/suggestWidget.ts`;
 
 /**
- * JSON URL for defaults colors for dark scheme.
- */
-export const DARK_DEFAULTS = `${THEME_DEFAULTS}/dark_defaults.json`;
-
-/**
  * JSON URL for Dark theme.
  */
 export const DARK_VS = `${THEME_DEFAULTS}/dark_vs.json`;
