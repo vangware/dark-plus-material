@@ -1,5 +1,9 @@
 # Changelog
 
+## 2.4.1
+
+- Dependency upgrade.
+
 ## 2.4.0
 
 - Dependency upgrade (It's been a while).
