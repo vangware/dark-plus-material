@@ -1,1 +1,1 @@
-module.exports = require("@vangware/base").prettier;
+module.exports = require("@vangware/base").prettierrc;

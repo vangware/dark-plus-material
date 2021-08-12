@@ -23,7 +23,9 @@ export const notAllowedOrDeprecated = [
 	"tree.indentGuidesStroke",
 	// I was lazy so I'm omitting these ones (no broken, just weird format):
 	"editor.selectionHighlightBackground",
-	"list.filterMatchBorder"
+	"list.filterMatchBorder",
+	"editorSuggestWidget.selectedIconForeground",
+	"statusBarItem.warningBackground"
 ];
 
 export default notAllowedOrDeprecated;

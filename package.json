@@ -1,83 +1,76 @@
 {
-  "name": "dark-plus-material",
-  "description": "The default Dark+ Theme, with material palette and always up to date",
-  "version": "2.4.1",
-  "author": {
-    "name": "Vangware",
-    "url": "https://vangware.com"
-  },
-  "bugs": {
-    "url": "https://github.com/vangware/dark-plus-material/issues"
-  },
-  "categories": [
-    "Themes"
-  ],
-  "contributes": {
-    "themes": [
-      {
-        "label": "Dark+ Material",
-        "uiTheme": "vs-dark",
-        "path": "./dark-plus-material.json"
-      }
-    ]
-  },
-  "devDependencies": {
-    "@types/color": "^3.0.1",
-    "@types/node": "15.12.4",
-    "@types/node-fetch": "^2.5.10",
-    "@types/prettier": "^2.3.0",
-    "@typescript-eslint/eslint-plugin": "^4.27.0",
-    "@typescript-eslint/parser": "^4.27.0",
-    "@vangware/base": "^4.7.6",
-    "@vangware/utils": "^6.3.2",
-    "color": "^3.1.3",
-    "eslint": "^7.29.0",
-    "eslint-config-prettier": "^8.3.0",
-    "eslint-plugin-ban": "^1.5.2",
-    "eslint-plugin-import": "^2.23.4",
-    "eslint-plugin-no-null": "^1.0.2",
-    "eslint-plugin-prefer-arrow": "^1.2.3",
-    "eslint-plugin-prettier": "^3.4.0",
-    "node-fetch": "^2.6.1",
-    "prettier": "^2.3.1",
-    "ts-node": "^10.0.0",
-    "typescript": "^4.3.4"
-  },
-  "displayName": "Dark+ Material",
-  "engines": {
-    "vscode": "*"
-  },
-  "galleryBanner": {
-    "color": "#212121",
-    "theme": "dark"
-  },
-  "homepage": "https://github.com/vangware/dark-plus-material",
-  "icon": "assets/icon.png",
-  "keywords": [
-    "colorful",
-    "dark",
-    "google",
-    "material",
-    "saturated",
-    "theme",
-    "vscode"
-  ],
-  "license": "MIT",
-  "publisher": "vangware",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/vangware/dark-plus-material"
-  },
-  "resolutions": {
-    "@types/node": "10.9.4",
-    "chalk": "2.4.2",
-    "ansi-styles": "3.2.1",
-    "supports-color": "5.5.0"
-  },
-  "scripts": {
-    "update": "ts-node ./src/update.ts"
-  },
-  "dependencies": {
-    "json5": "^2.2.0"
-  }
+	"name": "dark-plus-material",
+	"description": "The default Dark+ Theme, with material palette and always up to date",
+	"version": "2.4.2",
+	"author": {
+		"email": "hello@vangware.com",
+		"name": "Vangware",
+		"url": "https://vangware.com"
+	},
+	"bugs": {
+		"url": "https://github.com/vangware/dark-plus-material/issues"
+	},
+	"categories": [
+		"Themes"
+	],
+	"contributes": {
+		"themes": [
+			{
+				"label": "Dark+ Material",
+				"uiTheme": "vs-dark",
+				"path": "./dark-plus-material.json"
+			}
+		]
+	},
+	"devDependencies": {
+		"@types/color": "^3.0.2",
+		"@types/node": "16.6.0",
+		"@types/node-fetch": "^2.5.12",
+		"@types/prettier": "^2.3.2",
+		"@typescript-eslint/eslint-plugin": "^4.29.1",
+		"@typescript-eslint/parser": "^4.29.1",
+		"@vangware/base": "^5.0.4",
+		"@vangware/utils": "^7.0.1",
+		"color": "^4.0.1",
+		"eslint": "^7.32.0",
+		"eslint-config-prettier": "^8.3.0",
+		"eslint-plugin-ban": "^1.5.2",
+		"eslint-plugin-import": "^2.24.0",
+		"eslint-plugin-no-null": "^1.0.2",
+		"eslint-plugin-prefer-arrow": "^1.2.3",
+		"eslint-plugin-prettier": "^3.4.0",
+		"json5": "^2.2.0",
+		"node-fetch": "^2.6.1",
+		"prettier": "^2.3.2",
+		"ts-node": "^10.2.0",
+		"typescript": "^4.3.5"
+	},
+	"displayName": "Dark+ Material",
+	"engines": {
+		"vscode": "*"
+	},
+	"galleryBanner": {
+		"color": "#212121",
+		"theme": "dark"
+	},
+	"homepage": "https://github.com/vangware/dark-plus-material",
+	"icon": "assets/icon.png",
+	"keywords": [
+		"colorful",
+		"dark",
+		"google",
+		"material",
+		"saturated",
+		"theme",
+		"vscode"
+	],
+	"license": "MIT",
+	"publisher": "vangware",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/vangware/dark-plus-material"
+	},
+	"scripts": {
+		"sync": "ts-node ./src/sync.ts"
+	}
 }
