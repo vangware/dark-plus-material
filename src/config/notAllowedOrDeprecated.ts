@@ -10,6 +10,7 @@ export const notAllowedOrDeprecated = [
 	"checkbox.border",
 	"checkbox.foreground",
 	"editorActiveLineNumber.foreground",
+	"editorBracketHighlight.unexpectedBracket.foreground",
 	"editorHoverWidget.foreground",
 	"list.deemphasizedForeground",
 	"list.filterMatchBackground",
