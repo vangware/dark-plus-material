@@ -7,8 +7,8 @@ specifiers:
   '@types/prettier': ^2.3.2
   '@typescript-eslint/eslint-plugin': ^4.29.2
   '@typescript-eslint/parser': ^4.29.2
-  '@vangware/base': ^5.1.0
-  '@vangware/utils': ^7.0.3
+  '@vangware/base': ^5.2.2
+  '@vangware/utils': ^7.0.5
   color: ^4.0.1
   eslint: ^7.32.0
   eslint-config-prettier: ^8.3.0
@@ -30,8 +30,8 @@ devDependencies:
   '@types/prettier': 2.3.2
   '@typescript-eslint/eslint-plugin': 4.29.2_b01b7137116ac50f0745961d9cf72d34
   '@typescript-eslint/parser': 4.29.2_eslint@7.32.0+typescript@4.3.5
-  '@vangware/base': 5.1.0
-  '@vangware/utils': 7.0.3
+  '@vangware/base': 5.2.2
+  '@vangware/utils': 7.0.5
   color: 4.0.1
   eslint: 7.32.0
   eslint-config-prettier: 8.3.0_eslint@7.32.0
@@ -289,15 +289,15 @@ packages:
       eslint-visitor-keys: 2.1.0
     dev: true
 
-  /@vangware/base/5.1.0:
-    resolution: {integrity: sha512-gVwiwYtm/RwUOqGZTu9LDWgftQXiJIkswTZaw+Xh47PaBXEtFy1PNBzzeK/vO0rk6AIKyl3DDNGSs3DOaLkerw==}
+  /@vangware/base/5.2.2:
+    resolution: {integrity: sha512-IQglV9np8w22PG6zRGPf/o3/dPfmJrMNW/ksKJGuUNbVftFFJ/joTYs9YMigSNC/go7rH/1gYoWi46TpfeBRjQ==}
     hasBin: true
     dependencies:
       prompts: 2.4.1
     dev: true
 
-  /@vangware/utils/7.0.3:
-    resolution: {integrity: sha512-P59mCp82j1ts6pUcTcxy5cHLQSX7wY5vcVUHc1/5IsocLL9kf/48CorvTvBNYp1nKKlxFB0L2m2GZdOfqDOUdQ==}
+  /@vangware/utils/7.0.5:
+    resolution: {integrity: sha512-arbO/69T10KfuHrJBPP/U9vM+vWYHpXIkmBBWzEBGZaYeq0PzrDfmGBxVaUVKmhylcNaSfH8Dg+dx4Np8aWkOA==}
     dev: true
 
   /acorn-jsx/5.3.2_acorn@7.4.1:
