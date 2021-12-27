@@ -270,5 +270,3 @@ export const themeColors = [
 	...teal,
 	...yellow,
 ].map(hexToRGBA);
-
-export const themeGrayscale = gray.map(hexToRGBA);

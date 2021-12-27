@@ -1,5 +1,9 @@
 # Changelog
 
+## 3.0.1
+
+-   Instead of using euclidean difference, now use LAB trough `color-diff`.
+
 ## 3.0.0
 
 -   Dependency upgrade.
