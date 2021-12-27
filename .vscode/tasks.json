@@ -4,9 +4,7 @@
 		{
 			"type": "npm",
 			"script": "update",
-			"problemMatcher": [
-				"$tsc"
-			]
+			"problemMatcher": ["$tsc"]
 		}
 	]
 }

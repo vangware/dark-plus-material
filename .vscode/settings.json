@@ -1,29 +1,29 @@
 {
-  "cSpell.words": [
-    "Preformat",
-    "Promisified",
-    "alignas",
-    "alignof",
-    "enummember",
-    "instanceof",
-    "noexcept",
-    "scrollbar",
-    "uintptr",
-    "vangware",
-    "vendored",
-    "wordlike"
-  ],
-  "editor.codeActionsOnSave": {
-    "source.organizeImports": true,
-    "source.fixAll.eslint": true
-  },
-  "editor.formatOnSave": true,
-  "eslint.validate": [
-    "javascript",
-    "javascriptreact",
-    "typescript",
-    "typescriptreact"
-  ],
-  "eslint.enable": true,
-  "typescript.tsdk": "./node_modules/typescript/lib"
+	"cSpell.words": [
+		"alignas",
+		"alignof",
+		"enummember",
+		"instanceof",
+		"noexcept",
+		"Preformat",
+		"Promisified",
+		"scrollbar",
+		"uintptr",
+		"vangware",
+		"vendored",
+		"wordlike"
+	],
+	"editor.codeActionsOnSave": {
+		"source.organizeImports": true,
+		"source.fixAll.eslint": true
+	},
+	"editor.formatOnSave": true,
+	"eslint.validate": [
+		"javascript",
+		"javascriptreact",
+		"typescript",
+		"typescriptreact"
+	],
+	"eslint.enable": true,
+	"typescript.tsdk": "./node_modules/typescript/lib"
 }
