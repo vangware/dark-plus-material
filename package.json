@@ -1,7 +1,7 @@
 {
 	"name": "dark-plus-material",
 	"description": "The default Dark+ Theme, with material palette and always up to date",
-	"version": "3.0.0",
+	"version": "3.0.1",
 	"author": {
 		"email": "hello@vangware.com",
 		"name": "Vangware",
@@ -22,6 +22,7 @@
 	},
 	"devDependencies": {
 		"@types/color": "^3.0.2",
+		"@types/color-diff": "^1.2.1",
 		"@types/node": "17.0.5",
 		"@types/prettier": "^2.4.2",
 		"@typescript-eslint/eslint-plugin": "^5.8.0",
@@ -30,6 +31,7 @@
 		"@vangware/types": "^2.0.1",
 		"@vangware/utils": "^8.0.0",
 		"color": "^4.1.0",
+		"color-diff": "^1.2.0",
 		"eslint": "^8.5.0",
 		"eslint-config-prettier": "^8.3.0",
 		"eslint-plugin-ban": "^1.6.0",

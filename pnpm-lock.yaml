@@ -2,6 +2,7 @@ lockfileVersion: 5.3
 
 specifiers:
   '@types/color': ^3.0.2
+  '@types/color-diff': ^1.2.1
   '@types/node': 17.0.5
   '@types/prettier': ^2.4.2
   '@typescript-eslint/eslint-plugin': ^5.8.0
@@ -10,6 +11,7 @@ specifiers:
   '@vangware/types': ^2.0.1
   '@vangware/utils': ^8.0.0
   color: ^4.1.0
+  color-diff: ^1.2.0
   eslint: ^8.5.0
   eslint-config-prettier: ^8.3.0
   eslint-plugin-ban: ^1.6.0
@@ -26,6 +28,7 @@ specifiers:
 
 devDependencies:
   '@types/color': 3.0.2
+  '@types/color-diff': 1.2.1
   '@types/node': 17.0.5
   '@types/prettier': 2.4.2
   '@typescript-eslint/eslint-plugin': 5.8.0_836011a006f4f5d67178564baf2b6d34
@@ -34,6 +37,7 @@ devDependencies:
   '@vangware/types': 2.0.1
   '@vangware/utils': 8.0.0
   color: 4.1.0
+  color-diff: 1.2.0
   eslint: 8.5.0
   eslint-config-prettier: 8.3.0_eslint@8.5.0
   eslint-plugin-ban: 1.6.0
@@ -135,6 +139,10 @@ packages:
     resolution: {integrity: sha512-m7GG7IKKGuJUXvkZ1qqG3ChccdIM/qBBo913z+Xft0nKCX4hAU/IxKwZBU4cpRZ7GS5kV4vOblUkILtSShCPXQ==}
     dependencies:
       '@types/color-name': 1.1.1
+    dev: true
+
+  /@types/color-diff/1.2.1:
+    resolution: {integrity: sha512-iemOGPqMODUJyDbd8TVV9vdaHfbO1Z7rQhql1umt75Z7NUminF7MXvWaNxh5+aizZpeei2WFGGrpmOocuqh8oQ==}
     dev: true
 
   /@types/color-name/1.1.1:
@@ -402,6 +410,10 @@ packages:
     engines: {node: '>=7.0.0'}
     dependencies:
       color-name: 1.1.4
+    dev: true
+
+  /color-diff/1.2.0:
+    resolution: {integrity: sha512-FN7iLBCfb97ElJU2AQXbBAFXPbKmu0XJjPU9GWWmUkIbXka+Im8Q5w1geiL9GB+AktJ4pIA6nRZD1+TlEG6/rA==}
     dev: true
 
   /color-name/1.1.4:
