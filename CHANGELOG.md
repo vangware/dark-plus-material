@@ -1,5 +1,12 @@
 # Changelog
 
+## 3.0.0
+
+-   Dependency upgrade.
+-   Moved to ESM.
+-   Simplified code a lot.
+-   Color mapping is now automatic using an sRGBA euclidean color difference operation, without fine tunning.
+
 ## 2.4.4
 
 -   Dependency upgrade.
