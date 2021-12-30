@@ -1,0 +1,19 @@
+:root {
+	--white: #fff;
+	--black: #000;
+	--foreground: var(--black);
+	--background: var(--white);
+}
+
+/* A comment */
+@media (prefers-color-scheme: dark) {
+	:root {
+		--foreground: var(--white);
+		--background: var(--black);
+	}
+}
+
+#foo > .bar {
+	color: var(--foreground);
+	background-color: var(--background);
+}
