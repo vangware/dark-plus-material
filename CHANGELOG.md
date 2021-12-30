@@ -1,5 +1,10 @@
 # Changelog
 
+## 3.0.2
+
+-   Better README.md.
+-   Updated screenshots.
+
 ## 3.0.1
 
 -   Instead of using euclidean difference, now use LAB trough `color-diff`.
