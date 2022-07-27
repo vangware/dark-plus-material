@@ -4,7 +4,7 @@ import { closestRGBColor } from "./closestRGBColor.js";
 
 export default readFile(new URL("./base.json", import.meta.url), "utf-8")
 	.then(JSON.parse as (content: string) => typeof baseJson)
-	.then(({ colors, name, tokenColors, ...data }) => ({
+	.then(({ colors, name, tokenColors, semanticTokenColors, ...data }) => ({
 		...data,
 		colors: Object.fromEntries(
 			Object.entries(colors).map(([key, value]) => [
@@ -23,6 +23,13 @@ export default readFile(new URL("./base.json", import.meta.url), "utf-8")
 						: undefined,
 			},
 		})),
+		semanticHighlighting: true,
+		semanticTokenColors: Object.fromEntries(
+			Object.entries(semanticTokenColors).map(([key, value]) => [
+				key,
+				closestRGBColor(value),
+			]),
+		),
 	}))
 	.then(theme => JSON.stringify(theme, undefined, "\t"))
 	.then(content =>
