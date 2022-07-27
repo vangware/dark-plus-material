@@ -1,5 +1,10 @@
 # Changelog
 
+## 3.1.0
+
+-   Dependency upgrade.
+-   Bug fixes.
+
 ## 3.0.4
 
 -   Dependency upgrade.
