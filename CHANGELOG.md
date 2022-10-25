@@ -1,5 +1,9 @@
 # Changelog
 
+## 3.1.1
+
+-   Dependency upgrade.
+
 ## 3.1.0
 
 -   Dependency upgrade.
@@ -27,7 +31,8 @@
 -   Dependency upgrade.
 -   Moved to ESM.
 -   Simplified code a lot.
--   Color mapping is now automatic using an sRGBA euclidean color difference operation, without fine tunning.
+-   Color mapping is now automatic using an sRGBA euclidean color difference
+    operation, without fine tunning.
 
 ## 2.4.4
 
@@ -157,7 +162,8 @@
 ## 2.2.1
 
 -   Dependency update.
--   Fixed bug with icon color (found it quick thanks to [@kjgalvan](https://github.com/kjgalvan)).
+-   Fixed bug with icon color (found it quick thanks to
+    [@kjgalvan](https://github.com/kjgalvan)).
 -   Updated prettier config.
 -   Moved from TSLint to ESLint.
 -   Fixed code based on eslint suggestions.
@@ -197,7 +203,8 @@
 
 ## 2.0.4
 
--   Completely updated colorMap to match with the old one and add the new colors on top of that (should be better for old users).
+-   Completely updated colorMap to match with the old one and add the new colors
+    on top of that (should be better for old users).
 -   Added simple description of the update process in the README.
 
 ## 2.0.3
@@ -207,7 +214,8 @@
 ## 2.0.2
 
 -   Reverted back from true black background to gray by popular demand.
--   Will add an option in the future to have it true black (I like that contrast better).
+-   Will add an option in the future to have it true black (I like that contrast
+    better).
 
 ## 2.0.1
 
@@ -215,9 +223,11 @@
 
 ## 2.0.0
 
--   Big update, changed all the update scripts to load default styles from several sources.
+-   Big update, changed all the update scripts to load default styles from
+    several sources.
 -   Added a lot of color support to the UI.
--   Yes, the theme now is darker (which is nicer for my eyes, but maybe you hate is, so feedback is appreciated).
+-   Yes, the theme now is darker (which is nicer for my eyes, but maybe you hate
+    is, so feedback is appreciated).
 -   Updated `README.md`.
 -   Updated dependencies.
 -   Added build to test theme when coding.
@@ -464,7 +474,8 @@
 -   Updated TS code.
 -   Updated theme to latests VSCode repo stuff.
 -   Updated node dependencies.
--   Removed SVGs from README.md because sudenly VSCode team is afraid or alergic to SVGs.
+-   Removed SVGs from README.md because sudenly VSCode team is afraid or alergic
+    to SVGs.
 
 ## 1.0.4
 
@@ -476,12 +487,14 @@
 
 ## 1.0.3
 
--   Removed error color for now ... all colors should be defined on the default dark themes.
+-   Removed error color for now ... all colors should be defined on the default
+    dark themes.
 
 ## 1.0.2
 
 -   Minimal update to latest VSCode Dark+ Theme.
--   Hopefuly the default theme will come with tall the default colors to be replaced by this theme.
+-   Hopefuly the default theme will come with tall the default colors to be
+    replaced by this theme.
 
 ## 1.0.1
 
@@ -496,8 +509,10 @@
 ## 0.4.0
 
 -   Updated theme to have editor customizations.
--   There are lots of properties missing from the default Dark+ Theme, so I created `missing-colors.json` with some of them.
--   In the next version all missing colors will be available in `missing-colors.json` until they are added to the default theme.
+-   There are lots of properties missing from the default Dark+ Theme, so I
+    created `missing-colors.json` with some of them.
+-   In the next version all missing colors will be available in
+    `missing-colors.json` until they are added to the default theme.
 
 ## 0.3.6
 
@@ -591,7 +606,8 @@
 
 ## 0.0.6
 
--   Added recommendations section in `README.md` for some great stuff made by others.
+-   Added recommendations section in `README.md` for some great stuff made by
+    others.
 -   Added a more readable "changes made" section to `README.md`.
 
 ## 0.0.5

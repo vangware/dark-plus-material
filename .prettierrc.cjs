@@ -1,1 +1,1 @@
-module.exports = require("@vangware/configs/.prettierrc.js");
+module.exports = require("@vangware/configs/.prettierrc.cjs");
