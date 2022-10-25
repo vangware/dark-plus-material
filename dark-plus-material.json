@@ -245,6 +245,12 @@
 		"widget.shadow": "#0000005c"
 	},
 	"name": "Dark+ Material",
+	"semanticTokenColors": {
+		"newOperator": "#ce93d8ff",
+		"stringLiteral": "#ffab91ff",
+		"customLiteral": "#f0f4c3ff",
+		"numberLiteral": "#a5d6a7ff"
+	},
 	"tokenColors": [
 		{
 			"scope": [
@@ -783,11 +789,5 @@
 				"foreground": "#bdbdbdff"
 			}
 		}
-	],
-	"semanticTokenColors": {
-		"newOperator": "#ce93d8ff",
-		"stringLiteral": "#ffab91ff",
-		"customLiteral": "#f0f4c3ff",
-		"numberLiteral": "#a5d6a7ff"
-	}
+	]
 }

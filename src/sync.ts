@@ -13,6 +13,13 @@ export default readFile(new URL("./base.json", import.meta.url), "utf-8")
 			]),
 		),
 		name: "Dark+ Material",
+		semanticHighlighting: true,
+		semanticTokenColors: Object.fromEntries(
+			Object.entries(semanticTokenColors).map(([key, value]) => [
+				key,
+				closestRGBColor(value),
+			]),
+		),
 		tokenColors: tokenColors.map(({ scope, settings }) => ({
 			scope,
 			settings: {
@@ -23,13 +30,6 @@ export default readFile(new URL("./base.json", import.meta.url), "utf-8")
 						: undefined,
 			},
 		})),
-		semanticHighlighting: true,
-		semanticTokenColors: Object.fromEntries(
-			Object.entries(semanticTokenColors).map(([key, value]) => [
-				key,
-				closestRGBColor(value),
-			]),
-		),
 	}))
 	.then(theme => JSON.stringify(theme, undefined, "\t"))
 	.then(content =>

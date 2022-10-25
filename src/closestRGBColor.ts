@@ -6,15 +6,27 @@ import { themeColors } from "./themeColors.js";
 /**
  * Returns the closest color in `themeColors` to the given color.
  * Preserves the alpha.
+ *
+ * @example
+ * ```ts
+ * closestRGBColor("#fefefeff"); // "#ffffffff"
+ * ```
+ * @param color A hex color string.
+ * @returns A hex color string.
  */
 export const closestRGBColor = (hex: string) => {
 	const [red, green, blue, alpha] = hexToRGBA(hex);
+	// eslint-disable-next-line id-length
 	const { R, G, B } = colorDiff.closest(
-		{ R: red, G: green, B: blue },
+		// eslint-disable-next-line id-length
+		{ B: blue, G: green, R: red },
 		themeColors.map(rgb => ({
-			R: rgb[0],
-			G: rgb[1],
+			// eslint-disable-next-line id-length
 			B: rgb[2],
+			// eslint-disable-next-line id-length
+			G: rgb[1],
+			// eslint-disable-next-line id-length
+			R: rgb[0],
 		})),
 	);
 
