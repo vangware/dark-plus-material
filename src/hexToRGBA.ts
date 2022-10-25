@@ -2,6 +2,13 @@ import type { RGBA } from "./RGBA.js";
 
 /**
  * Hex color to RGBA quadruple.
+ *
+ * @example
+ * ```ts
+ * hexToRGBA("#ffffff"); // [255, 255, 255, 1]
+ * ```
+ * @param hex A hex color string.
+ * @returns An RGBA quadruple.
  */
 export const hexToRGBA = (hex: string) =>
 	(hex
