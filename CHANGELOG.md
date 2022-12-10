@@ -1,5 +1,9 @@
 # Changelog
 
+## 3.1.3
+
+-   Dependency upgrade.
+
 ## 3.1.2
 
 -   Apply linting rules.
