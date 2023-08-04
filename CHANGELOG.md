@@ -1,5 +1,9 @@
 # Changelog
 
+## 3.2.0
+
+-   Upgrade dependencies and update config files.
+
 ## 3.1.3
 
 -   Dependency upgrade.

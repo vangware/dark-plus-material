@@ -1,4 +1,4 @@
-import colorDiff from "color-diff";
+import * as colorDiff from "color-diff";
 import { hexToRGBA } from "./hexToRGBA.js";
 import { rgbaToHex } from "./rgbaToHex.js";
 import { themeColors } from "./themeColors.js";
