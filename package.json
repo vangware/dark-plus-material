@@ -21,17 +21,17 @@
 		]
 	},
 	"devDependencies": {
-		"@types/color-diff": "^1.2.1",
-		"@types/node": "^20.4.7",
-		"@vangware/configs": "^5.1.0",
-		"@vangware/types": "^6.0.7",
-		"@vangware/utils": "^10.1.6",
+		"@types/color-diff": "^1.2.3",
+		"@types/node": "^20.8.7",
+		"@vangware/configs": "^7.1.0",
+		"@vangware/types": "^6.3.5",
+		"@vangware/utils": "^10.1.27",
 		"color-diff": "^1.4.0",
-		"eslint": "^8.46.0",
-		"prettier": "^3.0.1",
-		"stylelint": "^15.10.2",
-		"tsx": "^3.12.7",
-		"typescript": "^5.1.6"
+		"eslint": "^8.51.0",
+		"prettier": "^3.0.3",
+		"stylelint": "^15.11.0",
+		"tsx": "^3.14.0",
+		"typescript": "^5.2.2"
 	},
 	"displayName": "Dark+ Material",
 	"engines": {
